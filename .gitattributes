@@ -1,4 +1,3 @@
-#Remember to run git lfs install
 [attr]unityyaml -text merge=unityyamlmerge diff
 
 # Macro for all binary files that should use Git LFS.
