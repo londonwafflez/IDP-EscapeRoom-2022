@@ -11,7 +11,7 @@ public class PlayerMovement : MonoBehaviour
     public Sprite Left;
     public float speed;
     */
-    
+
     //public float speed = 500;
     //public Transform obj;//
 
@@ -26,18 +26,31 @@ public class PlayerMovement : MonoBehaviour
         obj.transform.position += tempVect;
     }*/
 
+    int multiplier = 20;
+
     private void Update()
     {
         Rigidbody rb = GetComponent<Rigidbody>();
         if (Input.GetKey(KeyCode.A))
-            rb.AddForce(Vector3.left);
+        {
+            //GetComponent<SpriteRenderer>().sprite = Up;
+            rb.AddForce(Vector3.left * multiplier);
+        }
         if (Input.GetKey(KeyCode.D))
-            rb.AddForce(Vector3.right);
+        {
+           //GetComponent<SpriteRenderer>().sprite = Up;
+            rb.AddForce(Vector3.right * multiplier);
+        }
         if (Input.GetKey(KeyCode.W))
-            rb.AddForce(Vector3.up);
+        {
+            //GetComponent<SpriteRenderer>().sprite = Up;
+            rb.AddForce(Vector3.up * multiplier);
+        }
         if (Input.GetKey(KeyCode.S))
-            rb.AddForce(Vector3.down);
-
+        {
+            //GetComponent<SpriteRenderer>().sprite = Up;
+            rb.AddForce(Vector3.down * multiplier);
+        }
     }
 
     // Update is called once per frame
