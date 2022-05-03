@@ -44,3 +44,6 @@ TagManager:
   - name: Sprites
     uniqueID: 3437957441
     locked: 0
+  - name: UI
+    uniqueID: 3358305739
+    locked: 0

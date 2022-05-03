@@ -4,13 +4,13 @@ using UnityEngine;
 
 public class PlayerMovement : MonoBehaviour
 {
-    /*
+    
     public Sprite Up;
     public Sprite Down;
     public Sprite Right;
     public Sprite Left;
-    public float speed;
-    */
+    //public float speed;
+    
 
     //public float speed = 500;
     //public Transform obj;//
@@ -33,22 +33,22 @@ public class PlayerMovement : MonoBehaviour
         Rigidbody rb = GetComponent<Rigidbody>();
         if (Input.GetKey(KeyCode.A))
         {
-            //GetComponent<SpriteRenderer>().sprite = Up;
+            GetComponent<SpriteRenderer>().sprite = Left;
             rb.AddForce(Vector3.left * multiplier);
         }
         if (Input.GetKey(KeyCode.D))
         {
-           //GetComponent<SpriteRenderer>().sprite = Up;
+            GetComponent<SpriteRenderer>().sprite = Right;
             rb.AddForce(Vector3.right * multiplier);
         }
         if (Input.GetKey(KeyCode.W))
         {
-            //GetComponent<SpriteRenderer>().sprite = Up;
+            GetComponent<SpriteRenderer>().sprite = Up;
             rb.AddForce(Vector3.up * multiplier);
         }
         if (Input.GetKey(KeyCode.S))
         {
-            //GetComponent<SpriteRenderer>().sprite = Up;
+            GetComponent<SpriteRenderer>().sprite = Down;
             rb.AddForce(Vector3.down * multiplier);
         }
     }

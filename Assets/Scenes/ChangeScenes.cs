@@ -10,13 +10,13 @@ public class ChangeScenes : MonoBehaviour
     {
         SceneManager.LoadScene("Menu");
     }
-    public void Main()
+    public void Storage_Room()
     {
-        SceneManager.LoadScene("Main");
+        SceneManager.LoadScene("Storage Room");
     }
     public void Scene3()
     {
-        SceneManager.LoadScene("Scene3");
+        SceneManager.LoadScene("");
     }
     public void exitgame()
     {
