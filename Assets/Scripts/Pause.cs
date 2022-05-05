@@ -4,20 +4,25 @@ using UnityEngine;
 
 public class Pause : MonoBehaviour
 {
+/*    GameObject PauseScreen;
+
+    public void Start()
+    {
+        PauseScreen = GameObject.Find("PauseScreen");
+    }
+    
+
+    public void pause()
+    {
+        PauseScreen.SetActive(*//*!PauseScreen.activeSelf*//*false);
+    }
+
     // Update is called once per frame
     void Update()
     {
         if (Input.GetKey(KeyCode.Escape))
         {
-
+            pause();
         }
-    }
-
-    void OnMouseDown()
-    {
-        //GameObject's Collider is now a trigger Collider when the GameObject is clicked. It now acts as a trigger
-        //m_ObjectCollider.isTrigger = true;
-        //Output to console the GameObject’s trigger state
-        //Debug.Log("Trigger On : " + m_ObjectCollider.isTrigger);
-    }
+    }*/
 }
