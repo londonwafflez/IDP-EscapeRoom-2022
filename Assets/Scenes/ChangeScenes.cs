@@ -23,4 +23,22 @@ public class ChangeScenes : MonoBehaviour
         Debug.Log("exitgame");
         Application.Quit();
     }
+
+    /*void OnTriggerStay2D(Collider2D other)
+    {
+        if (Input.GetKey(KeyCode.F) || Input.GetKey(KeyCode.Space))
+        {
+            var nextSceneIndex = SceneManager.GetActiveScene().buildIndex + 1;
+
+            if (nextSceneIndex < SceneManager.sceneCountInBuildSettings)
+            {
+                string nextSceneName = GetSceneNameByBuildIndex(nextSceneIndex);
+                SceneManager.LoadScene(nextSceneName);
+            }
+            else
+            {
+                Debug.Log("Next scene unavailable");
+            }
+        }
+    }*/
 }

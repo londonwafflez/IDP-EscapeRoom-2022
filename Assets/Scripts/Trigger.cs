@@ -10,7 +10,12 @@ public class Trigger : MonoBehaviour
     {
         if (Input.GetKey(KeyCode.F) || Input.GetKey(KeyCode.Space))
         {
-            obj.SetActive(false); // false to hide, true to show
+            obj.SetActive(true); // false to hide, true to show
         }
+    }
+
+    void OnTriggerExit2D(Collider2D other)
+    {
+        obj.SetActive(false);
     }
 }
