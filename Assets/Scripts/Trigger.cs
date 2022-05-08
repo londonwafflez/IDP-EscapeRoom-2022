@@ -5,29 +5,31 @@ using UnityEngine;
 public class Trigger : MonoBehaviour
 {
     public GameObject obj;
+
+    bool runTrigger = false;
     bool isActive = false;
 
-    IEnumerator Wait() 
+    void Update()
     {
-
-        yield return 24;
+        if (runTrigger)
+        {
+            if (Input.GetKeyDown(KeyCode.F) || Input.GetKeyDown(KeyCode.Space))
+            {
+                obj.SetActive(!isActive); // false to hide, true to show
+                isActive = !isActive;
+            }
+        }
     }
 
-
-    void OnTriggerStay2D(Collider2D other)
+    void OnTriggerEnter2D(Collider2D other)
     {
-        if (Input.GetKey(KeyCode.F) || Input.GetKey(KeyCode.Space))
-        {
-            obj.SetActive(!isActive); // false to hide, true to show
-            isActive = !isActive;
-            StartCoroutine(Wait());
-        }
+        runTrigger = true;
     }
 
     void OnTriggerExit2D(Collider2D other)
     {
         obj.SetActive(false);
         isActive = false;
-
+        runTrigger = false;
     }
 }

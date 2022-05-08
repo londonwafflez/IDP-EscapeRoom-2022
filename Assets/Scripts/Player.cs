@@ -16,11 +16,6 @@ public class Player : MonoBehaviour
     private Vector2 input;
     private bool moving;
 
-    void Awake()
-    {
-        DontDestroyOnLoad(this.gameObject);
-    }
-
     private void Start(){
         rb = GetComponent<Rigidbody2D>();
     }
@@ -35,8 +30,6 @@ public class Player : MonoBehaviour
     private void GetInput(){
         x = Input.GetAxisRaw("Horizontal");
         y = Input.GetAxisRaw("Vertical");
-
-        Debug.Log("x: " + x +  " y: "+  y);
 
         input = new Vector2(x, y);
         input.Normalize(); 
