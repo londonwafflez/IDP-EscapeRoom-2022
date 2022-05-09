@@ -10,11 +10,5 @@ EditorBuildSettings:
     guid: 063ef937c150a9f46a1b5193c8d83f27
   - enabled: 1
     path: Assets/Scenes/Storage Room.unity
-    guid: 41c9938e6804a5746a3b97ecaf0a7f07
-  - enabled: 1
-    path: Assets/Scenes/Library.unity
-    guid: 2cda990e2423bbf4892e6590ba056729
-  - enabled: 1
-    path: Assets/Scenes/Living Room.unity
-    guid: 811288d46a4ecaf4d8502035443d813a
+    guid: 7a8fbf9c78c75c74ba330f9ee30d99fc
   m_configObjects: {}
