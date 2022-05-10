@@ -10,9 +10,9 @@ public class ChangeScenes : MonoBehaviour
     {
         SceneManager.LoadScene("Menu");
     }
-    public void Storage_Room()
+    public void Start_Cut_Scene()
     {
-        SceneManager.LoadScene("Storage Room");
+        SceneManager.LoadScene("Start Cut Scene");
     }
     public void Scene3()
     {
