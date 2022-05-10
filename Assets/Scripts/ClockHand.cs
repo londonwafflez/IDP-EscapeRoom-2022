@@ -1,21 +1,93 @@
+using System;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
- 
-public class ClockHand : MonoBehaviour {
-    public GameObject clockHand;
-    Vector3 mouse_pos;
-    Vector3 object_pos;
-    float angle;
 
-    void OnMouseDrag () {
-        Debug.Log("Mouse Down");
-        mouse_pos = Input.mousePosition;
-        mouse_pos.x = mouse_pos.x - object_pos.x;
-        mouse_pos.y = mouse_pos.y - object_pos.y;
-        angle = Mathf.Atan2(mouse_pos.y, mouse_pos.x) * Mathf.Rad2Deg;
-        Vector3 aVector = new Vector3(0, 0, angle);
-        clockHand.transform.rotation = Quaternion.Euler(aVector);
-        // transform.RotateAround(point, axis, Time.deltaTime * 10);
+public class ClockHand : MonoBehaviour
+{
+    public GameObject clockPuzzle;
+    GameObject clockHand;
+    GameObject clockDoor;
+    GameObject trigger;
+    float offset = -90;
+    float firstThreshold = 0;
+    float interval = 30;
+    float appliedRotation;
+    int curHour;
+    int waitTime = 35;
+    bool wait;
+    
+
+    void Start()
+    {
+        clockPuzzle.SetActive(true);
+        clockHand = GameObject.Find("ClockHand");
+        clockDoor = GameObject.Find("ClockDoor");
+        trigger = GameObject.Find("TriggerClockFace");
+        clockPuzzle.SetActive(false);
+        string dt = DateTime.Now.ToString("hh");
+        curHour = int.Parse(dt);
+    }
+
+    void Update()
+    {
+        if (wait)
+        {
+            waitTime--;
+            if (waitTime == 0)
+            {
+                clockPuzzle.SetActive(false);
+                clockDoor.SetActive(false);
+                trigger.SetActive(false);
+                wait = false;
+            }
+        }
+    }
+    
+    float RoundToNearestTime(float rotation)
+    {
+        bool isPos = true;
+        if (rotation < 0)
+        {
+            isPos = false;
+            rotation *= -1;
+        }
+
+        double output =
+            Math.Round((rotation - firstThreshold) / interval)
+                * interval + firstThreshold;
+
+        if (!isPos)
+        {
+            output *= -1;
+        }
+        return (float)output;
+    }
+
+    void OnMouseDrag()
+    {
+        Vector3 difference = Camera.main.ScreenToWorldPoint(Input.mousePosition) - transform.position;
+        difference.Normalize();
+        float rotation_z = Mathf.Atan2(difference.y, difference.x) * Mathf.Rad2Deg;
+        appliedRotation = RoundToNearestTime(rotation_z);
+        clockHand.transform.rotation = Quaternion.Euler(0f, 0f, appliedRotation + offset);
+    }
+
+    void OnMouseUp()
+    {
+        int correctPos;
+        if (curHour < 10)
+        {
+            correctPos = curHour * -30;
+        }
+        else
+        {
+            correctPos = (12 - curHour) * 30;
+        }
+
+        if (appliedRotation - 90 == correctPos)
+        {
+            wait = true;
+        }
     }
 }
