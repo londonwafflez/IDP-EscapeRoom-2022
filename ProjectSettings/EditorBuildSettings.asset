@@ -14,4 +14,10 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/Start Cut Scene.unity
     guid: 11309b217680c2c41b0e6f556fe1c492
+  - enabled: 1
+    path: Assets/Scenes/Controls.unity
+    guid: 6b6c28e8f0644dd4ba2c7a005bb23cf7
+  - enabled: 1
+    path: Assets/Scenes/Leaderboard.unity
+    guid: 971eb6e3097cad2449640d74f3314de9
   m_configObjects: {}
