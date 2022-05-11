@@ -9,6 +9,7 @@ public class ClockHand : MonoBehaviour
     GameObject clockHand;
     GameObject clockDoor;
     GameObject trigger;
+    GameObject key2;
     float offset = -90;
     float firstThreshold = 0;
     float interval = 30;
@@ -24,7 +25,9 @@ public class ClockHand : MonoBehaviour
         clockHand = GameObject.Find("ClockHand");
         clockDoor = GameObject.Find("ClockDoor");
         trigger = GameObject.Find("TriggerClockFace");
+        key2 = GameObject.Find("Key2");
         clockPuzzle.SetActive(false);
+        key2.SetActive(false);
         string dt = DateTime.Now.ToString("hh");
         curHour = int.Parse(dt);
     }
@@ -39,6 +42,7 @@ public class ClockHand : MonoBehaviour
                 clockPuzzle.SetActive(false);
                 clockDoor.SetActive(false);
                 trigger.SetActive(false);
+                key2.SetActive(true);
                 wait = false;
             }
         }
