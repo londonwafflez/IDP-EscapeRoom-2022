@@ -3,13 +3,13 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class ClockHand : MonoBehaviour
+public class ClockPuzzle : MonoBehaviour
 {
     public GameObject clockPuzzle;
     GameObject clockHand;
     GameObject clockDoor;
     GameObject trigger;
-    GameObject key2;
+    GameObject insideClock;
     float offset = -90;
     float firstThreshold = 0;
     float interval = 30;
@@ -25,9 +25,9 @@ public class ClockHand : MonoBehaviour
         clockHand = GameObject.Find("ClockHand");
         clockDoor = GameObject.Find("ClockDoor");
         trigger = GameObject.Find("TriggerClockFace");
-        key2 = GameObject.Find("Key2");
+        insideClock = GameObject.Find("InsideClock");
         clockPuzzle.SetActive(false);
-        key2.SetActive(false);
+        insideClock.SetActive(false);
         string dt = DateTime.Now.ToString("hh");
         curHour = int.Parse(dt);
     }
@@ -42,7 +42,7 @@ public class ClockHand : MonoBehaviour
                 clockPuzzle.SetActive(false);
                 clockDoor.SetActive(false);
                 trigger.SetActive(false);
-                key2.SetActive(true);
+                insideClock.SetActive(true);
                 wait = false;
             }
         }
