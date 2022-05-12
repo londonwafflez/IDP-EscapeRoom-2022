@@ -14,6 +14,7 @@ public class Inventory : MonoBehaviour
     public Sprite[] items = new Sprite[7];
     int activeInvBox = -1;
     int invItemCount = 0;
+    int lastBoxIdentity;
     bool isZoomed = false;
 
     //Start is called before the first frame update
@@ -66,5 +67,24 @@ public class Inventory : MonoBehaviour
     public void onZoom()
     {
         isZoomed = true;
+    }
+
+    public string whatItemDragged(int boxIdentity)
+    {
+        spriteRenderer = itemBoxes[boxIdentity].GetComponent<SpriteRenderer>();
+        lastBoxIdentity = boxIdentity;
+        return spriteRenderer.sprite.name;
+    }
+
+    public void used(string spriteName)
+    {
+        itemBoxes[lastBoxIdentity].SetActive(false);
+        invItemCount--;
+    }
+
+    public string getActiveItem()
+    {
+        spriteRenderer = itemBoxes[activeInvBox].GetComponent<SpriteRenderer>();
+        return spriteRenderer.sprite.name;
     }
 }

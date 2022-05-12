@@ -5,6 +5,8 @@ using UnityEngine.SceneManagement;
 
 public class ChangeScenes : MonoBehaviour
 {
+    public Inventory inventory;
+
     // Start is called before the first frame update
     public void Menu()
     {
@@ -14,9 +16,13 @@ public class ChangeScenes : MonoBehaviour
     {
         SceneManager.LoadScene("Start Cut Scene");
     }
-    public void Scene3()
+    public void StoreRoom()
     {
-        SceneManager.LoadScene("");
+        SceneManager.LoadScene("Store Room");
+    }
+        public void Library()
+    {
+        SceneManager.LoadScene("Library");
     }
     public void exitgame()
     {
@@ -24,11 +30,18 @@ public class ChangeScenes : MonoBehaviour
         Application.Quit();
     }
 
-    /*void OnTriggerStay2D(Collider2D other)
+
+    void OnTriggerStay2D(Collider2D other)
     {
         if (Input.GetKey(KeyCode.F) || Input.GetKey(KeyCode.Space))
         {
-            var nextSceneIndex = SceneManager.GetActiveScene().buildIndex + 1;
+            if (inventory.getActiveItem() == "Key1")
+            {
+                Library();
+            }
+            
+
+            /*var nextSceneIndex = SceneManager.GetActiveScene().buildIndex + 1;
 
             if (nextSceneIndex < SceneManager.sceneCountInBuildSettings)
             {
@@ -38,7 +51,7 @@ public class ChangeScenes : MonoBehaviour
             else
             {
                 Debug.Log("Next scene unavailable");
-            }
+            }*/
         }
-    }*/
+    }
 }

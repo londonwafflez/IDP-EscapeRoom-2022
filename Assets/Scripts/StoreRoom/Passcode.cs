@@ -6,6 +6,10 @@ using UnityEngine.UI;
 
 public class Passcode : MonoBehaviour
 {
+    public GameObject chest;
+    public GameObject key1;
+    public Sprite openChest;
+    SpriteRenderer spriteRenderer;
     string Code = "1324";
     string Nr = null;
     int NrIndex = 0;
@@ -24,6 +28,11 @@ public class Passcode : MonoBehaviour
         if (Nr == Code)
         {
             Debug.Log("Correct");
+            gameObject.SetActive(false);
+            spriteRenderer = chest.GetComponent<SpriteRenderer>();
+            spriteRenderer.sprite = openChest;
+            key1.SetActive(true);
+            Destroy(this);
         }
 
         if (Nr != Code)
