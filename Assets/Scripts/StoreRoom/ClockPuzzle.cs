@@ -17,7 +17,6 @@ public class ClockPuzzle : MonoBehaviour
     int curHour;
     int waitTime = 35;
     bool wait;
-    
 
     void Start()
     {
@@ -41,7 +40,7 @@ public class ClockPuzzle : MonoBehaviour
             {
                 clockPuzzle.SetActive(false);
                 clockDoor.SetActive(false);
-                trigger.SetActive(false);
+                // trigger.SetActive(false);
                 insideClock.SetActive(true);
                 wait = false;
             }

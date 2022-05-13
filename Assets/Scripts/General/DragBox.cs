@@ -6,14 +6,17 @@ public class DragBox : MonoBehaviour
 {
     public Inventory inventory; 
     public string checkingFor;
-    public Sprite newSprite;
+    GameObject blackLightCode;
+    // public Sprite newSprite;
     bool allowCheck = false;
-    SpriteRenderer spriteRenderer;
+    // SpriteRenderer spriteRenderer;
 
     // Start is called before the first frame update
     void Start()
     {
-        spriteRenderer = GetComponent<SpriteRenderer>();
+        // spriteRenderer = GetComponent.<SpriteRenderer>();
+        blackLightCode = GameObject.Find("blacklightcode");
+        blackLightCode.SetActive(false);
     }
 
     // Update is called once per frame
@@ -22,8 +25,9 @@ public class DragBox : MonoBehaviour
         
     }
 
-    void OnMouseOver()
+    void OnMouseEnter()
     {
+        Debug.Log("Mouse entered");
         allowCheck = true;
     }
 
@@ -35,7 +39,7 @@ public class DragBox : MonoBehaviour
         {
             inventory.used(spriteName);
             Debug.Log("found");
-            spriteRenderer.sprite = newSprite;
+            blackLightCode.SetActive(true);
         }
         allowCheck = false;
     }

@@ -6,12 +6,17 @@ public class ChangeRug : MonoBehaviour
 {
     //public GameObject obj;
     public Sprite revealedRug;
+    public Sprite normalRug;
     bool runTrigger = false;
     SpriteRenderer spriteRenderer;
+    GameObject codeTranslator;
+    public BoxCollider2D RugCollider;
 
     void Start()
     {
         spriteRenderer = GetComponent<SpriteRenderer>();
+        codeTranslator = GameObject.Find("CodeTranslator");
+        codeTranslator.SetActive(false);
     }
 
     void Update()
@@ -20,8 +25,18 @@ public class ChangeRug : MonoBehaviour
         {
             if (Input.GetKeyDown(KeyCode.F) || Input.GetKeyDown(KeyCode.Space))
             { 
-                spriteRenderer.sprite = revealedRug;
-                Destroy(GetComponent<ChangeRug>());
+                if(spriteRenderer.sprite == revealedRug) {
+                    spriteRenderer.sprite = normalRug;
+                    if (codeTranslator != null) {
+                        codeTranslator.SetActive(false);
+                    }
+                } else {
+                    spriteRenderer.sprite = revealedRug;
+                    if (codeTranslator != null) {
+                        codeTranslator.SetActive(true);
+                    }
+                }
+                // Destroy(GetComponent<ChangeRug>());
             }
         }
     }

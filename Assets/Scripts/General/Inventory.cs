@@ -84,7 +84,10 @@ public class Inventory : MonoBehaviour
 
     public string getActiveItem()
     {
+        if(activeInvBox == -1) {
         spriteRenderer = itemBoxes[activeInvBox].GetComponent<SpriteRenderer>();
         return spriteRenderer.sprite.name;
+        }
+        return "No active inv box";
     }
 }
