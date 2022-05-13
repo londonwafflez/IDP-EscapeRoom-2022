@@ -15,7 +15,7 @@ public class Inventory : MonoBehaviour
     int activeInvBox = -1;
     int invItemCount = 0;
     int lastBoxIdentity;
-    bool isZoomed = false;
+    // bool isZoomed = false;
 
     //Start is called before the first frame update
     void Start()
@@ -37,8 +37,7 @@ public class Inventory : MonoBehaviour
         for (int i = 1; i < 7 + 1; i++)
         {
             if (Input.GetKeyDown(keyCodes[i]))
-            {
-                Debug.Log("Key " + keyCodes[i]);
+            {   
                 if (activeInvBox == i)
                 {
                     invBoxes[i].SetActive(false);
@@ -64,10 +63,10 @@ public class Inventory : MonoBehaviour
         invItemCount++;
     }
 
-    public void onZoom()
-    {
-        isZoomed = true;
-    }
+    // public void onZoom()
+    // {
+    //     isZoomed = true;
+    // }
 
     public string whatItemDragged(int boxIdentity)
     {
