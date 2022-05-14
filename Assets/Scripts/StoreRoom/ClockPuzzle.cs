@@ -13,7 +13,7 @@ public class ClockPuzzle : MonoBehaviour
     float offset = -90;
     float firstThreshold = 0;
     float interval = 30;
-    float appliedRotation;
+    public float appliedRotation;
     int curHour;
     int waitTime = 35;
     bool wait;

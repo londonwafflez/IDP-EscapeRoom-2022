@@ -21,8 +21,7 @@ public class ChangeSprite : MonoBehaviour
         {
             if (Input.GetKeyDown(KeyCode.F) || Input.GetKeyDown(KeyCode.Space))
             { 
-                Debug.Log("F or space clicked");
-                if(spriteRenderer.sprite == sprite0) {
+                if (spriteRenderer.sprite == sprite1) {
                     spriteFunc(0);
                 } else {
                     spriteFunc(1);
@@ -31,7 +30,7 @@ public class ChangeSprite : MonoBehaviour
         }
     }
 
-    protected void spriteFunc(int spriteToBe) {
+    protected virtual void spriteFunc(int spriteToBe) {
 
     }
 

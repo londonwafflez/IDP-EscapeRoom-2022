@@ -3,9 +3,10 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.SceneManagement;
 
-public class ChangeScenes : MonoBehaviour
+public class ChangeScenes : Trigger
 {
     public Inventory inventory;
+    public ClockPuzzle clockPuzzle;
 
     // Start is called before the first frame update
     public void Menu()
@@ -31,15 +32,27 @@ public class ChangeScenes : MonoBehaviour
     }
 
 
-    void OnTriggerStay2D(Collider2D other)
+    void OnTriggerExit2D()
     {
-        if (Input.GetKey(KeyCode.F) || Input.GetKey(KeyCode.Space))
+        runTrigger = false;
+    }
+
+    protected override void toRun()
+    {
+        int correctPos = 0; // Correct time is 12; see clockpuzzle.cs for full conversion
+
+        if (inventory.getActiveItem() == "Key1" && clockPuzzle.appliedRotation - 90 == correctPos)
         {
-            if (inventory.getActiveItem() == "Key1")
-            {
-                Library();
-            }
-            
+            Library();
+        } else if (inventory.getActiveItem() == "Key1") {
+            Debug.Log("Something else is missing");
+        } else if (clockPuzzle.appliedRotation - 90 == correctPos) {
+            Debug.Log("Something else is missing");
+        } else
+        {
+            Debug.Log("More needs to be done to unlock the trapdoor");
+        }
+    }    
 
             /*var nextSceneIndex = SceneManager.GetActiveScene().buildIndex + 1;
 
@@ -52,6 +65,5 @@ public class ChangeScenes : MonoBehaviour
             {
                 Debug.Log("Next scene unavailable");
             }*/
-        }
-    }
+
 }

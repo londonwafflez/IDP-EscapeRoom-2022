@@ -4,6 +4,7 @@ using UnityEngine;
 
 public class ChangeCellDoor : ChangeSprite
 {
+    public Inventory inventory;
     GameObject closedCellDoor;
     GameObject openCellDoor;
 
@@ -30,10 +31,13 @@ public class ChangeCellDoor : ChangeSprite
     //     }
     // }
 
-    new void spriteFunc(int spriteToBe) 
+    protected override void spriteFunc(int spriteToBe) 
     {
-        Debug.Log("spriteFunc in ChangeCellDoor.cs run");
-        openCellDoor.SetActive(spriteToBe == 0);
-        closedCellDoor.SetActive(spriteToBe == 1);
+        if(inventory.getActiveItem() == "CellKey")
+        {
+            openCellDoor.SetActive(spriteToBe == 1);
+            closedCellDoor.SetActive(spriteToBe == 0);
+            inventory.used("CellKey");
+        }
     }
 }

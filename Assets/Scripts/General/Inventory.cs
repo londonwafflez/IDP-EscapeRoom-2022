@@ -15,6 +15,8 @@ public class Inventory : MonoBehaviour
     int activeInvBox = -1;
     int invItemCount = 0;
     int lastBoxIdentity;
+    int popOutItem;
+    GameObject popOut;
     // bool isZoomed = false;
 
     //Start is called before the first frame update
@@ -31,6 +33,9 @@ public class Inventory : MonoBehaviour
             itemBoxes[i] = GameObject.Find("itemBox" + i);
             itemBoxes[i].SetActive(false);
         }
+
+        popOut = GameObject.Find("TranslatorPopout");
+        popOut.SetActive(false);
     }
 
     void Update() {
@@ -42,6 +47,7 @@ public class Inventory : MonoBehaviour
                 {
                     invBoxes[i].SetActive(false);
                     activeInvBox = -1;
+                    popOut.SetActive(false);
                     break;
                 }
 
@@ -51,16 +57,24 @@ public class Inventory : MonoBehaviour
                 }
                 invBoxes[i].SetActive(true);
                 activeInvBox = i;
+                if (activeInvBox == popOutItem)
+                {
+                    popOut.SetActive(true);
+                }
                 break;
             }
         }
     }
 
     public void itemGrabbed(int itemIndex) {
-        spriteRenderer = itemBoxes[invItemCount + 1].GetComponent<SpriteRenderer>();
-        spriteRenderer.sprite = items[itemIndex];
-        itemBoxes[invItemCount + 1].SetActive(true);
         invItemCount++;
+        spriteRenderer = itemBoxes[invItemCount].GetComponent<SpriteRenderer>();
+        spriteRenderer.sprite = items[itemIndex];
+        itemBoxes[invItemCount].SetActive(true);
+        if (itemIndex == 4)
+        {
+            popOutItem = invItemCount;
+        }
     }
 
     // public void onZoom()
@@ -83,10 +97,11 @@ public class Inventory : MonoBehaviour
 
     public string getActiveItem()
     {
-        if(activeInvBox == -1) {
-        spriteRenderer = itemBoxes[activeInvBox].GetComponent<SpriteRenderer>();
-        return spriteRenderer.sprite.name;
+        if(activeInvBox != -1) {
+            spriteRenderer = itemBoxes[activeInvBox].GetComponent<SpriteRenderer>();
+            lastBoxIdentity = activeInvBox;
+            return spriteRenderer.sprite.name;
         }
-        return "No active inv box";
+        return "N/A";
     }
 }

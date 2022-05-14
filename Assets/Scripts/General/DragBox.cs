@@ -47,7 +47,7 @@ public class DragBox : MonoBehaviour
             Debug.Log("Correct area");
             if(spriteName == checkingFor)
             {
-                inventory.used(spriteName);
+                inventory.used(checkingFor);
                 Debug.Log("found");
                 blackLightCode.SetActive(true);
             }

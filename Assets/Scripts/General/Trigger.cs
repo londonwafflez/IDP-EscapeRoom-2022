@@ -6,30 +6,35 @@ public class Trigger : MonoBehaviour
 {
     public GameObject obj;
 
-    bool runTrigger = false;
-    bool isActive = false;
+    protected bool runTrigger = false;
+    protected bool isActive = false;
 
-    void Update()
+    protected void Update()
     {
         if (runTrigger)
         {
             if (Input.GetKeyDown(KeyCode.F) || Input.GetKeyDown(KeyCode.Space))
             {
-                obj.SetActive(!isActive); // false to hide, true to show
-                isActive = !isActive;
+                toRun();
             }
         }
     }
 
-    void OnTriggerEnter2D(Collider2D other)
+    protected void OnTriggerEnter2D(Collider2D other)
     {
         runTrigger = true;
     }
 
-    void OnTriggerExit2D(Collider2D other)
+    protected void OnTriggerExit2D(Collider2D other)
     {
         obj.SetActive(false);
         isActive = false;
         runTrigger = false;
+    }
+
+    protected virtual void toRun()
+    {
+        obj.SetActive(!isActive); // false to hide, true to show
+        isActive = !isActive;
     }
 }
