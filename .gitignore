@@ -10,6 +10,7 @@
 /[Ll]ogs/
 /[Uu]ser[Ss]ettings/
 
+
 # MemoryCaptures can get excessive in size.
 # They also could contain extremely sensitive data
 /[Mm]emoryCaptures/
@@ -77,3 +78,13 @@ crashlytics-build.properties
 # Python
 *.pyc
 Assets/Resources/DataDump/keys.json
+
+# Build files
+IDP\ 2022.exe
+UnityCrashHandler64.exe
+UnityPlayer.dll
+
+# Other
+/MonoBleedingEdge/
+/IDP\ 2022_BurstDebugInformation_DoNotShip/
+/IDP\ 2022_Data/
