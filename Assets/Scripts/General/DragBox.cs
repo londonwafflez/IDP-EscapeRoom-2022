@@ -8,8 +8,10 @@ public class DragBox : MonoBehaviour
     public string checkingFor;
     GameObject blackLightCode;
     // public Sprite newSprite;
-    bool allowCheck = false;
+    // bool allowCheck = false;
     // SpriteRenderer spriteRenderer;
+    public Vector2 topLeftBound;
+    public Vector2 botRightBound; 
 
     // Start is called before the first frame update
     void Start()
@@ -25,22 +27,31 @@ public class DragBox : MonoBehaviour
         
     }
 
-    void OnMouseEnter()
-    {
-        Debug.Log("Mouse entered");
-        allowCheck = true;
-    }
+    // void OnMouseDrag()
+    // // void OnMouseEnter()
+    // {
+    //     Debug.Log("Mouse entered");
+    //     allowCheck = true;
+    // }
 
-    public void checkItem(string spriteName)
+    // void OnMouseExit() {
+    //     Debug.Log("Mouse exit");
+    //     allowCheck = false;
+    // }
+
+    public void checkItem(string spriteName, Vector2 spriteLoc)
     {
         Debug.Log("Checking " + spriteName);
-        Debug.Log(allowCheck);
-        if(spriteName == checkingFor && allowCheck)
+        if ((spriteLoc.x > topLeftBound.x && spriteLoc.x < botRightBound.x) && (spriteLoc.y > botRightBound.y && spriteLoc.y < topLeftBound.y))
         {
-            inventory.used(spriteName);
-            Debug.Log("found");
-            blackLightCode.SetActive(true);
+            Debug.Log("Correct area");
+            if(spriteName == checkingFor)
+            {
+                inventory.used(checkingFor);
+                Debug.Log("found");
+                blackLightCode.SetActive(true);
+            }
         }
-        allowCheck = false;
+        // allowCheck = false; 
     }
 }

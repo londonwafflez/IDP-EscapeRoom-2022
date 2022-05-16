@@ -8,6 +8,7 @@ public class whenDragged : MonoBehaviour
     public DragBox dragBox;
     public int boxIdentity;
     Vector3 startPos;
+    Vector2 mousePosition;
 
     void Start()
     {
@@ -16,13 +17,13 @@ public class whenDragged : MonoBehaviour
 
     void OnMouseDrag()
     {
-        Vector2 mousePosition = Camera.main.ScreenToWorldPoint(Input.mousePosition);
+        mousePosition = Camera.main.ScreenToWorldPoint(Input.mousePosition);
         transform.position = mousePosition;
     }
 
     void OnMouseUp()
     {
-        dragBox.checkItem(inventory.whatItemDragged(boxIdentity));
+        dragBox.checkItem(inventory.whatItemDragged(boxIdentity), gameObject.transform.position);
         transform.position = startPos;
     }
 }

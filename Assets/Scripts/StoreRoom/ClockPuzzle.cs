@@ -6,27 +6,27 @@ using UnityEngine;
 public class ClockPuzzle : MonoBehaviour
 {
     public GameObject clockPuzzle;
-    GameObject clockHand;
-    GameObject clockDoor;
-    GameObject trigger;
-    GameObject insideClock;
+    public GameObject clockHand;
+    public GameObject clockDoor;
+    public GameObject trigger;
+    public GameObject insideClock;
     float offset = -90;
     float firstThreshold = 0;
     float interval = 30;
-    float appliedRotation;
+    public float appliedRotation;
     int curHour;
     int waitTime = 35;
     bool wait;
 
     void Start()
     {
-        clockPuzzle.SetActive(true);
+/*        clockPuzzle.SetActive(true);
         clockHand = GameObject.Find("ClockHand");
         clockDoor = GameObject.Find("ClockDoor");
         trigger = GameObject.Find("TriggerClockFace");
         insideClock = GameObject.Find("InsideClock");
         clockPuzzle.SetActive(false);
-        insideClock.SetActive(false);
+        insideClock.SetActive(false);*/
         string dt = DateTime.Now.ToString("hh");
         curHour = int.Parse(dt);
     }

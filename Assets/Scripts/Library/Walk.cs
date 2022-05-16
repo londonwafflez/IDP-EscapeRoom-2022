@@ -15,13 +15,13 @@ public class Walk : MonoBehaviour
 
     void FixedUpdate()
     {
-        if (MainCharacter.transform.position.y < 173)
+        if (MainCharacter.transform.position.y < 190)
         {
-            sprite.sortingOrder = 2;
+            sprite.sortingOrder = 11;
         }
-        if (MainCharacter.transform.position.y > 173)
+        if (MainCharacter.transform.position.y > 190)
         {
-            sprite.sortingOrder = 0;
+            sprite.sortingOrder = 9;
         }
     }
 }
