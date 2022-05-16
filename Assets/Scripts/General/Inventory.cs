@@ -1,3 +1,4 @@
+using System;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
@@ -7,6 +8,7 @@ public class Inventory : MonoBehaviour
     //Variables
     GameObject boxHighlight;
     SpriteRenderer spriteRenderer;
+    public GameObject popOut;
 
     KeyCode[] keyCodes = new KeyCode[] { KeyCode.Alpha0, KeyCode.Alpha1, KeyCode.Alpha2, KeyCode.Alpha3, KeyCode.Alpha4, KeyCode.Alpha5, KeyCode.Alpha6, KeyCode.Alpha7 };
     GameObject[] invBoxes = new GameObject[8];
@@ -15,8 +17,8 @@ public class Inventory : MonoBehaviour
     int activeInvBox = -1;
     int invItemCount = 0;
     int lastBoxIdentity;
+    int nextBox = -1;
     int popOutItem;
-    GameObject popOut;
     // bool isZoomed = false;
 
     //Start is called before the first frame update
@@ -33,9 +35,6 @@ public class Inventory : MonoBehaviour
             itemBoxes[i] = GameObject.Find("itemBox" + i);
             itemBoxes[i].SetActive(false);
         }
-
-        popOut = GameObject.Find("TranslatorPopout");
-        popOut.SetActive(false);
     }
 
     void Update() {
@@ -53,6 +52,7 @@ public class Inventory : MonoBehaviour
 
                 if (activeInvBox != -1)
                 {
+                    popOut.SetActive(false);
                     invBoxes[activeInvBox].SetActive(false);
                 }
                 invBoxes[i].SetActive(true);
@@ -68,13 +68,21 @@ public class Inventory : MonoBehaviour
 
     public void itemGrabbed(int itemIndex) {
         invItemCount++;
-        spriteRenderer = itemBoxes[invItemCount].GetComponent<SpriteRenderer>();
+        if (nextBox != -1)
+        {
+            nextBox = Math.Min(invItemCount, nextBox);
+        } else
+        {
+            nextBox = invItemCount;
+        }
+        spriteRenderer = itemBoxes[nextBox].GetComponent<SpriteRenderer>();
         spriteRenderer.sprite = items[itemIndex];
-        itemBoxes[invItemCount].SetActive(true);
+        itemBoxes[nextBox].SetActive(true);
         if (itemIndex == 4)
         {
-            popOutItem = invItemCount;
+            popOutItem = nextBox;
         }
+        nextBox = -1;
     }
 
     // public void onZoom()
@@ -92,6 +100,7 @@ public class Inventory : MonoBehaviour
     public void used(string spriteName)
     {
         itemBoxes[lastBoxIdentity].SetActive(false);
+        nextBox = lastBoxIdentity;
         invItemCount--;
     }
 
