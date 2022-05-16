@@ -4,9 +4,9 @@ using UnityEngine;
 
 public class Walk : MonoBehaviour
 {
-    public int sortingOrder = 2;
     private SpriteRenderer sprite;
     public GameObject MainCharacter;
+    public int thresh;
 
     void Start()
     {
@@ -15,11 +15,11 @@ public class Walk : MonoBehaviour
 
     void FixedUpdate()
     {
-        if (MainCharacter.transform.position.y < 190)
+        if (MainCharacter.transform.position.y < thresh)
         {
             sprite.sortingOrder = 11;
         }
-        if (MainCharacter.transform.position.y > 190)
+        if (MainCharacter.transform.position.y > thresh)
         {
             sprite.sortingOrder = 9;
         }
