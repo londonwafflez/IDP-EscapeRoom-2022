@@ -67,6 +67,8 @@ public class Inventory : MonoBehaviour
     }
 
     public void itemGrabbed(int itemIndex) {
+        invBoxes[activeInvBox].SetActive(false);
+        activeInvBox = -1;
         invItemCount++;
         if (nextBox != -1)
         {

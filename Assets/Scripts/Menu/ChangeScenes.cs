@@ -7,6 +7,7 @@ public class ChangeScenes : Trigger
 {
     public Inventory inventory;
     public ClockPuzzle clockPuzzle;
+    public Sprite openTrapDoor;
 
     // Start is called before the first frame update
     public void Menu()
@@ -39,18 +40,31 @@ public class ChangeScenes : Trigger
 
     protected override void toRun()
     {
-        int correctPos = 0; // Correct time is 12; see clockpuzzle.cs for full conversion
-
-        if (inventory.getActiveItem() == "Key1" && clockPuzzle.appliedRotation - 90 == correctPos)
+        if (SceneManager.GetActiveScene().name == "Storage Room")
         {
-            Library();
-        } else if (inventory.getActiveItem() == "Key1") {
-            Debug.Log("Something else is missing");
-        } else if (clockPuzzle.appliedRotation - 90 == correctPos) {
-            Debug.Log("Something else is missing");
+            int correctPos = 0; // Correct time is 12; see clockpuzzle.cs for full conversion
+
+            if (inventory.getActiveItem() == "Key1" && clockPuzzle.appliedRotation - 90 == correctPos)
+            {
+                gameObject.GetComponent<SpriteRenderer>().sprite = openTrapDoor;
+                inventory.used("Key1");
+                Library();
+            }
+            else if (inventory.getActiveItem() == "Key1")
+            {
+                Debug.Log("Something else is missing");
+            }
+            else if (clockPuzzle.appliedRotation - 90 == correctPos)
+            {
+                Debug.Log("Something else is missing");
+            }
+            else
+            {
+                Debug.Log("More needs to be done to unlock the trapdoor");
+            }
         } else
         {
-            Debug.Log("More needs to be done to unlock the trapdoor");
+            StoreRoom();
         }
     }    
 
