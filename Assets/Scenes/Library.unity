@@ -1558,6 +1558,7 @@ GameObject:
   - component: {fileID: 314662617}
   - component: {fileID: 314662616}
   - component: {fileID: 314662615}
+  - component: {fileID: 314662618}
   m_Layer: 0
   m_Name: ShelfTrigger (6)
   m_TagString: Untagged
@@ -1681,6 +1682,22 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!114 &314662618
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 314662613}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 2a69c3cb249c7cf4c8497d30948bce94, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  sprite0: {fileID: 0}
+  sprite1: {fileID: 0}
+  runTrigger: 0
+  spriteRenderer: {fileID: 0}
 --- !u!1 &345772925
 GameObject:
   m_ObjectHideFlags: 0
@@ -1818,6 +1835,7 @@ GameObject:
   - component: {fileID: 347841168}
   - component: {fileID: 347841167}
   - component: {fileID: 347841166}
+  - component: {fileID: 347841169}
   m_Layer: 0
   m_Name: ShelfTrigger (8)
   m_TagString: Untagged
@@ -1941,6 +1959,22 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!114 &347841169
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 347841164}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 2a69c3cb249c7cf4c8497d30948bce94, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  sprite0: {fileID: 0}
+  sprite1: {fileID: 0}
+  runTrigger: 0
+  spriteRenderer: {fileID: 0}
 --- !u!1 &374791157
 GameObject:
   m_ObjectHideFlags: 0
@@ -2856,6 +2890,7 @@ GameObject:
   - component: {fileID: 503209221}
   - component: {fileID: 503209220}
   - component: {fileID: 503209219}
+  - component: {fileID: 503209222}
   m_Layer: 0
   m_Name: ShelfTrigger (9)
   m_TagString: Untagged
@@ -2979,6 +3014,22 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!114 &503209222
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 503209217}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 2a69c3cb249c7cf4c8497d30948bce94, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  sprite0: {fileID: 0}
+  sprite1: {fileID: 0}
+  runTrigger: 0
+  spriteRenderer: {fileID: 0}
 --- !u!1 &518382510
 GameObject:
   m_ObjectHideFlags: 0
@@ -4112,6 +4163,7 @@ GameObject:
   - component: {fileID: 878603572}
   - component: {fileID: 878603571}
   - component: {fileID: 878603570}
+  - component: {fileID: 878603573}
   m_Layer: 0
   m_Name: ShelfTrigger (4)
   m_TagString: Untagged
@@ -4235,6 +4287,22 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!114 &878603573
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 878603568}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 2a69c3cb249c7cf4c8497d30948bce94, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  sprite0: {fileID: 0}
+  sprite1: {fileID: 0}
+  runTrigger: 0
+  spriteRenderer: {fileID: 0}
 --- !u!1 &887937427
 GameObject:
   m_ObjectHideFlags: 0
@@ -4250,7 +4318,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!4 &887937428
 Transform:
   m_ObjectHideFlags: 0
@@ -5564,6 +5632,7 @@ GameObject:
   - component: {fileID: 1205123182}
   - component: {fileID: 1205123181}
   - component: {fileID: 1205123180}
+  - component: {fileID: 1205123183}
   m_Layer: 0
   m_Name: ShelfTrigger (7)
   m_TagString: Untagged
@@ -5687,6 +5756,22 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!114 &1205123183
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1205123178}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 2a69c3cb249c7cf4c8497d30948bce94, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  sprite0: {fileID: 0}
+  sprite1: {fileID: 0}
+  runTrigger: 0
+  spriteRenderer: {fileID: 0}
 --- !u!1 &1249806908
 GameObject:
   m_ObjectHideFlags: 0
@@ -5855,7 +5940,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   chest: {fileID: 587957427}
-  key1: {fileID: 0}
+  key1: {fileID: 887937427}
   openChest: {fileID: 21300000, guid: 5e55e81dee0e40e44a1ae42bba93feda, type: 3}
   Code: 4321
   UiText: {fileID: 2127601991}
@@ -6120,6 +6205,7 @@ GameObject:
   - component: {fileID: 1317294035}
   - component: {fileID: 1317294034}
   - component: {fileID: 1317294033}
+  - component: {fileID: 1317294036}
   m_Layer: 0
   m_Name: ShelfTrigger (2)
   m_TagString: Untagged
@@ -6243,6 +6329,22 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!114 &1317294036
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1317294031}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 2a69c3cb249c7cf4c8497d30948bce94, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  sprite0: {fileID: 0}
+  sprite1: {fileID: 0}
+  runTrigger: 0
+  spriteRenderer: {fileID: 0}
 --- !u!1 &1428074798
 GameObject:
   m_ObjectHideFlags: 0
@@ -6389,6 +6491,7 @@ GameObject:
   - component: {fileID: 1454085181}
   - component: {fileID: 1454085180}
   - component: {fileID: 1454085179}
+  - component: {fileID: 1454085182}
   m_Layer: 0
   m_Name: ShelfTrigger (3)
   m_TagString: Untagged
@@ -6512,6 +6615,22 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!114 &1454085182
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1454085177}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 2a69c3cb249c7cf4c8497d30948bce94, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  sprite0: {fileID: 0}
+  sprite1: {fileID: 0}
+  runTrigger: 0
+  spriteRenderer: {fileID: 0}
 --- !u!1 &1454637279
 GameObject:
   m_ObjectHideFlags: 0
@@ -6789,7 +6908,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1565317851}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 765, y: 66, z: 0}
+  m_LocalPosition: {x: 754.6, y: 66.2, z: 0}
   m_LocalScale: {x: 110, y: 110, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -7632,6 +7751,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1794635500}
   - component: {fileID: 1794635501}
+  - component: {fileID: 1794635502}
   m_Layer: 0
   m_Name: bookshelf zoomed
   m_TagString: Untagged
@@ -7706,6 +7826,22 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!114 &1794635502
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1794635499}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a70041a1daa30ca4a9efb424c56f98da, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  checkingFor: 
+  revealedObj: {fileID: 0}
+  topLeftBound: {x: 380, y: 440}
+  botRightBound: {x: 750, y: 100}
 --- !u!1 &1794714662
 GameObject:
   m_ObjectHideFlags: 0
@@ -8426,6 +8562,7 @@ GameObject:
   - component: {fileID: 1937721109}
   - component: {fileID: 1937721108}
   - component: {fileID: 1937721107}
+  - component: {fileID: 1937721110}
   m_Layer: 0
   m_Name: ShelfTrigger (1)
   m_TagString: Untagged
@@ -8549,6 +8686,22 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!114 &1937721110
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1937721105}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 2a69c3cb249c7cf4c8497d30948bce94, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  sprite0: {fileID: 0}
+  sprite1: {fileID: 0}
+  runTrigger: 0
+  spriteRenderer: {fileID: 0}
 --- !u!1 &1942338468
 GameObject:
   m_ObjectHideFlags: 0
@@ -8919,7 +9072,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 1f79b4efc2b5cc54aa27b3e2c367b071, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  itemIndex: 8
+  itemIndex: 7
 --- !u!1 &1994260658
 GameObject:
   m_ObjectHideFlags: 0
@@ -9080,6 +9233,7 @@ GameObject:
   - component: {fileID: 2100830173}
   - component: {fileID: 2100830172}
   - component: {fileID: 2100830171}
+  - component: {fileID: 2100830174}
   m_Layer: 0
   m_Name: ShelfTrigger (5)
   m_TagString: Untagged
@@ -9203,6 +9357,22 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!114 &2100830174
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2100830169}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 2a69c3cb249c7cf4c8497d30948bce94, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  sprite0: {fileID: 0}
+  sprite1: {fileID: 0}
+  runTrigger: 0
+  spriteRenderer: {fileID: 0}
 --- !u!1 &2127601990
 GameObject:
   m_ObjectHideFlags: 0

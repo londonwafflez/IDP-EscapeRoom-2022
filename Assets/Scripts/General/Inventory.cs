@@ -2,6 +2,7 @@ using System;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class Inventory : MonoBehaviour
 {
@@ -46,18 +47,20 @@ public class Inventory : MonoBehaviour
                 {
                     invBoxes[i].SetActive(false);
                     activeInvBox = -1;
-                    popOut.SetActive(false);
+                    if (popOut != null)
+                        popOut.SetActive(false);
                     break;
                 }
 
                 if (activeInvBox != -1)
                 {
-                    popOut.SetActive(false);
+                    if (popOut != null)
+                        popOut.SetActive(false);
                     invBoxes[activeInvBox].SetActive(false);
                 }
                 invBoxes[i].SetActive(true);
                 activeInvBox = i;
-                if (activeInvBox == popOutItem)
+                if (activeInvBox == popOutItem && popOut != null)
                 {
                     popOut.SetActive(true);
                 }

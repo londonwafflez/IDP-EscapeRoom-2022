@@ -4,27 +4,20 @@ using UnityEngine;
 
 public class DragBox : MonoBehaviour
 {
-    public Inventory inventory; 
+    protected Inventory m_inventory;
     public string checkingFor;
-    GameObject blackLightCode;
+    public GameObject revealedObj;
     // public Sprite newSprite;
     // bool allowCheck = false;
     // SpriteRenderer spriteRenderer;
     public Vector2 topLeftBound;
-    public Vector2 botRightBound; 
+    public Vector2 botRightBound;
 
     // Start is called before the first frame update
     void Start()
     {
-        // spriteRenderer = GetComponent.<SpriteRenderer>();
-        blackLightCode = GameObject.Find("blacklightcode");
-        blackLightCode.SetActive(false);
-    }
-
-    // Update is called once per frame
-    void Update()
-    {
-        
+        m_inventory = GameObject.Find("inventory").GetComponent<Inventory>();
+        revealedObj.SetActive(false);
     }
 
     // void OnMouseDrag()
@@ -39,7 +32,7 @@ public class DragBox : MonoBehaviour
     //     allowCheck = false;
     // }
 
-    public void checkItem(string spriteName, Vector2 spriteLoc)
+    public virtual void checkItem(string spriteName, Vector2 spriteLoc)
     {
         Debug.Log("Checking " + spriteName);
         if ((spriteLoc.x > topLeftBound.x && spriteLoc.x < botRightBound.x) && (spriteLoc.y > botRightBound.y && spriteLoc.y < topLeftBound.y))
@@ -47,9 +40,9 @@ public class DragBox : MonoBehaviour
             Debug.Log("Correct area");
             if(spriteName == checkingFor)
             {
-                inventory.used(checkingFor);
+                m_inventory.used(checkingFor);
                 Debug.Log("found");
-                blackLightCode.SetActive(true);
+                revealedObj.SetActive(true);
             }
         }
         // allowCheck = false; 
