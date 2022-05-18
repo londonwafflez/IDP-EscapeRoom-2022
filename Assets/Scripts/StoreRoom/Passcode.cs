@@ -10,7 +10,7 @@ public class Passcode : MonoBehaviour
     public GameObject key1;
     public Sprite openChest;
     SpriteRenderer spriteRenderer;
-    string Code = "1324";
+    public string Code;
     string Nr = null;
     int NrIndex = 0;
     string alpha;

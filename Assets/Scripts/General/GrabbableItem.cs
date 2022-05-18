@@ -4,13 +4,14 @@ using UnityEngine;
 
 public class GrabbableItem : MonoBehaviour
 {
-    public Inventory inventory;
+    Inventory m_inventory;
     public int itemIndex;
     bool used = false;
     bool runTrigger;
     
     void Start() {
-        // inventory = GetComponent<Inventory>();
+        m_inventory = GameObject.Find("inventory").GetComponent<Inventory>();
+        Debug.Log(m_inventory);
     }
 
     // Update is called once per frame
@@ -21,8 +22,8 @@ public class GrabbableItem : MonoBehaviour
             if (Input.GetKeyDown(KeyCode.F) || Input.GetKeyDown(KeyCode.Space))
             {
                 gameObject.SetActive(false);
-                Debug.Log(inventory);
-                inventory.itemGrabbed(itemIndex);
+                Debug.Log(itemIndex + " used");
+                m_inventory.itemGrabbed(itemIndex);
                 Destroy(this.gameObject);
             }
         }

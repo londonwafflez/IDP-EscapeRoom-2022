@@ -13,7 +13,7 @@ public class Inventory : MonoBehaviour
     KeyCode[] keyCodes = new KeyCode[] { KeyCode.Alpha0, KeyCode.Alpha1, KeyCode.Alpha2, KeyCode.Alpha3, KeyCode.Alpha4, KeyCode.Alpha5, KeyCode.Alpha6, KeyCode.Alpha7 };
     GameObject[] invBoxes = new GameObject[8];
     GameObject[] itemBoxes = new GameObject[8];
-    public Sprite[] items = new Sprite[7];
+    public Sprite[] items = new Sprite[20];
     int activeInvBox = -1;
     int invItemCount = 0;
     int lastBoxIdentity;
@@ -67,8 +67,10 @@ public class Inventory : MonoBehaviour
     }
 
     public void itemGrabbed(int itemIndex) {
-        invBoxes[activeInvBox].SetActive(false);
-        activeInvBox = -1;
+        if (activeInvBox != -1) {
+            invBoxes[activeInvBox].SetActive(false);
+            activeInvBox = -1;
+        }
         invItemCount++;
         if (nextBox != -1)
         {

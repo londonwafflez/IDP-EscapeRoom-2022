@@ -675,6 +675,7 @@ MonoBehaviour:
   chest: {fileID: 1191252106}
   key1: {fileID: 2128301171}
   openChest: {fileID: 21300000, guid: 4656193dcad11a04891969fa2a2b582a, type: 3}
+  Code: 
   UiText: {fileID: 1376401647}
 --- !u!114 &153939794
 MonoBehaviour:
@@ -1242,7 +1243,7 @@ GameObject:
   - component: {fileID: 221185782}
   - component: {fileID: 221185783}
   m_Layer: 0
-  m_Name: Inventory
+  m_Name: InventoryObjs
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -1691,6 +1692,7 @@ MonoBehaviour:
   chest: {fileID: 0}
   key1: {fileID: 0}
   openChest: {fileID: 0}
+  Code: 
   UiText: {fileID: 0}
 --- !u!1 &320438363
 GameObject:
@@ -3281,8 +3283,9 @@ MonoBehaviour:
   - {fileID: 21300000, guid: 67fec5ed99558cc45b80f5f208b4ed67, type: 3}
   - {fileID: 21300000, guid: a76439c51de867940843cf288a17e286, type: 3}
   - {fileID: 21300000, guid: 4629d30ebccdadb4b879eea613020ff3, type: 3}
-  - {fileID: 0}
-  - {fileID: 0}
+  - {fileID: 21300000, guid: 468f63592f7014547a6d9c3b07304082, type: 3}
+  - {fileID: 21300000, guid: 3a44d408391a52844bdfb67cf5ab53ef, type: 3}
+  - {fileID: 21300000, guid: a2dd8a676e683bb438287040c43c7894, type: 3}
 --- !u!1 &695911391
 GameObject:
   m_ObjectHideFlags: 0
@@ -3355,7 +3358,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 1f79b4efc2b5cc54aa27b3e2c367b071, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  inventory: {fileID: 695817292}
   itemIndex: 3
 --- !u!212 &695911395
 SpriteRenderer:
@@ -3460,8 +3462,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 1a4fae79dcfbeb74ea24c6dbeb007353, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  timeValue: 90
-  timerText: {fileID: 0}
+  timeValue: 1801
+  timerText: {fileID: 697350935}
 --- !u!114 &697350935
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -8404,6 +8406,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   MainCharacter: {fileID: 1565317851}
   thresh: 150
+  thresh2: 0
 --- !u!1 &1594670032
 GameObject:
   m_ObjectHideFlags: 0
@@ -8502,7 +8505,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 1f79b4efc2b5cc54aa27b3e2c367b071, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  inventory: {fileID: 695817292}
   itemIndex: 4
 --- !u!61 &1594670036
 BoxCollider2D:
@@ -10101,7 +10103,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 1f79b4efc2b5cc54aa27b3e2c367b071, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  inventory: {fileID: 695817292}
   itemIndex: 1
 --- !u!61 &2082023234
 BoxCollider2D:
@@ -10445,7 +10446,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 1f79b4efc2b5cc54aa27b3e2c367b071, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  inventory: {fileID: 695817292}
   itemIndex: 0
 --- !u!212 &2128301173
 SpriteRenderer:
