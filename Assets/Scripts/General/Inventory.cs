@@ -106,18 +106,24 @@ public class Inventory : MonoBehaviour
 
     public void used(string spriteName)
     {
+        if (activeInvBox != -1)
+        {
+            invBoxes[activeInvBox].SetActive(false);
+            activeInvBox = -1;
+        }
         itemBoxes[lastBoxIdentity].SetActive(false);
+        spriteRenderer.sprite = null;
         nextBox = lastBoxIdentity;
+        
         invItemCount--;
     }
 
     public string getActiveItem()
     {
-        if(activeInvBox != -1) {
-            spriteRenderer = itemBoxes[activeInvBox].GetComponent<SpriteRenderer>();
-            lastBoxIdentity = activeInvBox;
-            return spriteRenderer.sprite.name;
-        }
-        return "N/A";
+        if (activeInvBox == -1) { return "N/A"; }
+        spriteRenderer = itemBoxes[activeInvBox].GetComponent<SpriteRenderer>();
+        lastBoxIdentity = activeInvBox;
+        try { return spriteRenderer.sprite.name; }
+        catch { return "N/A"; }
     }
 }
