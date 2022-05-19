@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class whenDragged : MonoBehaviour
 {
@@ -13,6 +14,12 @@ public class whenDragged : MonoBehaviour
     void Start()
     {
         startPos = gameObject.transform.position;
+    }
+
+    void Awake() {
+        if (SceneManager.GetActiveScene().name == "Library") {
+            Destroy(this);
+        }
     }
 
     void OnMouseDrag()
