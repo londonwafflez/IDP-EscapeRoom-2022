@@ -20,11 +20,15 @@ public class Inventory : MonoBehaviour
     int lastBoxIdentity;
     int nextBox = -1;
     int popOutItem;
+    blacklight m_blacklight;
     // bool isZoomed = false;
 
     //Start is called before the first frame update
     void Start()
     {
+        spriteRenderer = GetComponent<SpriteRenderer>();
+        m_blacklight = GameObject.Find("MainCharacter").GetComponent<blacklight>();
+
         invBoxes[0] = GameObject.Find("nothing"); // null object
         for (int i = 1; i < 8; i++) {
             invBoxes[i] = GameObject.Find("InvBox" + i);
@@ -60,8 +64,16 @@ public class Inventory : MonoBehaviour
                 }
                 invBoxes[i].SetActive(true);
                 activeInvBox = i;
+
+                if (itemBoxes[activeInvBox].GetComponent<SpriteRenderer>().sprite.name == "Blacklight") {
+                    m_blacklight.holdingBlacklight(true);
+                } else {
+                    m_blacklight.holdingBlacklight(false);
+                }
+
                 if (activeInvBox == popOutItem && popOut != null)
                 {
+                    popOut.GetComponent<SpriteRenderer>().sprite = itemBoxes[activeInvBox].GetComponent<SpriteRenderer>().sprite;
                     popOut.SetActive(true);
                 }
                 break;
@@ -85,7 +97,7 @@ public class Inventory : MonoBehaviour
         spriteRenderer = itemBoxes[nextBox].GetComponent<SpriteRenderer>();
         spriteRenderer.sprite = items[itemIndex];
         itemBoxes[nextBox].SetActive(true);
-        if (itemIndex == 4)
+        if (itemIndex == 4 || itemIndex == 8)
         {
             popOutItem = nextBox;
         }

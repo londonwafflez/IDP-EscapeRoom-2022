@@ -206,7 +206,7 @@ namespace Ink.UnityIntegration {
         public static void Add (InkFile inkFile) {
             instance.inkLibrary.Add(inkFile);
 			SortInkLibrary();
-			if (inkFile != null && inkFile.inkAsset != null)
+			if (inkFile != null && inkFile.inkAsset != null && instance != null && instance.inkLibraryDictionary != null)
 			{
 				instance.inkLibraryDictionary.Add(inkFile.inkAsset, inkFile);
 			}

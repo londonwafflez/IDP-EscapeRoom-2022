@@ -26,6 +26,10 @@ public class ChangeScenes : Trigger
     {
         SceneManager.LoadScene("Library");
     }
+    public void LivingRoom()
+    {
+        SceneManager.LoadScene("LivingRoom");
+    }
     public void exitgame()
     {
         Debug.Log("exitgame");
@@ -62,9 +66,11 @@ public class ChangeScenes : Trigger
             {
                 Debug.Log("More needs to be done to unlock the trapdoor");
             }
-        } else
+        } else if (gameObject.name == "TrapDoorOpen")
         {
             StoreRoom();
+        } else {
+            LivingRoom();
         }
     }    
 
