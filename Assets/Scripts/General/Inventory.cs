@@ -14,6 +14,7 @@ public class Inventory : MonoBehaviour
     KeyCode[] keyCodes = new KeyCode[] { KeyCode.Alpha0, KeyCode.Alpha1, KeyCode.Alpha2, KeyCode.Alpha3, KeyCode.Alpha4, KeyCode.Alpha5, KeyCode.Alpha6, KeyCode.Alpha7 };
     GameObject[] invBoxes = new GameObject[8];
     GameObject[] itemBoxes = new GameObject[8];
+    bool[] activeItemBoxes = new bool[8] {true, false, false, false, false, false, false, false};
     public Sprite[] items = new Sprite[20];
     int activeInvBox = -1;
     int invItemCount = 0;
@@ -94,13 +95,16 @@ public class Inventory : MonoBehaviour
             activeInvBox = -1;
         }
         invItemCount++;
-        if (nextBox != -1)
-        {
-            nextBox = Math.Min(invItemCount, nextBox);
-        } else
-        {
-            nextBox = invItemCount;
+
+        for (int i = 0; i < activeItemBoxes.Length; i++) { 
+            if (!activeItemBoxes[i]) {
+                Debug.Log("item box " + i + " is free");
+                nextBox = i;
+                activeItemBoxes[i] = true;
+                break;
+            }
         }
+
         spriteRenderer = itemBoxes[nextBox].GetComponent<SpriteRenderer>();
         spriteRenderer.sprite = items[itemIndex];
         itemBoxes[nextBox].SetActive(true);
@@ -110,19 +114,7 @@ public class Inventory : MonoBehaviour
         }
         nextBox = -1;
     }
-
-    // public void onZoom()
-    // {
-    //     isZoomed = true;
-    // }
-
-    public string whatItemDragged(int boxIdentity)
-    {
-        spriteRenderer = itemBoxes[boxIdentity].GetComponent<SpriteRenderer>();
-        lastBoxIdentity = boxIdentity;
-        return spriteRenderer.sprite.name;
-    }
-
+// next 4 inv 2
     public void used(string spriteName)
     {
         if (activeInvBox != -1)
@@ -133,9 +125,23 @@ public class Inventory : MonoBehaviour
         itemBoxes[lastBoxIdentity].SetActive(false);
         spriteRenderer.sprite = null;
         nextBox = lastBoxIdentity;
+        activeItemBoxes[lastBoxIdentity] = false;
         
         invItemCount--;
     }
+    // public void onZoom()
+    // {
+    //     isZoomed = true;
+    // }
+
+    // public string whatItemDragged(int boxIdentity)
+    // {
+    //     spriteRenderer = itemBoxes[boxIdentity].GetComponent<SpriteRenderer>();
+    //     lastBoxIdentity = boxIdentity;
+    //     return spriteRenderer.sprite.name;
+    // }
+
+    
 
     public string getActiveItem()
     {

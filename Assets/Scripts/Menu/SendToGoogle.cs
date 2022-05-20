@@ -20,6 +20,7 @@ public class SendToGoogle : MonoBehaviour
        form.AddField("entry.876960760", score);
        byte[] rawData = form.data;
        WWW www = new WWW(BASE_URL, rawData);
+       Debug.Log("Data user: " + name + " and score: " + score + " sent");
        yield return www;
    }
 
