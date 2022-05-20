@@ -76,6 +76,7 @@ public class ChangeScenes : Trigger
             // LivingRoom();
             GameObject.Find("API").GetComponent<SendToGoogle>().Send();
             Menu();
+            Destroy(GameObject.Find("UICanvas"));
         }
     }    
 
