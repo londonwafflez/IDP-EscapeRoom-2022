@@ -2,25 +2,27 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.SceneManagement;
+using TMPro;
 
 public class ChangeScenes : Trigger
 {
     public Inventory inventory;
     public ClockPuzzle clockPuzzle;
     public Sprite openTrapDoor;
+    public GameObject usernameInput;
 
     // Start is called before the first frame update
     public void Menu()
     {
         SceneManager.LoadScene("Menu");
     }
-    public void Start_Cut_Scene()
+    public void Cut_Scene()
     {
-        SceneManager.LoadScene("Start Cut Scene");
+        SceneManager.LoadScene("Cut Scene");
     }
-    public void StoreRoom()
+    public void StorageRoom()
     {
-        SceneManager.LoadScene("Store Room");
+        SceneManager.LoadScene("Storage Room");
     }
         public void Library()
     {
@@ -50,6 +52,7 @@ public class ChangeScenes : Trigger
 
             if (inventory.getActiveItem() == "Key1" && clockPuzzle.appliedRotation - 90 == correctPos)
             {
+                GameObject.Find("HintButton").GetComponent<Hints>().FinishedPuzzle();
                 gameObject.GetComponent<SpriteRenderer>().sprite = openTrapDoor;
                 inventory.used("Key1");
                 Library();
@@ -68,11 +71,19 @@ public class ChangeScenes : Trigger
             }
         } else if (gameObject.name == "TrapDoorOpen")
         {
-            StoreRoom();
+            // StorageRoom();
         } else {
-            LivingRoom();
+            // LivingRoom();
+            GameObject.Find("API").GetComponent<SendToGoogle>().Send();
+            Menu();
         }
     }    
+
+    public void checkUserGoStorageRoom() {
+        if (usernameInput.GetComponent<TMP_InputField>().text != null) {
+            StorageRoom();
+        }
+    }
 
             /*var nextSceneIndex = SceneManager.GetActiveScene().buildIndex + 1;
 

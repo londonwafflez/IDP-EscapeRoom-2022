@@ -5,7 +5,7 @@ using UnityEngine.UI;
 
 public class CountdownTimer : MonoBehaviour
 {
-    public float timeValue=1801;
+    public float timeValue = 1801;
     public Text timerText;
 
     // Update is called once per frame
@@ -33,5 +33,9 @@ public class CountdownTimer : MonoBehaviour
         float seconds = Mathf.FloorToInt(timeTodisplay % 60);
 
         timerText.text = string.Format("{0:00}:{1:00}", minutes, seconds);
+    }
+
+    public void SubtractHintTime() {
+        timeValue -= 30;
     }
 }

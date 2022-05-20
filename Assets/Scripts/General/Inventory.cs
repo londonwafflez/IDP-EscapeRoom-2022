@@ -65,10 +65,17 @@ public class Inventory : MonoBehaviour
                 invBoxes[i].SetActive(true);
                 activeInvBox = i;
 
-                if (itemBoxes[activeInvBox].GetComponent<SpriteRenderer>().sprite.name == "Blacklight") {
+                try {
+                    if (itemBoxes[activeInvBox].GetComponent<SpriteRenderer>().sprite.name == "Blacklight") 
+                    {
                     m_blacklight.holdingBlacklight(true);
-                } else {
-                    m_blacklight.holdingBlacklight(false);
+                    } 
+                    else 
+                    {
+                        m_blacklight.holdingBlacklight(false);
+                    } 
+                } catch {
+                    m_blacklight.holdingBlacklight(false); 
                 }
 
                 if (activeInvBox == popOutItem && popOut != null)

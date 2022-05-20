@@ -8,7 +8,7 @@ public class ShelfTrigger : Trigger
     // public GameObject obj;
     public Sprite[] shelfSprites = new Sprite[9];
     public GameObject[] bookSides = new GameObject[3];
-    public GameObject mockBirdBook, MockBirdInside, door;
+    public GameObject mockBirdBook, mockBirdInside, door;
     // public GameObject shelfZoomed;
     SpriteRenderer spriteRenderer;
     Inventory m_inventory;
@@ -53,6 +53,7 @@ public class ShelfTrigger : Trigger
             bookshelf6.GetComponent<Rigidbody2D>().simulated = true;
             bookshelf6.GetComponent<Rigidbody2D>().velocity = new Vector2(300, 0);
             GameObject.Find("ShelfTrigger (6)").SetActive(false);
+            GameObject.Find("HintButton").GetComponent<Hints>().FinishedPuzzle();
         }
     }
 
@@ -62,10 +63,13 @@ public class ShelfTrigger : Trigger
             {
                 int spriteIndex = charToInt(gameObject.name[14]) - 1;
                 spriteRenderer.sprite = shelfSprites[spriteIndex];
-                if (spriteIndex == 2) { mockBirdBook.SetActive(true); }
+                if (spriteIndex == 2) { 
+                    mockBirdBook.SetActive(true); 
+                    // mockBirdButton.SetActive(true); 
+                }
                 if (isActive && mockBirdBook != null) { 
-                    if (MockBirdInside.activeSelf) {
-                        MockBirdInside.SetActive(false);
+                    if (mockBirdInside.activeSelf) {
+                        mockBirdInside.SetActive(false);
                         break;
                     }
                     mockBirdBook.SetActive(false);
@@ -128,7 +132,8 @@ public class ShelfTrigger : Trigger
         }
         if (mockBirdBook != null) {
             mockBirdBook.SetActive(false);
-            MockBirdInside.SetActive(false);
+            // MockBirdButton.SetActive(true); 
+            mockBirdInside.SetActive(false);
         }
     }
 

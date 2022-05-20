@@ -18,7 +18,7 @@ public class proximityCheck : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if(Vector2.Distance(gameObject.transform.position, mc.transform.position) < 100 && inventory.getActiveItem() == "Blacklight" && mc.transform.position.x > 435) {
+        if(Vector2.Distance(gameObject.transform.position, mc.transform.position) < 125 && inventory.getActiveItem() == "Blacklight" && mc.transform.position.x > 435) {
             blacklightcode.SetActive(true);
         } else {
             blacklightcode.SetActive(false);

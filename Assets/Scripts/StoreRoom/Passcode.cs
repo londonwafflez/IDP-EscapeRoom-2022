@@ -32,6 +32,8 @@ public class Passcode : MonoBehaviour
             spriteRenderer = chest.GetComponent<SpriteRenderer>();
             spriteRenderer.sprite = openChest;
             key1.SetActive(true);
+            GameObject.Find("HintButton").GetComponent<Hints>().FinishedPuzzle();
+            Destroy(chest.GetComponent<Trigger>());
             Destroy(this);
         }
 
