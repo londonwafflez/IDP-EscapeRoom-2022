@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class Player : MonoBehaviour
 {
@@ -16,6 +17,8 @@ public class Player : MonoBehaviour
     private Vector2 input;
     private bool moving;
 
+    bool allKeyClicked, wClicked, aClicked, sClicked, dClicked;
+
     private void Start(){
         rb = GetComponent<Rigidbody2D>();
     }
@@ -30,6 +33,29 @@ public class Player : MonoBehaviour
     private void GetInput(){
         x = Input.GetAxisRaw("Horizontal");
         y = Input.GetAxisRaw("Vertical");
+
+        if (!allKeyClicked && SceneManager.GetActiveScene().name == "Storage Room") {
+            if (!wClicked && y == 1) {
+                Debug.Log("W clicked");
+                wClicked = true;
+            }
+            if (!aClicked && x == -1) {
+                Debug.Log("A clicked");
+                aClicked = true;
+            }
+            if (!sClicked && y == -1) {
+                Debug.Log("S clicked");
+                sClicked = true; 
+            }
+            if (!dClicked && y == -1) {
+                Debug.Log("D clicked");
+                dClicked = true;
+            }
+            if (wClicked && aClicked && sClicked && dClicked) {
+                allKeyClicked = true;
+                GameObject.Find("HintButton").GetComponent<Hints>().NextPrompt();
+            }
+        }
 
         input = new Vector2(x, y);
         input.Normalize(); 

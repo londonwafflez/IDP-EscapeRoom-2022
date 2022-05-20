@@ -24,7 +24,49 @@ public class Inventory : MonoBehaviour
     blacklight m_blacklight;
     // bool isZoomed = false;
 
-    //Start is called before the first frame update
+    void setActiveItemBox(int i) {
+        do {
+                if (activeInvBox == i)
+            {
+                invBoxes[i].SetActive(false);
+                activeInvBox = -1;
+                if (popOut != null)
+                    popOut.SetActive(false);
+                break;
+            }
+
+            if (activeInvBox != -1)
+            {
+                if (popOut != null)
+                    popOut.SetActive(false);
+                invBoxes[activeInvBox].SetActive(false);
+            }
+            invBoxes[i].SetActive(true);
+            activeInvBox = i;
+
+            try {
+                if (itemBoxes[activeInvBox].GetComponent<SpriteRenderer>().sprite.name == "Blacklight") 
+                {
+                m_blacklight.holdingBlacklight(true);
+                } 
+                else 
+                {
+                    m_blacklight.holdingBlacklight(false);
+                } 
+            } catch {
+                m_blacklight.holdingBlacklight(false); 
+            }
+
+            if (activeInvBox == popOutItem && popOut != null)
+            {
+                popOut.GetComponent<SpriteRenderer>().sprite = itemBoxes[activeInvBox].GetComponent<SpriteRenderer>().sprite;
+                popOut.SetActive(true);
+            }
+            break;
+        } while (false);
+    }
+
+
     void Start()
     {
         spriteRenderer = GetComponent<SpriteRenderer>();
@@ -48,43 +90,7 @@ public class Inventory : MonoBehaviour
         {
             if (Input.GetKeyDown(keyCodes[i]))
             {   
-                if (activeInvBox == i)
-                {
-                    invBoxes[i].SetActive(false);
-                    activeInvBox = -1;
-                    if (popOut != null)
-                        popOut.SetActive(false);
-                    break;
-                }
-
-                if (activeInvBox != -1)
-                {
-                    if (popOut != null)
-                        popOut.SetActive(false);
-                    invBoxes[activeInvBox].SetActive(false);
-                }
-                invBoxes[i].SetActive(true);
-                activeInvBox = i;
-
-                try {
-                    if (itemBoxes[activeInvBox].GetComponent<SpriteRenderer>().sprite.name == "Blacklight") 
-                    {
-                    m_blacklight.holdingBlacklight(true);
-                    } 
-                    else 
-                    {
-                        m_blacklight.holdingBlacklight(false);
-                    } 
-                } catch {
-                    m_blacklight.holdingBlacklight(false); 
-                }
-
-                if (activeInvBox == popOutItem && popOut != null)
-                {
-                    popOut.GetComponent<SpriteRenderer>().sprite = itemBoxes[activeInvBox].GetComponent<SpriteRenderer>().sprite;
-                    popOut.SetActive(true);
-                }
-                break;
+                setActiveItemBox(i);
             }
         }
     }
@@ -141,7 +147,9 @@ public class Inventory : MonoBehaviour
     //     return spriteRenderer.sprite.name;
     // }
 
-    
+    public void clickActive(int boxIdentity) {
+        setActiveItemBox(boxIdentity);
+    }
 
     public string getActiveItem()
     {

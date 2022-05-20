@@ -38,7 +38,7 @@ public class DragBox : MonoBehaviour
         if ((spriteLoc.x > topLeftBound.x && spriteLoc.x < botRightBound.x) && (spriteLoc.y > botRightBound.y && spriteLoc.y < topLeftBound.y))
         {
             Debug.Log("Correct area");
-            if(spriteName == checkingFor)
+            if (spriteName == checkingFor)
             {
                 m_inventory.used(checkingFor);
                 Debug.Log("found");
