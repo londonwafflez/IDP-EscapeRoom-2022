@@ -47,6 +47,21 @@ TagManager:
   - name: UI
     uniqueID: 3358305739
     locked: 0
-  - name: New Layer 3
+  - name: ' '
     uniqueID: 1211259207
+    locked: 0
+  - name: ' '
+    uniqueID: 143262549
+    locked: 0
+  - name: ' '
+    uniqueID: 2139513529
+    locked: 0
+  - name: ' '
+    uniqueID: 1897753485
+    locked: 0
+  - name: ' '
+    uniqueID: 971932975
+    locked: 0
+  - name: Dialogue
+    uniqueID: 3252889991
     locked: 0

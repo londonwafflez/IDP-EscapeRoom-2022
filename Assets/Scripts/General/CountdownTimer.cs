@@ -8,7 +8,7 @@ public class CountdownTimer : MonoBehaviour
     public float timeValue = 1801;
     public Text timerText;
 
-    // Update is called once per frame
+
     void Update()
     {
         if (timeValue > 0)
@@ -19,7 +19,6 @@ public class CountdownTimer : MonoBehaviour
         {
             timeValue = 0;
         }
-
         DisplayTime(timeValue);   
     }
 

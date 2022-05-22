@@ -1,0 +1,46 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ef8e2d3b8db03e4449333e8146392a1f, type: 3}
+  m_Name: 5.StorageRoom
+  m_EditorClassIdentifier: 
+  sentences:
+  - text: Hmm, Where am I?
+    speaker: {fileID: 11400000, guid: c91b125d574570e42b6955cd1c87cccf, type: 2}
+  - text: "Yay! I haven\u2019t had anyone come visit me since I died. Thank you for
+      joining me to keep me company!"
+    speaker: {fileID: 11400000, guid: 9513e85715b355d4796c400a900cba4f, type: 2}
+  - text: AAAAAAAAAAAHHHH who are you!
+    speaker: {fileID: 11400000, guid: c91b125d574570e42b6955cd1c87cccf, type: 2}
+  - text: I'm the ghost that has been haunting this house for many years. Please
+      help me. I need your help badly.
+    speaker: {fileID: 11400000, guid: 9513e85715b355d4796c400a900cba4f, type: 2}
+  - text: "I\u2019m sorry, but I have to go home to my mom."
+    speaker: {fileID: 11400000, guid: c91b125d574570e42b6955cd1c87cccf, type: 2}
+  - text: "Too late. You\u2019re trapped in this house. I won\u2019t let you leave
+      until you help me."
+    speaker: {fileID: 11400000, guid: 9513e85715b355d4796c400a900cba4f, type: 2}
+  - text: "WHAT? I can\u2019t. My mom is going to be mad if I stay past curfew!"
+    speaker: {fileID: 11400000, guid: c91b125d574570e42b6955cd1c87cccf, type: 2}
+  - text: "I\u2019ll let you go home to your mom when you finish helping me."
+    speaker: {fileID: 11400000, guid: 9513e85715b355d4796c400a900cba4f, type: 2}
+  - text: Ok fine. What do you need?
+    speaker: {fileID: 11400000, guid: c91b125d574570e42b6955cd1c87cccf, type: 2}
+  - text: My father was an inventor who rigged the house with secrets and passageways
+      in order to hide a secret artifact. It can free the souls of the dead.
+    speaker: {fileID: 11400000, guid: 9513e85715b355d4796c400a900cba4f, type: 2}
+  - text: "He used it to free himself when he became a ghost. But he hid that artifact
+      somewhere in the house, and I can\u2019t find it."
+    speaker: {fileID: 11400000, guid: 9513e85715b355d4796c400a900cba4f, type: 2}
+  - text: "I\u2019ll let you go once you find it. Goodbye."
+    speaker: {fileID: 11400000, guid: 9513e85715b355d4796c400a900cba4f, type: 2}
+  background: {fileID: 21300000, guid: d6be2be0f6c5ef7499cd5d79e2aeb25b, type: 3}
+  nextScene: {fileID: 0}

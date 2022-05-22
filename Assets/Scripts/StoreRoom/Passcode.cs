@@ -16,12 +16,14 @@ public class Passcode : MonoBehaviour
     string alpha;
     public Text UiText = null;
 
+
     public void CodeFunction(string Numbers)
     {
         NrIndex++;
         Nr = Nr + Numbers;
         UiText.text = Nr;
     }
+
 
     public void Enter()
     {
@@ -35,6 +37,7 @@ public class Passcode : MonoBehaviour
             GameObject.Find("HintButton").GetComponent<Hints>().FinishedPuzzle();
             Destroy(chest.GetComponent<Trigger>());
             Destroy(this);
+
         }
 
         if (Nr != Code)

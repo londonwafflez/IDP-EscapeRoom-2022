@@ -1,0 +1,26 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ef8e2d3b8db03e4449333e8146392a1f, type: 3}
+  m_Name: 2.TrickOrTreat
+  m_EditorClassIdentifier: 
+  sentences:
+  - text: "We\u2019ve been trick or treating for a while.. Look how much candy we
+      have!"
+    speaker: {fileID: 11400000, guid: c91b125d574570e42b6955cd1c87cccf, type: 2}
+  - text: "There\u2019s a lot of candy in our bags. Do we still want to trick or
+      treat?"
+    speaker: {fileID: 11400000, guid: f8cc8d893a8cbfb408cb7126f253ca5a, type: 2}
+  - text: "Look over there at that house, it\u2019s spooky. Maybe the owners of that
+      house set up a haunted maze."
+    speaker: {fileID: 11400000, guid: 86c83c7c17e14d344a93fbee6b2f8a4c, type: 2}
+  background: {fileID: 21300000, guid: a4cbbb2d41ce2dd4794c1e4114dc73bc, type: 3}
+  nextScene: {fileID: 0}

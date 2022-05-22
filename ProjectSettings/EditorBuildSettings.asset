@@ -23,4 +23,16 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/Storage Room.unity
     guid: 8bd64c754938b3e428960c88f82dc1bf
+  - enabled: 1
+    path: Assets/Scenes/Cutscenes/1Home.unity
+    guid: 6bee26a97c481014daee376313516190
+  - enabled: 1
+    path: Assets/Scenes/Cutscenes/2TrickOrTreat.unity
+    guid: 987fbecf51e6a09469ea68c1c849305b
+  - enabled: 1
+    path: Assets/Scenes/Cutscenes/3Outside.unity
+    guid: fa0f4ebf0be7b194bb0fc23585a85890
+  - enabled: 1
+    path: Assets/Scenes/Cutscenes/4Inside.unity
+    guid: 879c9fd2be5ff92459423b9279073d68
   m_configObjects: {}
