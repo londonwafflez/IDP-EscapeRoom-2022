@@ -5,21 +5,28 @@ using UnityEngine.UI;
 
 public class CountdownTimer : MonoBehaviour
 {
-    public float timeValue = 1801;
+    public float timeValue = 1800;
     public Text timerText;
+    GameController2 dialogueScript;
 
+    void Start() {
+        dialogueScript = GameObject.Find("DialogueCanvas").GetComponent<GameController2>();
+        DisplayTime(timeValue); 
+    }
 
     void Update()
     {
-        if (timeValue > 0)
-        {
-            timeValue -= Time.deltaTime;
+        if (dialogueScript.isDialogueDone()) {
+            if (timeValue > 0)
+            {
+                timeValue -= Time.deltaTime;
+            }
+            else
+            {
+                timeValue = 0;
+            }
+            DisplayTime(timeValue);   
         }
-        else
-        {
-            timeValue = 0;
-        }
-        DisplayTime(timeValue);   
     }
 
     void DisplayTime(float timeTodisplay)

@@ -64,6 +64,7 @@ public class Inventory : MonoBehaviour
             }
             break;
         } while (false);
+        Debug.Log("setActiveInvBox has run");
     }
 
 
@@ -90,6 +91,7 @@ public class Inventory : MonoBehaviour
         {
             if (Input.GetKeyDown(keyCodes[i]))
             {   
+                Debug.Log(keyCodes[i] + " clicked");
                 setActiveItemBox(i);
             }
         }

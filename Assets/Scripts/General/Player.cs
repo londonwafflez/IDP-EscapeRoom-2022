@@ -19,13 +19,19 @@ public class Player : MonoBehaviour
 
     bool allKeyClicked, wClicked, aClicked, sClicked, dClicked;
 
+    GameController2 dialogueScript;
+
     private void Start(){
         rb = GetComponent<Rigidbody2D>();
+        dialogueScript = GameObject.Find("DialogueCanvas").GetComponent<GameController2>();
     }
 
     private void Update() {
-        GetInput();
-        Animate();
+        if (dialogueScript.isDialogueDone())
+        {
+            GetInput();
+            Animate();
+        }
     }
     private void FixedUpdate() {
         rb.velocity = input * moveSpeed;

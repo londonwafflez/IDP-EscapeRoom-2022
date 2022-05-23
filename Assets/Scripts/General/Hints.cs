@@ -10,9 +10,11 @@ public class Hints : MonoBehaviour
     int puzzleNum, hintsGiven;
     public GameObject hintTextBox, originalOldHintButton, oldHintButtons, warning;
     TextMeshPro TMP;
+    GameController2 dialogueScript;
     GameObject oldHintButton;
     int lastHintGiven = -1;
     bool doneTyping = true;
+    bool firstHasRun = false;
     string activeSentence;
     string[] hintsText = new string[9]
     {
@@ -41,11 +43,16 @@ public class Hints : MonoBehaviour
     void Start()
     {
        m_cdTimer = GameObject.Find("TimerText").GetComponent<CountdownTimer>();
-       StartCoroutine(TypeSentence(prompts[curPrompt]));
+       dialogueScript = GameObject.Find("DialogueCanvas").GetComponent<GameController2>();
     }
 
     void Update() {
-        if (Input.GetKeyDown(KeyCode.F) || Input.GetKeyDown(KeyCode.Space) && doneTyping)
+        if (!firstHasRun && dialogueScript.isDialogueDone()) {
+            StartCoroutine(TypeSentence(prompts[curPrompt]));
+            firstHasRun = true;
+        }
+
+        if ((Input.GetKeyDown(KeyCode.F) || Input.GetKeyDown(KeyCode.Space)) && doneTyping)
         {
             hintTextBox.SetActive(false);
         }
@@ -117,7 +124,6 @@ public class Hints : MonoBehaviour
 
 	IEnumerator TypeSentence (string sentence)
 	{
-        activeSentence = sentence;
         hintTextBox.SetActive(true);
         doneTyping = false;
 		hintTextBoxText.text = "";
@@ -132,4 +138,11 @@ public class Hints : MonoBehaviour
 		}
         doneTyping = true;
 	}
+
+    void callTypeSentence(string sentence) {
+        if (doneTyping) {
+            StopAllCoroutines();
+            StartCoroutine(TypeSentence(sentence));
+        }
+    }
 }
