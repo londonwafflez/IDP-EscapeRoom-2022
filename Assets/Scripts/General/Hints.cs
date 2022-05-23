@@ -8,7 +8,7 @@ public class Hints : MonoBehaviour
 {
     public Text hintTextBoxText;
     int puzzleNum, hintsGiven;
-    public GameObject hintTextBox, originalOldHintButton, oldHintButtons;
+    public GameObject hintTextBox, originalOldHintButton, oldHintButtons, warning;
     TextMeshPro TMP;
     GameObject oldHintButton;
     int lastHintGiven = -1;
@@ -49,6 +49,20 @@ public class Hints : MonoBehaviour
         {
             hintTextBox.SetActive(false);
         }
+    }
+
+    void confirmHint()
+    {
+        warning.SetActive(true);
+    }
+
+    public void hintConfirmed(bool confirmed)
+    {
+        if (confirmed)
+        {
+            giveHint();
+        }
+        warning.SetActive(true);
     }
 
     public void giveHint() {
