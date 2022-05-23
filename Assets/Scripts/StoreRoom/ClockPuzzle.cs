@@ -29,6 +29,7 @@ public class ClockPuzzle : MonoBehaviour
         insideClock.SetActive(false);*/
         string dt = DateTime.Now.ToString("hh");
         curHour = int.Parse(dt);
+        GameObject.Find("HintButton").GetComponent<Hints>().SetPrompt(2);
     }
 
     void Update()
@@ -43,6 +44,7 @@ public class ClockPuzzle : MonoBehaviour
                 // trigger.SetActive(false);
                 insideClock.SetActive(true);
                 GameObject.Find("HintButton").GetComponent<Hints>().FinishedPuzzle();
+                GameObject.Find("HintButton").GetComponent<Hints>().SetPrompt(3);
                 wait = false;
             }
         }

@@ -32,7 +32,8 @@ public class Hints : MonoBehaviour
         "Use F or Spacebar to interact with objects",
         "You could move the clockhand by dragging it to the desired position",
         "Activate items in the inventory with 1, 2, 3... or click the item on the hotbar then use F or Spacebar to use it",
-        "Click the numbers on the screen to enter the passowrd"
+        "Click the numbers on the screen to enter the passowrd",
+        "Place the books in empty bookshelves by interacting with a bookshelf and then use F or Spacebar again with an active item"
     };
 
     CountdownTimer m_cdTimer;
