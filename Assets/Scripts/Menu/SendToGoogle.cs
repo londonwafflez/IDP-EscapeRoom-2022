@@ -27,9 +27,7 @@ public class SendToGoogle : MonoBehaviour
    public void Send()
    {
        CountdownTimer m_cdTimer = GameObject.Find("TimerText").GetComponent<CountdownTimer>();
-        float minutes = Mathf.FloorToInt(m_cdTimer.timeValue / 60);
-        float seconds = Mathf.FloorToInt(m_cdTimer.timeValue % 60);
-        Score = string.Format("{0:00}:{1:00}", minutes, seconds); //score.GetComponent<InputField>().text;
+        Score = m_cdTimer.timeValue.ToString(); //score.GetComponent<InputField>().text;
 
        StartCoroutine(Post(Name, Score));
     }

@@ -14,6 +14,7 @@ public class ChangeScenes : Trigger
     // Start is called before the first frame update
     public void Menu()
     {
+        if (GameObject.Find("UICanvas") != null) Destroy(GameObject.Find("UICanvas"));
         SceneManager.LoadScene("Menu");
     }
     public void Cut_Scene()
@@ -30,7 +31,7 @@ public class ChangeScenes : Trigger
     }
     public void LivingRoom()
     {
-        SceneManager.LoadScene("LivingRoom");
+        SceneManager.LoadScene("Living Room");
     }
     public void exitgame()
     {
@@ -55,6 +56,7 @@ public class ChangeScenes : Trigger
                 GameObject.Find("HintButton").GetComponent<Hints>().FinishedPuzzle();
                 gameObject.GetComponent<SpriteRenderer>().sprite = openTrapDoor;
                 inventory.used("Key1");
+                if (GameObject.Find("API") != null) GameObject.Find("API").GetComponent<SendToGoogle>().Send();
                 Library();
             }
             else if (inventory.getActiveItem() == "Key1")
@@ -74,9 +76,9 @@ public class ChangeScenes : Trigger
             // StorageRoom();
         } else {
             // LivingRoom();
-            GameObject.Find("API").GetComponent<SendToGoogle>().Send();
-            Menu();
-            Destroy(GameObject.Find("UICanvas"));
+
+            if (GameObject.Find("API") != null) GameObject.Find("API").GetComponent<SendToGoogle>().Send();
+            LivingRoom();
         }
     }    
 

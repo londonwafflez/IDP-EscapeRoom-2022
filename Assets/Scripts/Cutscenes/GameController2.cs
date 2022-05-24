@@ -14,15 +14,16 @@ public class GameController2 : MonoBehaviour
     public SpriteRenderer bar;
     public GameObject ghost;
     bool dialogueDone;
+    
 
     void Start()
     {
         bottomBar.PlayScene(currentScene);
     }
-
+ 
     void Update()
     {
-        if  (Input.GetKeyDown(KeyCode.Space))
+        if  (Input.GetKeyDown(KeyCode.Space) || Input.GetKeyDown(KeyCode.F))
         {
             if(bottomBar.IsCompleted())
             {
@@ -31,13 +32,17 @@ public class GameController2 : MonoBehaviour
                     dialogueDone = true;
 
                     // Move ghost out of screen and turn it to face correct way as leaving
-                    ghost.GetComponent<SpriteRenderer>().flipX = true;
-                    ghost.GetComponent<Rigidbody>().velocity = new Vector2(100, 0);
 
-                    for (int i = 0; i < 30; i++)
-                    {
-                        ghost.transform.rotation = new Quaternion(0, 0, 30, 0);
+                    if (ghost != null) {
+                        ghost.GetComponent<SpriteRenderer>().flipX = true;
+                        ghost.GetComponent<Rigidbody>().velocity = new Vector2(-100, 0);
                     }
+                    // ghost.transform.rotation = new Quaternion(0, 0, 30, 0);
+
+                    // for (int i = 0; i < 30; i++)
+                    // {
+                        
+                    // }
 /*
                     for (int i = 0; i < 100; i++)
                     {

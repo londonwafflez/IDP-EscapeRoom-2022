@@ -21,10 +21,18 @@ public class Player : MonoBehaviour
 
     GameController2 dialogueScript;
 
+    bool isTyping;
+
     private void Start(){
         rb = GetComponent<Rigidbody2D>();
-        if(!(SceneManager.GetActiveScene().name == "Living Room"))
+        if(SceneManager.GetActiveScene().name == "Storage Room")
+        {
             dialogueScript = GameObject.Find("DialogueCanvas").GetComponent<GameController2>();
+        }
+        else if (SceneManager.GetActiveScene().name == "Library")
+        {
+            dialogueScript = GameObject.Find("DialogueCanvas (1)").GetComponent<GameController2>();
+        }
     }
 
     private void Update() {
@@ -34,6 +42,9 @@ public class Player : MonoBehaviour
                 GetInput();
                 Animate();
             } 
+        } else if (!isTyping) {
+            GetInput();
+            Animate();
         }
     }
     private void FixedUpdate() {
@@ -87,5 +98,9 @@ public class Player : MonoBehaviour
        }
 
        anim.SetBool("Moving", moving);
+    }
+
+    public void typing(bool isTyping) {
+        this.isTyping = isTyping;
     }
 }

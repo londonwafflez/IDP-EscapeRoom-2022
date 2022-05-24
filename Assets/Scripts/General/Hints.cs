@@ -13,7 +13,7 @@ public class Hints : MonoBehaviour
     GameController2 dialogueScript;
     GameObject oldHintButton;
     int lastHintGiven = -1;
-    bool doneTyping = true;
+    static bool doneTyping = true;
     bool firstHasRun = false;
     string activeSentence;
     string[] hintsText = new string[9]
@@ -30,7 +30,7 @@ public class Hints : MonoBehaviour
     };
     int curPrompt = 0;
     string[] prompts = new string[] {
-        "Use W, A, S, and D to move up, left, down, and right",
+        "Use W, A, S, and D or arrow keys to move up, left, down, and right",
         "Use F or Spacebar to interact with objects",
         "You could move the clockhand by dragging it to the desired position",
         "Activate items in the inventory with 1, 2, 3... or click the item on the hotbar then use F or Spacebar to use it",
@@ -58,7 +58,7 @@ public class Hints : MonoBehaviour
         }
     }
 
-    void confirmHint()
+    public void confirmHint()
     {
         warning.SetActive(true);
     }
@@ -67,9 +67,10 @@ public class Hints : MonoBehaviour
     {
         if (confirmed)
         {
+            Debug.Log("run givehint");
             giveHint();
         }
-        warning.SetActive(true);
+        warning.SetActive(false);
     }
 
     public void giveHint() {
