@@ -23,14 +23,17 @@ public class Player : MonoBehaviour
 
     private void Start(){
         rb = GetComponent<Rigidbody2D>();
-        dialogueScript = GameObject.Find("DialogueCanvas").GetComponent<GameController2>();
+        if(!(SceneManager.GetActiveScene().name == "Living Room"))
+            dialogueScript = GameObject.Find("DialogueCanvas").GetComponent<GameController2>();
     }
 
     private void Update() {
-        if (dialogueScript.isDialogueDone())
-        {
-            GetInput();
-            Animate();
+        if (dialogueScript != null) {
+            if (dialogueScript.isDialogueDone())
+            {
+                GetInput();
+                Animate();
+            } 
         }
     }
     private void FixedUpdate() {

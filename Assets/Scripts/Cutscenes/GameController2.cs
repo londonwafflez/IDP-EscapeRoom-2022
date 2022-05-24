@@ -31,8 +31,19 @@ public class GameController2 : MonoBehaviour
                     dialogueDone = true;
 
                     // Move ghost out of screen and turn it to face correct way as leaving
-                    // ghost.transform.position = new Vector3()
-                    // ghost.GetComponent<SpriteRenderer>()
+                    ghost.GetComponent<SpriteRenderer>().flipX = true;
+                    ghost.GetComponent<Rigidbody>().velocity = new Vector2(100, 0);
+
+                    for (int i = 0; i < 30; i++)
+                    {
+                        ghost.transform.rotation = new Quaternion(0, 0, 30, 0);
+                    }
+/*
+                    for (int i = 0; i < 100; i++)
+                    {
+
+                        ghost.transform.rotation = Quaternion.LookRotation(new Vector3(0, 0, i*2), Vector3.up);
+                    }*/
 
                     dialogue_canvas.enabled = false;
                     bar.enabled = false; 
