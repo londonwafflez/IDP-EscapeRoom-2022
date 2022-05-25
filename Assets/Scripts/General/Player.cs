@@ -103,7 +103,6 @@ public class Player : MonoBehaviour
        {
            anim.SetFloat("X", x);
            anim.SetFloat("Y", y);
-
        }
 
        anim.SetBool("Moving", moving);
@@ -111,6 +110,6 @@ public class Player : MonoBehaviour
 
     public void typing(bool isTyping) {
         this.isTyping = isTyping;
-        computerTrigger.enabled = isTyping;
+        computerTrigger.enabled = !isTyping;
     }
 }

@@ -33,7 +33,7 @@ public class Walk : MonoBehaviour
                 sprite.sortingOrder = 7;
                 if (thresh3 != null && (MainCharacter.transform.position.y > thresh3)) 
                 {
-                    sprite.sortingOrder = 5;
+                    sprite.sortingOrder = 4;
                 }
             }
         }
