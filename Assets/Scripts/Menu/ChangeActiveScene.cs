@@ -50,7 +50,7 @@ public class ChangeActiveScene : Trigger
 
     protected override void toRun()
     {
-        if (activeScene == "Storage Room")
+        if (activeScene == "StorageRoom")
         {
 
             int correctPos = 0; // Correct time is 12; see clockpuzzle.cs for full conversion
@@ -63,8 +63,10 @@ public class ChangeActiveScene : Trigger
                 if (GameObject.Find("API") != null) GameObject.Find("API").GetComponent<SendToGoogle>().Send();
                 Library();
             }
-            else
+            else if (gameObject.name == "TrapDoorOpen")
             {
+                Library();
+            } else {
                 m_hints.SetPrompt(6);
             }
 
@@ -72,8 +74,11 @@ public class ChangeActiveScene : Trigger
         else if (gameObject.name == "TrapDoorOpen")
         {
             StorageRoom();
-        } else {
-            LivingRoom();
+        } else if (gameObject.name == "door") {
+            if (activeScene == "LivingRoom")
+                Library();
+            else 
+                LivingRoom();
         }
     }
 

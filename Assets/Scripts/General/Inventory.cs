@@ -54,7 +54,7 @@ public class Inventory : MonoBehaviour
                     m_blacklight.holdingBlacklight(false);
                 } 
             } catch {
-                m_blacklight.holdingBlacklight(false); 
+                // m_blacklight.holdingBlacklight(false); 
             }
 
             if (activeInvBox == popOutItem && popOut != null)
