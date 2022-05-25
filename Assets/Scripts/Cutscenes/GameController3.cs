@@ -12,42 +12,31 @@ public class GameController3 : MonoBehaviour
     public BottomBarController bottomBar;
     public Behaviour dialogue_canvas;
     public SpriteRenderer bar;
-    bool isDone = false;
 
 
+    public void Started()
+    {
+        bar.enabled = true;
+        bottomBar.PlayScene(currentScene);
+    }
 
     void Update()
     {
 
-        if (isDone == false)
+        if  (Input.GetKeyDown(KeyCode.Space))
         {
-            if (bar.enabled == true && dialogue_canvas.enabled == true)
+            if(bottomBar.IsCompleted())
             {
-                bottomBar.PlayScene(currentScene);
-                isDone = true;
-            }
-        }
-
-        if (isDone == true)
-        {
-
-            if  (Input.GetKeyDown(KeyCode.Space))
-            {
-                if(bottomBar.IsCompleted())
+                if(bottomBar.IsLastSentence())
                 {
-                    if(bottomBar.IsLastSentence())
-                    {
-
-                        dialogue_canvas.enabled = false;
-                        bar.enabled = false;               
-                    }
-                    else
-                    {
-                    bottomBar.PlayNextSentence();
-                    }
-
+                    bar.enabled = false;               
                 }
-            }
-        }
+                else
+                {
+                bottomBar.PlayNextSentence();
+                }
+
+             }
+         }
     }
 }

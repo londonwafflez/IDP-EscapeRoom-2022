@@ -42,14 +42,16 @@ public class Player : MonoBehaviour
             } else {
                 computerTrigger = GameObject.Find("computer").GetComponent<Trigger>();
             }
-        } else {
+        } 
+        else {
             if (SceneManager.GetActiveScene().name == "Storage Room") {
                 dialogueScript = GameObject.Find("DialogueCanvas").GetComponent<GameController2>();
             }
             else if (SceneManager.GetActiveScene().name == "Library")
             {
                 dialogueScript = GameObject.Find("DialogueCanvas").GetComponent<GameController2>();
-            } else {
+            } 
+            else {
                 computerTrigger = GameObject.Find("computer").GetComponent<Trigger>();
             }
         }
