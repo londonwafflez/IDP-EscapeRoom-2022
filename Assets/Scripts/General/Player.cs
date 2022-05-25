@@ -21,22 +21,37 @@ public class Player : MonoBehaviour
 
     GameController2 dialogueScript;
     Trigger computerTrigger;
-    GameObject computerCanvas;
+    public GameObject computerCanvas;
 
     bool isTyping;
 
+    ChangeActiveScene m_scene;
+
     private void Start(){
         rb = GetComponent<Rigidbody2D>();
-        if(SceneManager.GetActiveScene().name == "Storage Room")
-        {
-            dialogueScript = GameObject.Find("DialogueCanvas").GetComponent<GameController2>();
-        }
-        else if (SceneManager.GetActiveScene().name == "Library")
-        {
-            dialogueScript = GameObject.Find("DialogueCanvas (1)").GetComponent<GameController2>();
+        if (GameObject.Find("InSceneSceneChanger") != null) {            
+            m_scene = GameObject.Find("InSceneSceneChanger").GetComponent<ChangeActiveScene>();
+
+            if(m_scene.getScene() == "StorageRoom")
+            {
+                dialogueScript = GameObject.Find("DialogueCanvas").GetComponent<GameController2>();
+            }
+            else if (m_scene.getScene() == "Library")
+            {
+                dialogueScript = GameObject.Find("DialogueCanvas").GetComponent<GameController2>();
+            } else {
+                computerTrigger = GameObject.Find("computer").GetComponent<Trigger>();
+            }
         } else {
-            computerTrigger = GameObject.Find("computer").GetComponent<Trigger>();
-            computerCanvas = GameObject.Find("ComputerCanvas");
+            if (SceneManager.GetActiveScene().name == "Storage Room") {
+                dialogueScript = GameObject.Find("DialogueCanvas").GetComponent<GameController2>();
+            }
+            else if (SceneManager.GetActiveScene().name == "Library")
+            {
+                dialogueScript = GameObject.Find("DialogueCanvas").GetComponent<GameController2>();
+            } else {
+                computerTrigger = GameObject.Find("computer").GetComponent<Trigger>();
+            }
         }
     }
 
@@ -52,7 +67,7 @@ public class Player : MonoBehaviour
             Animate();
         }
         if (isTyping) {
-            if (computerCanvas.activeSelf == false) 
+            if (!computerCanvas.activeSelf) 
                 typing(false);
         }
     }
@@ -103,7 +118,6 @@ public class Player : MonoBehaviour
        {
            anim.SetFloat("X", x);
            anim.SetFloat("Y", y);
-
        }
 
        anim.SetBool("Moving", moving);
@@ -111,6 +125,6 @@ public class Player : MonoBehaviour
 
     public void typing(bool isTyping) {
         this.isTyping = isTyping;
-        computerTrigger.enabled = isTyping;
+        computerTrigger.enabled = !isTyping;
     }
 }

@@ -4,11 +4,12 @@ using UnityEngine;
 
 public class ChangeCellDoor : ChangeSprite
 {
-    public Inventory inventory;
+    Inventory inventory;
     GameObject closedCellDoor;
     GameObject openCellDoor;
 
     new void Start() {
+        inventory = GameObject.Find("inventory").GetComponent<Inventory>();
         spriteRenderer = GetComponent<SpriteRenderer>();
         closedCellDoor = GameObject.Find("CellDoor");
         openCellDoor = GameObject.Find("CellDoorOpen");
