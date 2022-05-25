@@ -20,6 +20,8 @@ public class Player : MonoBehaviour
     bool allKeyClicked, wClicked, aClicked, sClicked, dClicked;
 
     GameController2 dialogueScript;
+    Trigger computerTrigger;
+    GameObject computerCanvas;
 
     bool isTyping;
 
@@ -32,6 +34,9 @@ public class Player : MonoBehaviour
         else if (SceneManager.GetActiveScene().name == "Library")
         {
             dialogueScript = GameObject.Find("DialogueCanvas (1)").GetComponent<GameController2>();
+        } else {
+            computerTrigger = GameObject.Find("computer").GetComponent<Trigger>();
+            computerCanvas = GameObject.Find("ComputerCanvas");
         }
     }
 
@@ -45,6 +50,10 @@ public class Player : MonoBehaviour
         } else if (!isTyping) {
             GetInput();
             Animate();
+        }
+        if (isTyping) {
+            if (computerCanvas.activeSelf == false) 
+                typing(false);
         }
     }
     private void FixedUpdate() {
@@ -102,5 +111,6 @@ public class Player : MonoBehaviour
 
     public void typing(bool isTyping) {
         this.isTyping = isTyping;
+        computerTrigger.enabled = isTyping;
     }
 }
