@@ -10,6 +10,7 @@ public class ChangeScenes : Trigger
     public ClockPuzzle clockPuzzle;
     public Sprite openTrapDoor;
     public GameObject usernameInput;
+    Hints m_hints;
 
     // Start is called before the first frame update
     public void Menu()
@@ -24,6 +25,7 @@ public class ChangeScenes : Trigger
     public void StorageRoom()
     {
         SceneManager.LoadScene("Storage Room");
+        m_hints = GameObject.Find("HintButton").GetComponent<Hints>();
     }
         public void Library()
     {
@@ -49,11 +51,12 @@ public class ChangeScenes : Trigger
     {
         if (SceneManager.GetActiveScene().name == "Storage Room")
         {
+
             int correctPos = 0; // Correct time is 12; see clockpuzzle.cs for full conversion
 
             if (inventory.getActiveItem() == "Key1" && clockPuzzle.appliedRotation - 90 == correctPos)
             {
-                GameObject.Find("HintButton").GetComponent<Hints>().FinishedPuzzle();
+                m_hints.FinishedPuzzle();
                 gameObject.GetComponent<SpriteRenderer>().sprite = openTrapDoor;
                 inventory.used("Key1");
                 if (GameObject.Find("API") != null) GameObject.Find("API").GetComponent<SendToGoogle>().Send();
@@ -61,7 +64,7 @@ public class ChangeScenes : Trigger
             }
             else if (inventory.getActiveItem() == "Key1")
             {
-                Debug.Log("Something else is missing");
+                m_hints.SetPrompt(6);
             }
             else if (clockPuzzle.appliedRotation - 90 == correctPos)
             {
