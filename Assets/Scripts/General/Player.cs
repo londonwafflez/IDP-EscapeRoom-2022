@@ -25,13 +25,17 @@ public class Player : MonoBehaviour
 
     bool isTyping;
 
+    ChangeActiveScene m_scene;
+
     private void Start(){
         rb = GetComponent<Rigidbody2D>();
-        if(SceneManager.GetActiveScene().name == "Storage Room")
+        m_scene = GameObject.Find("InSceneSceneChanger").GetComponent<ChangeActiveScene>();
+
+        if(m_scene.getScene() == "StorageRoom")
         {
             dialogueScript = GameObject.Find("DialogueCanvas").GetComponent<GameController2>();
         }
-        else if (SceneManager.GetActiveScene().name == "Library")
+        else if (m_scene.getScene() == "Library")
         {
             dialogueScript = GameObject.Find("DialogueCanvas (1)").GetComponent<GameController2>();
         } else {
