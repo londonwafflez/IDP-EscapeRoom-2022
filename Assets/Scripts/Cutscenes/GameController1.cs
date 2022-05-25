@@ -11,7 +11,6 @@ public class GameController1 : MonoBehaviour
     public StoryScene currentScene;
     public BottomBarController bottomBar;
     public string nextScene;
-    public Behaviour dialogue_canvas;
 
 
     void Start()
@@ -28,7 +27,6 @@ public class GameController1 : MonoBehaviour
                 if(bottomBar.IsLastSentence())
                 {
 
-                    dialogue_canvas.enabled = false;
                     SceneManager.LoadScene(nextScene);
                     
                 }

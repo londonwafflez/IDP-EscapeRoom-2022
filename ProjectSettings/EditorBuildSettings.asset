@@ -36,6 +36,18 @@ EditorBuildSettings:
     path: Assets/Scenes/Cutscenes/4Inside.unity
     guid: 879c9fd2be5ff92459423b9279073d68
   - enabled: 1
+    path: Assets/Scenes/Cutscenes/9ArtifactFoundBad.unity
+    guid: c6f7fcab37fd0d74fa8480f28accc69b
+  - enabled: 1
+    path: Assets/Scenes/Cutscenes/9ArtifactFoundGood.unity
+    guid: 9d56ac7997ae1ec4393b942e32940e22
+  - enabled: 1
+    path: Assets/Scenes/Cutscenes/10Bad.unity
+    guid: 5609bd152a072af4dacdc7ed67513f7a
+  - enabled: 1
+    path: Assets/Scenes/Cutscenes/10Good.unity
+    guid: dc05f47fa62f90d45ab976226737cb2f
+  - enabled: 1
     path: Assets/Scenes/Living Room.unity
     guid: b5f4a47391144ad428089e4fed0a2626
   m_configObjects: {}

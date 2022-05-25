@@ -9,28 +9,24 @@ using UnityEngine.SceneManagement;
 public class GameController3 : MonoBehaviour
 {
     public StoryScene currentScene;
-    public BottomBarController bottomBar;
-    public Behaviour dialogue_canvas;
-    public SpriteRenderer bar;
-    bool isDone = false;
+    public BottomBarController1 bottomBar;
+    public SpriteRenderer bbar;
+    public Behaviour dialogue;
 
 
+    public void enabled()
+    {
+        bbar.enabled = true; 
+        dialogue.enabled = true;
+        bottomBar.PlayScene(currentScene);
+
+    }
 
     void Update()
     {
 
-        if (isDone == false)
+        if (bbar.enabled == true)
         {
-            if (bar.enabled == true && dialogue_canvas.enabled == true)
-            {
-                bottomBar.PlayScene(currentScene);
-                isDone = true;
-            }
-        }
-
-        if (isDone == true)
-        {
-
             if  (Input.GetKeyDown(KeyCode.Space))
             {
                 if(bottomBar.IsCompleted())
@@ -38,14 +34,13 @@ public class GameController3 : MonoBehaviour
                     if(bottomBar.IsLastSentence())
                     {
 
-                        dialogue_canvas.enabled = false;
-                        bar.enabled = false;               
+                        bbar.enabled = false; 
+                        dialogue.enabled = false;           
                     }
                     else
                     {
                     bottomBar.PlayNextSentence();
                     }
-
                 }
             }
         }
