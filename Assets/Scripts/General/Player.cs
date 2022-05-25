@@ -78,7 +78,7 @@ public class Player : MonoBehaviour
         x = Input.GetAxisRaw("Horizontal");
         y = Input.GetAxisRaw("Vertical");
 
-        if (!allKeyClicked && SceneManager.GetActiveScene().name == "Storage Room") {
+        if (!allKeyClicked && /*SceneManager.GetActiveScene().name*/m_scene.getScene() == "StorageRoom") {
             if (!wClicked && y == 1) {
                 Debug.Log("W clicked");
                 wClicked = true;

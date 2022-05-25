@@ -32,6 +32,7 @@ public class Inventory : MonoBehaviour
                 activeInvBox = -1;
                 if (popOut != null)
                     popOut.SetActive(false);
+                m_blacklight.holdingBlacklight(false);
                 break;
             }
 
@@ -44,18 +45,12 @@ public class Inventory : MonoBehaviour
             invBoxes[i].SetActive(true);
             activeInvBox = i;
 
-            try {
+            if (itemBoxes[activeInvBox].GetComponent<SpriteRenderer>().sprite != null) 
                 if (itemBoxes[activeInvBox].GetComponent<SpriteRenderer>().sprite.name == "Blacklight") 
                 {
-                m_blacklight.holdingBlacklight(true);
-                } 
-                else 
-                {
+                    m_blacklight.holdingBlacklight(true);
+                } else 
                     m_blacklight.holdingBlacklight(false);
-                } 
-            } catch {
-                m_blacklight.holdingBlacklight(false); 
-            }
 
             if (activeInvBox == popOutItem && popOut != null)
             {
@@ -64,7 +59,6 @@ public class Inventory : MonoBehaviour
             }
             break;
         } while (false);
-        Debug.Log("setActiveInvBox has run");
     }
 
 
@@ -91,7 +85,6 @@ public class Inventory : MonoBehaviour
         {
             if (Input.GetKeyDown(keyCodes[i]))
             {   
-                Debug.Log(keyCodes[i] + " clicked");
                 setActiveItemBox(i);
             }
         }

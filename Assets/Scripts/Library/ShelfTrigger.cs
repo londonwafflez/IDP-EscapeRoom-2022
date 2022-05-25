@@ -14,6 +14,7 @@ public class ShelfTrigger : Trigger
     Inventory m_inventory;
     GameObject curBook, bookshelf6;
     int booksCorrect;
+    bool alreadyRun = false;
 
     [HideInInspector]
     static int[] activeBooks = new int[3] { -1, -1, -1 };
@@ -47,8 +48,8 @@ public class ShelfTrigger : Trigger
             }
         }
 
-        if (booksCorrect >= 3) {
-            Debug.Log("Door unlocked");
+        if (booksCorrect >= 3 && !alreadyRun) {
+            alreadyRun = true;
             door.SetActive(true);
             bookshelf6.GetComponent<Rigidbody2D>().simulated = true;
             bookshelf6.GetComponent<Rigidbody2D>().velocity = new Vector2(300, 0);

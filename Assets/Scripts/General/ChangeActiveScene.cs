@@ -1,3 +1,4 @@
+// using System;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
@@ -11,15 +12,17 @@ public class ChangeActiveScene : Trigger
     public Sprite openTrapDoor;
     Hints m_hints;
     bool[] roomsGoneTo = new bool[3] {true, false, false};
-    string activeScene = "StorageRoom";
+    string lastScene, activeScene = "StorageRoom";
+    public GameObject[] ScenePrefabs = new GameObject[3];
 
-
-    void ChangeScenes(string newScene)
+    void ChangeScenes(int newScene)
     {
         if (GameObject.Find("API") != null) GameObject.Find("API").GetComponent<SendToGoogle>().Send();
-        GameObject.Find(activeScene).SetActive(false);
-        GameObject.Find(newScene).SetActive(true);
-        activeScene = newScene;
+        ScenePrefabs[newScene].SetActive(true); 
+        lastScene = activeScene;
+        activeScene = ScenePrefabs[newScene].name;
+        GameObject.Find(lastScene).SetActive(false);
+        Debug.Log(activeScene);
     }
 
     void Start()
@@ -30,15 +33,15 @@ public class ChangeActiveScene : Trigger
 
     public void StorageRoom()
     {
-        ChangeScenes("StorageRoom");
+        ChangeScenes(0);
     }
     public void Library()
     {
-        ChangeScenes("Library");
+        ChangeScenes(1);
     }
     public void LivingRoom()
     {
-        ChangeScenes("LivingRoom");
+        ChangeScenes(2);
     }
 
 
@@ -58,6 +61,8 @@ public class ChangeActiveScene : Trigger
             {
                 m_hints.FinishedPuzzle();
                 gameObject.GetComponent<SpriteRenderer>().sprite = openTrapDoor;
+                gameObject.transform.localScale = new Vector3(4, 4, 1);
+                // gameObject.transform.localScale.y ;
                 inventory.used("Key1");
                 if (GameObject.Find("API") != null) GameObject.Find("API").GetComponent<SendToGoogle>().Send();
                 Library();
@@ -68,7 +73,6 @@ public class ChangeActiveScene : Trigger
             } else {
                 m_hints.SetPrompt(6);
             }
-
         } 
         else if (gameObject.name == "TrapDoorOpen")
         {
@@ -85,4 +89,9 @@ public class ChangeActiveScene : Trigger
     {
         return activeScene;
     }
+    
+    // public bool isNewScene()
+    // {
+    //     Array.Find(roomsGoneTo, element => element == activeScene);
+    // }
 }
