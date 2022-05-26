@@ -290,7 +290,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 6520643438003402953, guid: 0be16fd0cef87e741b0061b008b24057, type: 3}
       propertyPath: m_IsActive
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 6520643438792537986, guid: 0be16fd0cef87e741b0061b008b24057, type: 3}
       propertyPath: blacklightCircle
@@ -1110,6 +1110,22 @@ PrefabInstance:
     m_RemovedComponents:
     - {fileID: 5343477046574646025, guid: 378ba82f6f2e21e449dcdba90fc6e8bb, type: 3}
   m_SourcePrefab: {fileID: 100100000, guid: 378ba82f6f2e21e449dcdba90fc6e8bb, type: 3}
+--- !u!114 &962807033 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 262588231251111076, guid: 145bd9f0368b1c8478dabfb38b2b1862, type: 3}
+  m_PrefabInstance: {fileID: 2039709826}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4d6a4b222c716ef4aaea9c8b0cf12626, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!223 &962807036 stripped
+Canvas:
+  m_CorrespondingSourceObject: {fileID: 2776053664876589656, guid: 145bd9f0368b1c8478dabfb38b2b1862, type: 3}
+  m_PrefabInstance: {fileID: 2039709826}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &1189427897 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 3942030398296836038, guid: 145bd9f0368b1c8478dabfb38b2b1862, type: 3}
@@ -1502,7 +1518,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 372443358513971795, guid: 145bd9f0368b1c8478dabfb38b2b1862, type: 3}
       propertyPath: m_IsActive
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 1248914174397231295, guid: 145bd9f0368b1c8478dabfb38b2b1862, type: 3}
       propertyPath: m_Name
@@ -1564,6 +1580,18 @@ PrefabInstance:
       propertyPath: m_IsActive
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 3591345703599484996, guid: 145bd9f0368b1c8478dabfb38b2b1862, type: 3}
+      propertyPath: bbar
+      value: 
+      objectReference: {fileID: 1189427897}
+    - target: {fileID: 3591345703599484996, guid: 145bd9f0368b1c8478dabfb38b2b1862, type: 3}
+      propertyPath: control
+      value: 
+      objectReference: {fileID: 962807033}
+    - target: {fileID: 3591345703599484996, guid: 145bd9f0368b1c8478dabfb38b2b1862, type: 3}
+      propertyPath: dialogue_canvas
+      value: 
+      objectReference: {fileID: 962807036}
     - target: {fileID: 3942030398296836038, guid: 145bd9f0368b1c8478dabfb38b2b1862, type: 3}
       propertyPath: m_IsActive
       value: 1
@@ -1586,6 +1614,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents:
     - {fileID: 1466611806062372717, guid: 145bd9f0368b1c8478dabfb38b2b1862, type: 3}
+    - {fileID: 7661581600481112420, guid: 145bd9f0368b1c8478dabfb38b2b1862, type: 3}
   m_SourcePrefab: {fileID: 100100000, guid: 145bd9f0368b1c8478dabfb38b2b1862, type: 3}
 --- !u!1 &2144620643 stripped
 GameObject:

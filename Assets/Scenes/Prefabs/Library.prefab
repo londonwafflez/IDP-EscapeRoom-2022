@@ -1148,7 +1148,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!224 &4307915375814679403
 RectTransform:
   m_ObjectHideFlags: 0
@@ -2017,12 +2017,12 @@ GameObject:
   - component: {fileID: 5895312518928302800}
   - component: {fileID: 262588231251111076}
   m_Layer: 5
-  m_Name: DialogueCanvas (2)
+  m_Name: DialogCanvas
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &4521746049705602643
 RectTransform:
   m_ObjectHideFlags: 0
@@ -2118,7 +2118,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   currentScene: {fileID: 11400000, guid: 9d0e7747a3c1ac141adf0af7f6080dbf, type: 2}
-  bottomBar: {fileID: 0}
+  bottomBar: {fileID: 7661581600481112420}
   dialogue_canvas: {fileID: 2776053664876589656}
   bar: {fileID: 9034105926694836067}
 --- !u!1 &2658857383966423648
@@ -2931,7 +2931,7 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 4431489400965334591}
+      - m_Target: {fileID: 3591345703599484996}
         m_TargetAssemblyTypeName: Passcode1, Assembly-CSharp
         m_MethodName: CodeFunction
         m_Mode: 5
@@ -3654,6 +3654,7 @@ MonoBehaviour:
   clockPuzzle: {fileID: 0}
   openTrapDoor: {fileID: 0}
   usernameInput: {fileID: 0}
+  feedback: {fileID: 0}
 --- !u!1 &3636716192119550516
 GameObject:
   m_ObjectHideFlags: 0
@@ -4263,7 +4264,7 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 4431489400965334591}
+      - m_Target: {fileID: 3591345703599484996}
         m_TargetAssemblyTypeName: Passcode1, Assembly-CSharp
         m_MethodName: CodeFunction
         m_Mode: 5
@@ -4666,6 +4667,7 @@ GameObject:
   m_Component:
   - component: {fileID: 6121235641746646996}
   - component: {fileID: 9034105926694836067}
+  - component: {fileID: 7661581600481112420}
   m_Layer: 0
   m_Name: BottomBar2
   m_TagString: Untagged
@@ -4742,6 +4744,22 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!114 &7661581600481112420
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3942030398296836038}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ec3b960395061504a8092d803cafb1ba, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  barText: {fileID: 420116595789661918}
+  personNameText: {fileID: 5386120960995608861}
+  currentScene: {fileID: 11400000, guid: 9d0e7747a3c1ac141adf0af7f6080dbf, type: 2}
+  bbar: {fileID: 9034105926694836067}
 --- !u!1 &4016195711340768831
 GameObject:
   m_ObjectHideFlags: 0
@@ -5458,7 +5476,7 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 4431489400965334591}
+      - m_Target: {fileID: 3591345703599484996}
         m_TargetAssemblyTypeName: Passcode1, Assembly-CSharp
         m_MethodName: CodeFunction
         m_Mode: 5
@@ -6034,6 +6052,7 @@ MonoBehaviour:
   clockPuzzle: {fileID: 0}
   openTrapDoor: {fileID: 0}
   usernameInput: {fileID: 0}
+  feedback: {fileID: 0}
 --- !u!61 &1311416755251580160
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -6324,7 +6343,7 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 4431489400965334591}
+      - m_Target: {fileID: 3591345703599484996}
         m_TargetAssemblyTypeName: Passcode1, Assembly-CSharp
         m_MethodName: CodeFunction
         m_Mode: 5
@@ -6773,7 +6792,7 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 4431489400965334591}
+      - m_Target: {fileID: 3591345703599484996}
         m_TargetAssemblyTypeName: Passcode1, Assembly-CSharp
         m_MethodName: Delete
         m_Mode: 1
@@ -7005,7 +7024,7 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 4431489400965334591}
+      - m_Target: {fileID: 3591345703599484996}
         m_TargetAssemblyTypeName: Passcode1, Assembly-CSharp
         m_MethodName: CodeFunction
         m_Mode: 5
@@ -7551,7 +7570,7 @@ GameObject:
   - component: {fileID: 1888487409747345167}
   - component: {fileID: 3224593872189191122}
   - component: {fileID: 8697520256742794569}
-  - component: {fileID: 4431489400965334591}
+  - component: {fileID: 3591345703599484996}
   m_Layer: 31
   m_Name: BoxInputEnlarged
   m_TagString: Untagged
@@ -7642,7 +7661,7 @@ MonoBehaviour:
   m_BlockingMask:
     serializedVersion: 2
     m_Bits: 4294967295
---- !u!114 &4431489400965334591
+--- !u!114 &3591345703599484996
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -7651,7 +7670,7 @@ MonoBehaviour:
   m_GameObject: {fileID: 6175583684721100717}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: e453123fedc0a5141aa37036426d6199, type: 3}
+  m_Script: {fileID: 11500000, guid: 29890aa354ec93746b9364d638713517, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   chest: {fileID: 6145151423649060061}
@@ -8275,7 +8294,7 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 4431489400965334591}
+      - m_Target: {fileID: 3591345703599484996}
         m_TargetAssemblyTypeName: Passcode1, Assembly-CSharp
         m_MethodName: CodeFunction
         m_Mode: 5
@@ -8613,7 +8632,7 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 4431489400965334591}
+      - m_Target: {fileID: 3591345703599484996}
         m_TargetAssemblyTypeName: Passcode1, Assembly-CSharp
         m_MethodName: Enter
         m_Mode: 1
@@ -8747,7 +8766,7 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 4431489400965334591}
+      - m_Target: {fileID: 3591345703599484996}
         m_TargetAssemblyTypeName: Passcode1, Assembly-CSharp
         m_MethodName: CodeFunction
         m_Mode: 5
@@ -9369,7 +9388,7 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 4431489400965334591}
+      - m_Target: {fileID: 3591345703599484996}
         m_TargetAssemblyTypeName: Passcode1, Assembly-CSharp
         m_MethodName: CodeFunction
         m_Mode: 5
@@ -9503,7 +9522,7 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 4431489400965334591}
+      - m_Target: {fileID: 3591345703599484996}
         m_TargetAssemblyTypeName: Passcode1, Assembly-CSharp
         m_MethodName: CodeFunction
         m_Mode: 5
@@ -10103,7 +10122,7 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 4431489400965334591}
+      - m_Target: {fileID: 3591345703599484996}
         m_TargetAssemblyTypeName: Passcode1, Assembly-CSharp
         m_MethodName: CodeFunction
         m_Mode: 5
