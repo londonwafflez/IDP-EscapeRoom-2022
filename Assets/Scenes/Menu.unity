@@ -359,7 +359,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 20.8367, y: -109.562805}
+  m_AnchoredPosition: {x: 20.8367, y: -19}
   m_SizeDelta: {x: 148.5387, y: 30.3518}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &186476547
@@ -406,9 +406,9 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 1616395272}
-        m_TargetAssemblyTypeName: ChangeScenes, Assembly-CSharp
-        m_MethodName: Cut_Scene
+      - m_Target: {fileID: 1616395274}
+        m_TargetAssemblyTypeName: Feedback, Assembly-CSharp
+        m_MethodName: HeartRateBefore
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -921,7 +921,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1616395273}
-  - component: {fileID: 1616395272}
+  - component: {fileID: 1616395274}
   m_Layer: 0
   m_Name: SceneChanger
   m_TagString: Untagged
@@ -929,23 +929,6 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
---- !u!114 &1616395272
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1616395271}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 6d6fd29dabe4f794ca917252268591d9, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  obj: {fileID: 0}
-  inventory: {fileID: 0}
-  clockPuzzle: {fileID: 0}
-  openTrapDoor: {fileID: 0}
-  usernameInput: {fileID: 0}
 --- !u!4 &1616395273
 Transform:
   m_ObjectHideFlags: 0
@@ -961,6 +944,18 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 3
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1616395274
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1616395271}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 07cfb770032ce5a4286d2396ff744875, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &1655213539
 GameObject:
   m_ObjectHideFlags: 0

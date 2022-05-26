@@ -32,4 +32,34 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/Gameplay.unity
     guid: 709da50f8ab160842a5329514b7ff1d2
+  - enabled: 0
+    path: Assets/Scenes/MetacognitveData.unity
+    guid: fc1c196c440a53041a3775de666815e6
+  - enabled: 1
+    path: Assets/Scenes/HeartRateAfter.unity
+    guid: ce69b2c27d7df1c4fab11a2f79547022
+  - enabled: 1
+    path: Assets/Scenes/HeartRateBefore.unity
+    guid: 4ce309e063d95484f8e98b712f886e3f
+  - enabled: 1
+    path: Assets/Scenes/StartQuestions.unity
+    guid: 6b2a6ecaff508a241b7191f03d09cb06
+  - enabled: 1
+    path: Assets/Scenes/Question1.unity
+    guid: 839e3ebc8da647640a3c3da4d3d9c128
+  - enabled: 1
+    path: Assets/Scenes/Question2.unity
+    guid: 39956ccd814596347bb049df3dafec9d
+  - enabled: 1
+    path: Assets/Scenes/Question3.unity
+    guid: c8b626331b79a5143a42cbaae61cdba7
+  - enabled: 1
+    path: Assets/Scenes/Question4.unity
+    guid: a6902f433e917d54da1bf8064f9f59b4
+  - enabled: 1
+    path: Assets/Scenes/Question5.unity
+    guid: 3f41011b611aafe4aae01c9aed75d79c
+  - enabled: 1
+    path: Assets/Scenes/GoToMenu.unity
+    guid: 790d49821c015c94bb51fa6783d7d2b7
   m_configObjects: {}
