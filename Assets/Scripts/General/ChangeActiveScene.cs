@@ -12,7 +12,8 @@ public class ChangeActiveScene : Trigger
     public Sprite openTrapDoor;
     Hints m_hints;
     static bool[] roomsGoneTo = new bool[3] {true, false, false};
-    static string lastScene, activeScene = "StorageRoom";
+    static string lastScene;
+    static string activeScene = "StorageRoom";
     public GameObject[] ScenePrefabs = new GameObject[3];
 
     void ChangeScenes(int newScene)
@@ -55,7 +56,6 @@ public class ChangeActiveScene : Trigger
     {
         if (getScene() == "StorageRoom")
         {
-
             int correctPos = 0; // Correct time is 12; see clockpuzzle.cs for full conversion
 
             if (inventory.getActiveItem() == "Key1" && clockPuzzle.appliedRotation - 90 == correctPos)
@@ -68,7 +68,7 @@ public class ChangeActiveScene : Trigger
                 if (GameObject.Find("API") != null) GameObject.Find("API").GetComponent<SendToGoogle>().Send();
                 Library();
             }
-            else if (gameObject.GetComponent<SpriteRenderer>().name == "trapdooropen" || roomsGoneTo[0]) 
+            else if (gameObject.GetComponent<SpriteRenderer>().name == "trapdooropen" || roomsGoneTo[1]) 
             {
                 Library();
             } else {

@@ -17,7 +17,7 @@ public class Player : MonoBehaviour
     private Vector2 input;
     private bool moving;
 
-    bool allKeyClicked, wClicked, aClicked, sClicked, dClicked;
+    static bool allKeyClicked, wClicked, aClicked, sClicked, dClicked;
 
     GameController2 dialogueScript;
     Trigger computerTrigger;
@@ -29,7 +29,7 @@ public class Player : MonoBehaviour
 
     private void Start(){
         rb = GetComponent<Rigidbody2D>();
-        if (GameObject.Find("InSceneSceneChanger") != null) {            
+        if (GameObject.Find("InSceneSceneChanger") != null) { 
             m_scene = GameObject.Find("InSceneSceneChanger").GetComponent<ChangeActiveScene>();
 
             if(m_scene.getScene() == "StorageRoom")
@@ -99,7 +99,7 @@ public class Player : MonoBehaviour
             }
             if (wClicked && aClicked && sClicked && dClicked) {
                 allKeyClicked = true;
-                GameObject.Find("HintButton").GetComponent<Hints>().NextPrompt();
+                GameObject.Find("HintButton").GetComponent<Hints>().SetPrompt(1);
             }
         }
 

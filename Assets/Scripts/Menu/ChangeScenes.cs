@@ -23,16 +23,16 @@ public class ChangeScenes : Trigger
     }
     public void StorageRoom()
     {
-        SceneManager.LoadScene("Storage Room");
+        SceneManager.LoadScene("Gameplay");
     }
-        public void Library()
+     /*   public void Library()
     {
         SceneManager.LoadScene("Library");
     }
     public void LivingRoom()
     {
         SceneManager.LoadScene("Living Room");
-    }
+    }*/
     public void exitgame()
     {
         Debug.Log("exitgame");
@@ -45,7 +45,7 @@ public class ChangeScenes : Trigger
         runTrigger = false;
     }
 
-    protected override void toRun()
+    /*protected override void toRun()
     {
         if (SceneManager.GetActiveScene().name == "Storage Room")
         {
@@ -80,7 +80,7 @@ public class ChangeScenes : Trigger
             if (GameObject.Find("API") != null) GameObject.Find("API").GetComponent<SendToGoogle>().Send();
             LivingRoom();
         }
-    }    
+    }    */
 
     public void checkUserGoStorageRoom() {
         if (usernameInput.GetComponent<TMP_InputField>().text != null) {
