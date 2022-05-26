@@ -9,7 +9,7 @@ using UnityEngine.SceneManagement;
 public class GameController3 : MonoBehaviour
 {
     public StoryScene currentScene;
-    public BottomBarController bottomBar;
+    public BottomBarController1 bottomBar;
     public Behaviour dialogue_canvas;
     public SpriteRenderer bar;
 

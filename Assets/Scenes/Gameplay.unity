@@ -290,7 +290,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 6520643438003402953, guid: 0be16fd0cef87e741b0061b008b24057, type: 3}
       propertyPath: m_IsActive
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 6520643438792537986, guid: 0be16fd0cef87e741b0061b008b24057, type: 3}
       propertyPath: blacklightCircle
@@ -433,6 +433,17 @@ GameObject:
   m_CorrespondingSourceObject: {fileID: 372443358513971795, guid: 145bd9f0368b1c8478dabfb38b2b1862, type: 3}
   m_PrefabInstance: {fileID: 2039709826}
   m_PrefabAsset: {fileID: 0}
+--- !u!114 &436804537 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 420116595789661918, guid: 145bd9f0368b1c8478dabfb38b2b1862, type: 3}
+  m_PrefabInstance: {fileID: 2039709826}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f4688fdb7df04437aeb418b961361dc5, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &528197693 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 4812081165523383573, guid: 145bd9f0368b1c8478dabfb38b2b1862, type: 3}
@@ -749,6 +760,27 @@ PrefabInstance:
     m_RemovedComponents:
     - {fileID: 5343477046574646025, guid: 378ba82f6f2e21e449dcdba90fc6e8bb, type: 3}
   m_SourcePrefab: {fileID: 100100000, guid: 378ba82f6f2e21e449dcdba90fc6e8bb, type: 3}
+--- !u!1 &1189427897 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 3942030398296836038, guid: 145bd9f0368b1c8478dabfb38b2b1862, type: 3}
+  m_PrefabInstance: {fileID: 2039709826}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &1189427901
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1189427897}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ec3b960395061504a8092d803cafb1ba, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  barText: {fileID: 436804537}
+  personNameText: {fileID: 1587155954}
+  currentScene: {fileID: 11400000, guid: 9d0e7747a3c1ac141adf0af7f6080dbf, type: 2}
+  bbar: {fileID: 0}
 --- !u!1 &1287380481
 GameObject:
   m_ObjectHideFlags: 0
@@ -938,6 +970,17 @@ GameObject:
   m_CorrespondingSourceObject: {fileID: 3705478221033069017, guid: 378ba82f6f2e21e449dcdba90fc6e8bb, type: 3}
   m_PrefabInstance: {fileID: 888767417}
   m_PrefabAsset: {fileID: 0}
+--- !u!114 &1587155954 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 5386120960995608861, guid: 145bd9f0368b1c8478dabfb38b2b1862, type: 3}
+  m_PrefabInstance: {fileID: 2039709826}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f4688fdb7df04437aeb418b961361dc5, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &1612700000 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 3612758165708380936, guid: 623f5a8d2746be843bdeccf6b36bde0d, type: 3}
@@ -1089,6 +1132,10 @@ PrefabInstance:
       propertyPath: m_UseGravity
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 262588231251111076, guid: 145bd9f0368b1c8478dabfb38b2b1862, type: 3}
+      propertyPath: bottomBar
+      value: 
+      objectReference: {fileID: 1189427901}
     - target: {fileID: 372443358513971795, guid: 145bd9f0368b1c8478dabfb38b2b1862, type: 3}
       propertyPath: m_Name
       value: Library
@@ -1100,6 +1147,10 @@ PrefabInstance:
     - target: {fileID: 1248914174397231295, guid: 145bd9f0368b1c8478dabfb38b2b1862, type: 3}
       propertyPath: m_Name
       value: DialogueCanvas
+      objectReference: {fileID: 0}
+    - target: {fileID: 1248914174397231295, guid: 145bd9f0368b1c8478dabfb38b2b1862, type: 3}
+      propertyPath: m_IsActive
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 2290138935778369616, guid: 145bd9f0368b1c8478dabfb38b2b1862, type: 3}
       propertyPath: m_RootOrder
@@ -1143,6 +1194,14 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 2290138935778369616, guid: 145bd9f0368b1c8478dabfb38b2b1862, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2523851598001000238, guid: 145bd9f0368b1c8478dabfb38b2b1862, type: 3}
+      propertyPath: m_Name
+      value: DialogueCanvasTwo
+      objectReference: {fileID: 0}
+    - target: {fileID: 3942030398296836038, guid: 145bd9f0368b1c8478dabfb38b2b1862, type: 3}
+      propertyPath: m_IsActive
       value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 4714963557338465097, guid: 145bd9f0368b1c8478dabfb38b2b1862, type: 3}
