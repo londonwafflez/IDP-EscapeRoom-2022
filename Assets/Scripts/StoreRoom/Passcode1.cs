@@ -38,10 +38,10 @@ public class Passcode1 : MonoBehaviour
             key1.SetActive(true);
             GameObject.Find("HintButton").GetComponent<Hints>().FinishedPuzzle();
             if (SceneManager.GetActiveScene().name == "Library") GameObject.Find("HintButton").GetComponent<Hints>().SetPrompt(5);
-            dialogueCanvasObj.SetActive(true);
-            bbar.GetComponent<SpriteRenderer>().enabled = true;
+            // dialogueCanvasObj.SetActive(true);
+            // bbar.GetComponent<SpriteRenderer>().enabled = true;
 
-            control.Started();
+            // control.Started();
 
             
             Destroy(chest.GetComponent<Trigger>());
