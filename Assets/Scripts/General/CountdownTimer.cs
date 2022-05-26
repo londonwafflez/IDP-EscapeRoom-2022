@@ -8,6 +8,7 @@ public class CountdownTimer : MonoBehaviour
     public float timeValue = 1800;
     public Text timerText;
     GameController2 dialogueScript;
+    int[] puzzleTimes = {0, 0, 0};
 
     void Start() {
         dialogueScript = GameObject.Find("DialogueCanvas").GetComponent<GameController2>();
@@ -43,5 +44,9 @@ public class CountdownTimer : MonoBehaviour
 
     public void SubtractHintTime() {
         timeValue -= 30;
+    }
+
+    public void LogTime(int index) {
+        puzzleTimes[index] = (int)timeValue;
     }
 }

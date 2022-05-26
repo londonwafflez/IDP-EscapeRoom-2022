@@ -43,7 +43,8 @@ public class Hints : MonoBehaviour
             "The blacklight makes the numbers 1324 appear",
 /*10*/      "Don't you love to stop and smell the flowers when you're about to become a ghost for the rest of your life",
             "A comfortable looking chair",
-            "A comfortable looking couch"
+            "A comfortable looking couch",
+            "Something happened..."
     };
 
     CountdownTimer m_cdTimer;
@@ -100,7 +101,8 @@ public class Hints : MonoBehaviour
     {
         if(hintTextBox.activeSelf) 
         {
-            hintTextBox.SetActive(false);
+            if (hintTextBox != null) 
+                hintTextBox.SetActive(false);
         } else {
 
             callTypeSentence(hintsText[puzzleNum]);
@@ -152,5 +154,9 @@ public class Hints : MonoBehaviour
         if (lastRoutine != null)
             StopCoroutine(lastRoutine);
         lastRoutine = StartCoroutine(TypeSentence(sentence));
+    }
+
+    public int GetPuzzleNum() {
+        return puzzleNum;
     }
 }

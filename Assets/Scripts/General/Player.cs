@@ -26,6 +26,7 @@ public class Player : MonoBehaviour
     bool isTyping;
 
     ChangeActiveScene m_scene;
+    Hints hints;
 
     private void Start(){
         rb = GetComponent<Rigidbody2D>();
@@ -35,6 +36,7 @@ public class Player : MonoBehaviour
             if(m_scene.getScene() == "StorageRoom")
             {
                 dialogueScript = GameObject.Find("DialogueCanvas").GetComponent<GameController2>();
+                hints = GameObject.Find("HintButton").GetComponent<Hints>();
             }
             else if (m_scene.getScene() == "Library")
             {
@@ -99,7 +101,8 @@ public class Player : MonoBehaviour
             }
             if (wClicked && aClicked && sClicked && dClicked) {
                 allKeyClicked = true;
-                GameObject.Find("HintButton").GetComponent<Hints>().SetPrompt(1);
+                if (hints.GetPuzzleNum() == 0)
+                    hints.SetPrompt(1);
             }
         }
 

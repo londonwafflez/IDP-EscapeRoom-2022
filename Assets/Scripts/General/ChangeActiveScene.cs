@@ -15,20 +15,21 @@ public class ChangeActiveScene : Trigger
     static string lastScene;
     static string activeScene = "StorageRoom";
     public GameObject[] ScenePrefabs = new GameObject[3];
+    CountdownTimer cdTimer;
 
     void ChangeScenes(int newScene)
     {
-        if (GameObject.Find("API") != null) GameObject.Find("API").GetComponent<SendToGoogle>().Send();
+        if (!roomsGoneTo[newScene]) cdTimer.LogTime(newScene - 1);
         ScenePrefabs[newScene].SetActive(true); 
         lastScene = activeScene;
         roomsGoneTo[newScene] = true;
         activeScene = ScenePrefabs[newScene].name;
         if (lastScene != null) GameObject.Find(lastScene).SetActive(false);
-        Debug.Log(activeScene);
     }
 
     void Start()
     {
+        cdTimer = GameObject.Find("TimerText").GetComponent<CountdownTimer>();
         m_hints = GameObject.Find("HintButton").GetComponent<Hints>();
         inventory = GameObject.Find("inventory").GetComponent<Inventory>();
     }
@@ -44,6 +45,11 @@ public class ChangeActiveScene : Trigger
     public void LivingRoom()
     {
         ChangeScenes(2);
+    }
+
+    public void Win() 
+    {
+        if (GameObject.Find("API") != null) GameObject.Find("API").GetComponent<SendToGoogle>().Send();
     }
 
 

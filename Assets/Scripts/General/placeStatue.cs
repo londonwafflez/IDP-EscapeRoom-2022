@@ -26,7 +26,7 @@ public class placeStatue : Trigger
             statuesPlaced++;
             if (statuesPlaced >= 3) {
                 // win
-                Debug.Log("win or something");
+                hints.SetPrompt(13);
             }
         } else { 
             switch (scene.getScene()) {
@@ -42,7 +42,6 @@ public class placeStatue : Trigger
                     hints.SetPrompt(12);
                     break;
             }
-            Debug.Log("Active item: " + inventory.getActiveItem());
         }
     }
 }
