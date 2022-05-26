@@ -176,7 +176,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   currentScene: {fileID: 11400000, guid: 7dc830157e9e17d4e84cb502aad48f1c, type: 2}
   bottomBar: {fileID: 1064287064}
-  cutscene: 3Outside
+  nextScene: 3Outside
+  dialogue_canvas: {fileID: 1671140301}
 --- !u!114 &859339611
 MonoBehaviour:
   m_ObjectHideFlags: 0

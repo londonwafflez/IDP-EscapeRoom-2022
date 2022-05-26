@@ -1,3 +1,4 @@
+using System.Text.RegularExpressions;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
@@ -9,7 +10,8 @@ public class ChangeScenes : Trigger
     public Inventory inventory;
     public ClockPuzzle clockPuzzle;
     public Sprite openTrapDoor;
-    public GameObject usernameInput;
+    public GameObject usernameInput, feedback;
+    string username;
 
     // Start is called before the first frame update
     public void Menu()
@@ -17,22 +19,22 @@ public class ChangeScenes : Trigger
         if (GameObject.Find("UICanvas") != null) Destroy(GameObject.Find("UICanvas"));
         SceneManager.LoadScene("Menu");
     }
-    public void Cut_Scene()
+    public void Username()
     {
-        SceneManager.LoadScene("Cut Scene");
+        SceneManager.LoadScene("Username");
     }
     public void StorageRoom()
     {
         SceneManager.LoadScene("Gameplay");
     }
-     /*   public void Library()
+       public void FirstScene()
     {
-        SceneManager.LoadScene("Library");
+        SceneManager.LoadScene("1Home");
     }
-    public void LivingRoom()
-    {
-        SceneManager.LoadScene("Living Room");
-    }*/
+    // public void LivingRoom()
+    // {
+    //     SceneManager.LoadScene("Living Room");
+    // }
     public void exitgame()
     {
         Debug.Log("exitgame");
@@ -82,10 +84,19 @@ public class ChangeScenes : Trigger
         }
     }    */
 
-    public void checkUserGoStorageRoom() {
-        if (usernameInput.GetComponent<TMP_InputField>().text != null) {
-            StorageRoom();
+    public void checkUserGoFirstCutScene() {
+        if (Regex.IsMatch(usernameInput.GetComponent<TMP_InputField>().text, "^[a-zA-z]") && usernameInput.GetComponent<TMP_InputField>().text.Split().Length < 20) {
+            username = usernameInput.GetComponent<TMP_InputField>().text;
+            FirstScene();
+        } 
+        feedback.SetActive(true);
+    }
+
+    public void checkUserGoCutScene() {
+        if (!Regex.IsMatch(usernameInput.GetComponent<TMP_InputField>().text, @"^[A-Za-z\s]*$")  && usernameInput.GetComponent<TMP_InputField>().text.Split().Length < 4) {
+            Username();
         }
+        feedback.SetActive(true);
     }
 
             /*var nextSceneIndex = SceneManager.GetActiveScene().buildIndex + 1;
@@ -99,5 +110,7 @@ public class ChangeScenes : Trigger
             {
                 Debug.Log("Next scene unavailable");
             }*/
-
+    public string GetUsername() {
+        return username;
+    }
 }
