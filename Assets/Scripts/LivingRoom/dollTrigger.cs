@@ -14,16 +14,25 @@ public class dollTrigger : Trigger
         m_inventory = GameObject.Find("inventory").GetComponent<Inventory>();
     }
 
-    protected virtual void toRun()
+    protected override void toRun()
     {
-        if (m_inventory.getActiveItem() == "teacup")
+        if (m_inventory.getActiveItem() == "invTeaCup")
         {
             obj1.SetActive(!isActive); // false to hide, true to show
             isActive1 = !isActive1;
         } else
         {
+            
             obj.SetActive(!isActive); // false to hide, true to show
             isActive = !isActive;
         }
+    }
+
+    void OnTriggerExit2D() {
+        obj.SetActive(false);
+        obj1.SetActive(false);
+        isActive = false;
+        isActive1 = false;
+        runTrigger = false;
     }
 }

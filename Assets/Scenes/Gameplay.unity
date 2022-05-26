@@ -290,7 +290,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 6520643438003402953, guid: 0be16fd0cef87e741b0061b008b24057, type: 3}
       propertyPath: m_IsActive
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 6520643438792537986, guid: 0be16fd0cef87e741b0061b008b24057, type: 3}
       propertyPath: blacklightCircle
@@ -468,6 +468,11 @@ MonoBehaviour:
   - {fileID: 137791524}
   - {fileID: 415017989}
   - {fileID: 1362400156}
+--- !u!1 &540256201 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 3705478221724987990, guid: 378ba82f6f2e21e449dcdba90fc6e8bb, type: 3}
+  m_PrefabInstance: {fileID: 888767417}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &617407417 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 3705478220720015821, guid: 378ba82f6f2e21e449dcdba90fc6e8bb, type: 3}
@@ -486,6 +491,11 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   itemIndex: 10
+--- !u!1 &845190863 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 3705478220677083360, guid: 378ba82f6f2e21e449dcdba90fc6e8bb, type: 3}
+  m_PrefabInstance: {fileID: 888767417}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1001 &888767417
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -529,13 +539,17 @@ PrefabInstance:
       propertyPath: Loop
       value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: 3705478220095848925, guid: 378ba82f6f2e21e449dcdba90fc6e8bb, type: 3}
+      propertyPath: m_audioClip
+      value: 
+      objectReference: {fileID: 8300000, guid: 457ba3f001e70014e8bdd719c81deaa2, type: 3}
     - target: {fileID: 3705478220095848926, guid: 378ba82f6f2e21e449dcdba90fc6e8bb, type: 3}
       propertyPath: m_IsActive
       value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 3705478220720015816, guid: 378ba82f6f2e21e449dcdba90fc6e8bb, type: 3}
       propertyPath: m_SortingOrder
-      value: 12
+      value: 14
       objectReference: {fileID: 0}
     - target: {fileID: 3705478220720015817, guid: 378ba82f6f2e21e449dcdba90fc6e8bb, type: 3}
       propertyPath: m_LocalPosition.x
@@ -583,7 +597,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 3705478221033069017, guid: 378ba82f6f2e21e449dcdba90fc6e8bb, type: 3}
       propertyPath: m_IsActive
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 3705478221033069030, guid: 378ba82f6f2e21e449dcdba90fc6e8bb, type: 3}
       propertyPath: m_RootOrder
@@ -679,7 +693,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 3705478221278087894, guid: 378ba82f6f2e21e449dcdba90fc6e8bb, type: 3}
       propertyPath: m_SortingOrder
-      value: 12
+      value: 14
       objectReference: {fileID: 0}
     - target: {fileID: 3705478221278087895, guid: 378ba82f6f2e21e449dcdba90fc6e8bb, type: 3}
       propertyPath: m_LocalPosition.x
@@ -725,6 +739,14 @@ PrefabInstance:
       propertyPath: m_SortingOrder
       value: 11
       objectReference: {fileID: 0}
+    - target: {fileID: 3705478221724987989, guid: 378ba82f6f2e21e449dcdba90fc6e8bb, type: 3}
+      propertyPath: LoginCanvas
+      value: 
+      objectReference: {fileID: 540256201}
+    - target: {fileID: 3705478221724987989, guid: 378ba82f6f2e21e449dcdba90fc6e8bb, type: 3}
+      propertyPath: SecurityCams
+      value: 
+      objectReference: {fileID: 845190863}
     - target: {fileID: 3705478221781248066, guid: 378ba82f6f2e21e449dcdba90fc6e8bb, type: 3}
       propertyPath: m_SortingOrder
       value: 11
@@ -763,7 +785,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 3705478221899896511, guid: 378ba82f6f2e21e449dcdba90fc6e8bb, type: 3}
       propertyPath: m_SortingOrder
-      value: 12
+      value: 14
       objectReference: {fileID: 0}
     - target: {fileID: 4484318958103106216, guid: 378ba82f6f2e21e449dcdba90fc6e8bb, type: 3}
       propertyPath: m_LocalPosition.x
@@ -1167,7 +1189,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 372443358513971795, guid: 145bd9f0368b1c8478dabfb38b2b1862, type: 3}
       propertyPath: m_IsActive
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 1248914174397231295, guid: 145bd9f0368b1c8478dabfb38b2b1862, type: 3}
       propertyPath: m_Name

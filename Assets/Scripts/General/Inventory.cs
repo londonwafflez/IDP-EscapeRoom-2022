@@ -10,6 +10,7 @@ public class Inventory : MonoBehaviour
     GameObject boxHighlight;
     SpriteRenderer spriteRenderer;
     public GameObject popOut;
+    Player player;
 
     KeyCode[] keyCodes = new KeyCode[] { KeyCode.Alpha0, KeyCode.Alpha1, KeyCode.Alpha2, KeyCode.Alpha3, KeyCode.Alpha4, KeyCode.Alpha5, KeyCode.Alpha6, KeyCode.Alpha7 };
     GameObject[] invBoxes = new GameObject[8];
@@ -87,7 +88,7 @@ public class Inventory : MonoBehaviour
     void Update() {
         for (int i = 1; i < 7 + 1; i++)
         {
-            if (Input.GetKeyDown(keyCodes[i]))
+            if (Input.GetKeyDown(keyCodes[i]) && !GameObject.Find("MainCharacter").GetComponent<Player>().getTyping())
             {   
                 setActiveItemBox(i);
             }

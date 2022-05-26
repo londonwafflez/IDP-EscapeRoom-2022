@@ -32,11 +32,11 @@ public class LoginCredCheck : MonoBehaviour
 
     public void checkCredentials()
     {
-        if ("user" == userText.text && "8664" == passText.text)
+        if ("teapot123" == userText.text && "8664" == passText.text)
         {
+            SecurityCams.SetActive(true);
             LoginCanvas.SetActive(false);
             feedback.SetActive(false);
-            SecurityCams.SetActive(true);
         } else
         {
             feedback.SetActive(true);

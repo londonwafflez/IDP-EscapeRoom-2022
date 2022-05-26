@@ -129,4 +129,8 @@ public class Player : MonoBehaviour
         this.isTyping = isTyping;
         computerTrigger.enabled = !isTyping;
     }
+
+    public bool getTyping() {
+        return isTyping;
+    }
 }
