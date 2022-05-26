@@ -9,6 +9,10 @@ public class Feedback : MonoBehaviour
     {
         SceneManager.LoadScene("HeartRateBefore");
     }
+     public void HeartRateAfter()
+    {
+        SceneManager.LoadScene("HeartRateAfter");
+    }
      public void Question1()
     {
         SceneManager.LoadScene("Question1");
@@ -37,5 +41,8 @@ public class Feedback : MonoBehaviour
     {
         SceneManager.LoadScene("GoToMenu");
     }
-    
+     public void StartQuestions()
+    {
+        SceneManager.LoadScene("StartQuestions");
+    }
 }
