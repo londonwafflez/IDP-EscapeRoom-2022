@@ -16,28 +16,29 @@ public class GameController3 : MonoBehaviour
 
     public void Started()
     {
-        dialogue_canvas.enabled = true;
-        bar.enabled = true;
         bottomBar.PlayScene(currentScene);
     }
 
     void Update()
     {
-
-        if  (Input.GetKeyDown(KeyCode.Space))
+        if (dialogue_canvas.enabled == true)
         {
-            if(bottomBar.IsCompleted())
-            {
-                if(bottomBar.IsLastSentence())
-                {
-                    bar.enabled = false;               
-                }
-                else
-                {
-                bottomBar.PlayNextSentence();
-                }
 
-             }
-         }
+            if  (Input.GetKeyDown(KeyCode.Space))
+            {
+                if(bottomBar.IsCompleted())
+                {
+                    if(bottomBar.IsLastSentence())
+                    {
+                        dialogue_canvas.enabled = false;
+                        bar.enabled = false;               
+                    }
+                    else
+                    {
+                    bottomBar.PlayNextSentence();
+                    }
+                }
+            }
+        }
     }
 }

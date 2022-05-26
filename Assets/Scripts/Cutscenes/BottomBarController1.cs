@@ -30,12 +30,11 @@ public class BottomBarController1 : MonoBehaviour
 
     public void PlayNextSentence()
     {
-        if (bbar.enabled == true)
-        {
-            StartCoroutine(TypeText(currentScene.sentences[++sentenceIndex].text));
-            personNameText.text = currentScene.sentences[sentenceIndex].speaker.speakerName;
-            personNameText.color = currentScene.sentences[sentenceIndex].speaker.textColor;
-        }
+        
+        StartCoroutine(TypeText(currentScene.sentences[++sentenceIndex].text));
+        personNameText.text = currentScene.sentences[sentenceIndex].speaker.speakerName;
+        personNameText.color = currentScene.sentences[sentenceIndex].speaker.textColor;
+        
         
     }
 
