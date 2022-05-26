@@ -7,7 +7,12 @@ using UnityEngine;
 
 public class Speaker : ScriptableObject
 {
-
     public string speakerName;
     public Color textColor;
+
+    public void ChangeSpeakerName(string newName) 
+    {
+        speakerName = newName;
+    }
 }
+

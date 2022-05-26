@@ -11,7 +11,7 @@ public class ChangeScenes : Trigger
     public ClockPuzzle clockPuzzle;
     public Sprite openTrapDoor;
     public GameObject usernameInput, feedback;
-    string username;
+    public Speaker UserSpeaker;
 
     // Start is called before the first frame update
     public void Menu()
@@ -86,10 +86,10 @@ public class ChangeScenes : Trigger
 
     public void checkUserGoFirstCutScene() {
         if (Regex.IsMatch(usernameInput.GetComponent<TMP_InputField>().text, "^[a-zA-z]") && usernameInput.GetComponent<TMP_InputField>().text.Split().Length < 20) {
-            username = usernameInput.GetComponent<TMP_InputField>().text;
+            UserSpeaker.ChangeSpeakerName(usernameInput.GetComponent<TMP_InputField>().text);
             FirstScene();
-        } 
-        feedback.SetActive(true);
+        } else
+            feedback.SetActive(true);
     }
 
     public void checkUserGoCutScene() {
@@ -110,7 +110,4 @@ public class ChangeScenes : Trigger
             {
                 Debug.Log("Next scene unavailable");
             }*/
-    public string GetUsername() {
-        return username;
-    }
 }
