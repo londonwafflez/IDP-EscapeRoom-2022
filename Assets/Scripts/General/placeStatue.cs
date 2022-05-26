@@ -7,7 +7,7 @@ public class placeStatue : Trigger
     Inventory inventory;
     Hints hints;
     ChangeActiveScene scene;
-    GameObject sceneStatue;
+    public GameObject sceneStatue;
     static int statuesPlaced = 0;
 
     void Start()
@@ -20,8 +20,8 @@ public class placeStatue : Trigger
     // Update is called once per frame
     protected override void toRun()
     {
-        if (inventory.getActiveItem() == "statue") {
-            inventory.used("statue");
+        if (inventory.getActiveItem() == "invStatue" && !sceneStatue.activeSelf) {
+            inventory.used("invStatue");
             sceneStatue.SetActive(true);
             statuesPlaced++;
             if (statuesPlaced >= 3) {
@@ -42,7 +42,7 @@ public class placeStatue : Trigger
                     hints.SetPrompt(12);
                     break;
             }
-            
+            Debug.Log("Active item: " + inventory.getActiveItem());
         }
     }
 }

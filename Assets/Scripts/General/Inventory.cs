@@ -45,12 +45,16 @@ public class Inventory : MonoBehaviour
             invBoxes[i].SetActive(true);
             activeInvBox = i;
 
-            if (itemBoxes[activeInvBox].GetComponent<SpriteRenderer>().sprite != null) 
-                if (itemBoxes[activeInvBox].GetComponent<SpriteRenderer>().sprite.name == "Blacklight") 
-                {
-                    m_blacklight.holdingBlacklight(true);
-                } else 
-                    m_blacklight.holdingBlacklight(false);
+            try
+            {
+                if (itemBoxes[activeInvBox].GetComponent<SpriteRenderer>().sprite != null)
+                    if (itemBoxes[activeInvBox].GetComponent<SpriteRenderer>().sprite.name == "Blacklight")
+                    {
+                        m_blacklight.holdingBlacklight(true);
+                    }
+                    else
+                        m_blacklight.holdingBlacklight(false);
+            } catch { }
 
             if (activeInvBox == popOutItem && popOut != null)
             {
@@ -99,7 +103,6 @@ public class Inventory : MonoBehaviour
 
         for (int i = 0; i < activeItemBoxes.Length; i++) { 
             if (!activeItemBoxes[i]) {
-                Debug.Log("item box " + i + " is free");
                 nextBox = i;
                 activeItemBoxes[i] = true;
                 break;

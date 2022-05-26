@@ -14,7 +14,7 @@ public class ShelfTrigger : Trigger
     Inventory m_inventory;
     GameObject curBook, bookshelf6;
     int booksCorrect;
-    bool alreadyRun = false;
+    static bool alreadyRun = false;
 
     [HideInInspector]
     static int[] activeBooks = new int[3] { -1, -1, -1 };

@@ -8,27 +8,34 @@ public class Walk : MonoBehaviour
     public GameObject MainCharacter;
     public int thresh;
     public int thresh2;
+    public int thresh3;
 
     void Start()
     {
-         sprite = GetComponent<SpriteRenderer>();
+        sprite = GetComponent<SpriteRenderer>();
     }
 
     void FixedUpdate()
     {
-        if (MainCharacter.transform.position.y < thresh2)
+        if (MainCharacter.transform.position.y < thresh)
         {
-            sprite.sortingOrder = 13;
-            if (MainCharacter.transform.position.y < thresh)
-                sprite.sortingOrder = 11;
+            sprite.sortingOrder = 12;
+            //if (MainCharacter.transform.position.y < thresh)
+            //  sprite.sortingOrder = 13;
         }
-        
-            
+
+
         if (MainCharacter.transform.position.y > thresh)
         {
             sprite.sortingOrder = 9;
             if (MainCharacter.transform.position.y > thresh2)
+            {
                 sprite.sortingOrder = 7;
+                if (thresh3 != null && (MainCharacter.transform.position.y > thresh3))
+                {
+                    sprite.sortingOrder = 4;
+                }
+            }
         }
     }
 }

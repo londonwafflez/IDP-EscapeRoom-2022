@@ -11,8 +11,8 @@ public class ChangeActiveScene : Trigger
     public ClockPuzzle clockPuzzle;
     public Sprite openTrapDoor;
     Hints m_hints;
-    bool[] roomsGoneTo = new bool[3] {true, false, false};
-    string lastScene, activeScene = "StorageRoom";
+    static bool[] roomsGoneTo = new bool[3] {true, false, false};
+    static string lastScene, activeScene = "StorageRoom";
     public GameObject[] ScenePrefabs = new GameObject[3];
 
     void ChangeScenes(int newScene)
@@ -20,8 +20,9 @@ public class ChangeActiveScene : Trigger
         if (GameObject.Find("API") != null) GameObject.Find("API").GetComponent<SendToGoogle>().Send();
         ScenePrefabs[newScene].SetActive(true); 
         lastScene = activeScene;
+        roomsGoneTo[newScene] = true;
         activeScene = ScenePrefabs[newScene].name;
-        GameObject.Find(lastScene).SetActive(false);
+        if (lastScene != null) GameObject.Find(lastScene).SetActive(false);
         Debug.Log(activeScene);
     }
 
@@ -52,7 +53,7 @@ public class ChangeActiveScene : Trigger
 
     protected override void toRun()
     {
-        if (activeScene == "StorageRoom")
+        if (getScene() == "StorageRoom")
         {
 
             int correctPos = 0; // Correct time is 12; see clockpuzzle.cs for full conversion
@@ -67,7 +68,7 @@ public class ChangeActiveScene : Trigger
                 if (GameObject.Find("API") != null) GameObject.Find("API").GetComponent<SendToGoogle>().Send();
                 Library();
             }
-            else if (gameObject.name == "TrapDoorOpen")
+            else if (gameObject.GetComponent<SpriteRenderer>().name == "trapdooropen" || roomsGoneTo[0]) 
             {
                 Library();
             } else {

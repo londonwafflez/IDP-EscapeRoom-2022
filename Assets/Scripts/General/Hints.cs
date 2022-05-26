@@ -51,11 +51,11 @@ public class Hints : MonoBehaviour
     void Start()
     {
        m_cdTimer = GameObject.Find("TimerText").GetComponent<CountdownTimer>();
-       dialogueScript = GameObject.Find("DialogueCanvas").GetComponent<GameController2>();
+       if (GameObject.Find("DialogueCanvas") != null) dialogueScript = GameObject.Find("DialogueCanvas").GetComponent<GameController2>();
     }
 
     void Update() {
-        if (!firstHasRun && dialogueScript.isDialogueDone()) {
+        if (GameObject.Find("DialogueCanvas") != null)  if (!firstHasRun && dialogueScript.isDialogueDone()) {
             callTypeSentence(prompts[curPrompt]);
             firstHasRun = true;
         }

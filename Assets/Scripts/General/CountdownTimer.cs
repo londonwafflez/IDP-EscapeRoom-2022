@@ -16,7 +16,7 @@ public class CountdownTimer : MonoBehaviour
 
     void Update()
     {
-        if (dialogueScript.isDialogueDone()) {
+        if (GameObject.Find("DialogueCanvas") != null)  if (dialogueScript.isDialogueDone()) {
             if (timeValue > 0)
             {
                 timeValue -= Time.deltaTime;
