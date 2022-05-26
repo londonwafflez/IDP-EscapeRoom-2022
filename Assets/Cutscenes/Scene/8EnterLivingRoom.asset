@@ -1,0 +1,26 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ef8e2d3b8db03e4449333e8146392a1f, type: 3}
+  m_Name: 8EnterLivingRoom
+  m_EditorClassIdentifier: 
+  sentences:
+  - text: Do you see the doll over there? My father created a doll and programmed
+      it to talk and move.
+    speaker: {fileID: 11400000, guid: 9513e85715b355d4796c400a900cba4f, type: 2}
+  - text: He had a bad memory, so he made a doll and telephone to remind him how
+      to get into his computer.
+    speaker: {fileID: 11400000, guid: 9513e85715b355d4796c400a900cba4f, type: 2}
+  - text: "But I can\u2019t figure out what they are saying. He did leave a journal
+      about it if you want to check it out."
+    speaker: {fileID: 11400000, guid: 9513e85715b355d4796c400a900cba4f, type: 2}
+  background: {fileID: 0}
+  nextScene: {fileID: 0}

@@ -16,6 +16,7 @@ public class GameController3 : MonoBehaviour
 
     public void Started()
     {
+        dialogue_canvas.enabled = true;
         bar.enabled = true;
         bottomBar.PlayScene(currentScene);
     }

@@ -216,7 +216,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 82719b887ad360f49ae8b47ca1cf8036, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  currentScene: {fileID: 11400000, guid: 7eb07922704dce54d893dcc0bd5b2408, type: 2}
+  currentScene: {fileID: 11400000, guid: 909c5e197cac3754e866bbd5499ecec9, type: 2}
   bottomBar: {fileID: 2324900146422142693}
   dialogue_canvas: {fileID: 2324900146649845351}
   bar: {fileID: 2324900146422142691}
