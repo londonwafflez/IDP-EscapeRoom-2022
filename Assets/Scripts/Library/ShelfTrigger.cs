@@ -83,10 +83,8 @@ public class ShelfTrigger : Trigger
                 {
                     for (int i = 0; i < 3; i++)
                     {
-                        Debug.Log(activeBooks[i]);
                         if (activeBooks[i] == charToInt(gameObject.name[14]))
                         {
-                            Debug.Log(activeBooks[i] + " is equal to " + gameObject.name[14] + " at index " + i);
                             bookSides[i].SetActive(true);
                         }
                     }
@@ -140,8 +138,6 @@ public class ShelfTrigger : Trigger
 
     public void changeActiveBooks(int index, int newVal)
     {
-        Debug.Log("ShelfTrigger.cs recieved index: " + index + " val: " + newVal);
         activeBooks[index] = newVal;
-        Debug.Log(activeBooks[index]);
     }
 }

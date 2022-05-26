@@ -33,7 +33,7 @@ public class Inventory : MonoBehaviour
                 activeInvBox = -1;
                 if (popOut != null)
                     popOut.SetActive(false);
-                m_blacklight.holdingBlacklight(false);
+                try {m_blacklight.holdingBlacklight(false);} catch {}
                 break;
             }
 

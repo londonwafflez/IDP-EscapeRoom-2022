@@ -15,8 +15,7 @@ public class Passcode1 : MonoBehaviour
     int NrIndex = 0;
     string alpha;
     public Text UiText = null;
-    public Behaviour dialogue_canvas;
-    public GameObject bbar;
+    public GameObject bbar, dialogueCanvasObj;
     public GameController3 control;
 
 
@@ -39,8 +38,7 @@ public class Passcode1 : MonoBehaviour
             key1.SetActive(true);
             GameObject.Find("HintButton").GetComponent<Hints>().FinishedPuzzle();
             if (SceneManager.GetActiveScene().name == "Library") GameObject.Find("HintButton").GetComponent<Hints>().SetPrompt(5);
-            dialogue_canvas.enabled = true;
-            bbar.SetActive(true);
+            dialogueCanvasObj.SetActive(true);
             bbar.GetComponent<SpriteRenderer>().enabled = true;
 
             control.Started();

@@ -24,7 +24,7 @@ public class GameController3 : MonoBehaviour
         if (dialogue_canvas.enabled == true)
         {
 
-            if  (Input.GetKeyDown(KeyCode.Space))
+            if  (Input.GetKeyDown(KeyCode.Space) || Input.GetKeyDown(KeyCode.F))
             {
                 if(bottomBar.IsCompleted())
                 {

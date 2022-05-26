@@ -46,8 +46,6 @@ public class BottomBarController1 : MonoBehaviour
     public bool IsLastSentence()
     {
         return sentenceIndex + 1 == currentScene.sentences.Count;
-        
-
     }
 
 

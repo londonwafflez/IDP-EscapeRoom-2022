@@ -1332,7 +1332,7 @@ MonoBehaviour:
   openTrapDoor: {fileID: 0}
   usernameInput: {fileID: 2054577338}
   feedback: {fileID: 1930355100}
-  UserSpeaker: {fileID: 11400000, guid: 3ccea962661f9ab42b9d246378e8f2e3, type: 2}
+  UserSpeaker: {fileID: 11400000, guid: c91b125d574570e42b6955cd1c87cccf, type: 2}
 --- !u!4 &1636596297
 Transform:
   m_ObjectHideFlags: 0

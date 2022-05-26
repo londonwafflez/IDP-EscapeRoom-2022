@@ -85,7 +85,7 @@ public class ChangeScenes : Trigger
     }    */
 
     public void checkUserGoFirstCutScene() {
-        if (Regex.IsMatch(usernameInput.GetComponent<TMP_InputField>().text, "^[a-zA-z]") && usernameInput.GetComponent<TMP_InputField>().text.Split().Length < 20) {
+        if (Regex.IsMatch(usernameInput.GetComponent<TMP_InputField>().text, "^[a-zA-z]") && usernameInput.GetComponent<TMP_InputField>().text.Length < 20) {
             UserSpeaker.ChangeSpeakerName(usernameInput.GetComponent<TMP_InputField>().text);
             FirstScene();
         } else
@@ -93,7 +93,7 @@ public class ChangeScenes : Trigger
     }
 
     public void checkUserGoCutScene() {
-        if (!Regex.IsMatch(usernameInput.GetComponent<TMP_InputField>().text, @"^[A-Za-z\s]*$")  && usernameInput.GetComponent<TMP_InputField>().text.Split().Length < 4) {
+        if (!Regex.IsMatch(usernameInput.GetComponent<TMP_InputField>().text, @"^[A-Za-z\s]*$")  && usernameInput.GetComponent<TMP_InputField>().text.Length < 4) {
             Username();
         }
         feedback.SetActive(true);
