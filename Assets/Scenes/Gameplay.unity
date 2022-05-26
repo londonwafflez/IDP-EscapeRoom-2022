@@ -765,6 +765,11 @@ GameObject:
   m_CorrespondingSourceObject: {fileID: 3942030398296836038, guid: 145bd9f0368b1c8478dabfb38b2b1862, type: 3}
   m_PrefabInstance: {fileID: 2039709826}
   m_PrefabAsset: {fileID: 0}
+--- !u!212 &1189427900 stripped
+SpriteRenderer:
+  m_CorrespondingSourceObject: {fileID: 9034105926694836067, guid: 145bd9f0368b1c8478dabfb38b2b1862, type: 3}
+  m_PrefabInstance: {fileID: 2039709826}
+  m_PrefabAsset: {fileID: 0}
 --- !u!114 &1189427901
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -780,7 +785,7 @@ MonoBehaviour:
   barText: {fileID: 436804537}
   personNameText: {fileID: 1587155954}
   currentScene: {fileID: 11400000, guid: 9d0e7747a3c1ac141adf0af7f6080dbf, type: 2}
-  bbar: {fileID: 0}
+  bbar: {fileID: 1189427900}
 --- !u!1 &1287380481
 GameObject:
   m_ObjectHideFlags: 0
@@ -1142,7 +1147,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 372443358513971795, guid: 145bd9f0368b1c8478dabfb38b2b1862, type: 3}
       propertyPath: m_IsActive
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 1248914174397231295, guid: 145bd9f0368b1c8478dabfb38b2b1862, type: 3}
       propertyPath: m_Name
