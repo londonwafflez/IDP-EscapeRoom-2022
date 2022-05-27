@@ -511,7 +511,8 @@ PrefabInstance:
       propertyPath: m_Sprite
       value: 
       objectReference: {fileID: 21300000, guid: 1315937200bf01045b6d0bd9b9719ea5, type: 3}
-    m_RemovedComponents: []
+    m_RemovedComponents:
+    - {fileID: 3612758165708380929, guid: 623f5a8d2746be843bdeccf6b36bde0d, type: 3}
   m_SourcePrefab: {fileID: 100100000, guid: 623f5a8d2746be843bdeccf6b36bde0d, type: 3}
 --- !u!1 &415017989 stripped
 GameObject:
@@ -534,6 +535,17 @@ GameObject:
   m_CorrespondingSourceObject: {fileID: 6637735306974212169, guid: 378ba82f6f2e21e449dcdba90fc6e8bb, type: 3}
   m_PrefabInstance: {fileID: 888767417}
   m_PrefabAsset: {fileID: 0}
+--- !u!114 &516732488 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 1014257735268176473, guid: 145bd9f0368b1c8478dabfb38b2b1862, type: 3}
+  m_PrefabInstance: {fileID: 2039709826}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4e29b1a8efbd4b44bb3f3716e73f07ff, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &528197693 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 4812081165523383573, guid: 145bd9f0368b1c8478dabfb38b2b1862, type: 3}
@@ -1131,6 +1143,17 @@ GameObject:
   m_CorrespondingSourceObject: {fileID: 2523851598001000238, guid: 145bd9f0368b1c8478dabfb38b2b1862, type: 3}
   m_PrefabInstance: {fileID: 2039709826}
   m_PrefabAsset: {fileID: 0}
+--- !u!114 &1512373013 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 5717885853733891344, guid: 145bd9f0368b1c8478dabfb38b2b1862, type: 3}
+  m_PrefabInstance: {fileID: 2039709826}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4e29b1a8efbd4b44bb3f3716e73f07ff, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!114 &1587155954 stripped
 MonoBehaviour:
   m_CorrespondingSourceObject: {fileID: 5386120960995608861, guid: 145bd9f0368b1c8478dabfb38b2b1862, type: 3}
@@ -1341,6 +1364,18 @@ PrefabInstance:
       propertyPath: m_IsActive
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 472265456135443280, guid: 145bd9f0368b1c8478dabfb38b2b1862, type: 3}
+      propertyPath: bookButton1
+      value: 
+      objectReference: {fileID: 516732488}
+    - target: {fileID: 472265456135443280, guid: 145bd9f0368b1c8478dabfb38b2b1862, type: 3}
+      propertyPath: bookButton2
+      value: 
+      objectReference: {fileID: 1512373013}
+    - target: {fileID: 472265456135443280, guid: 145bd9f0368b1c8478dabfb38b2b1862, type: 3}
+      propertyPath: bookButton3
+      value: 
+      objectReference: {fileID: 2065448761}
     - target: {fileID: 1248914174397231295, guid: 145bd9f0368b1c8478dabfb38b2b1862, type: 3}
       propertyPath: m_Name
       value: DialogueCanvas
@@ -1441,10 +1476,50 @@ PrefabInstance:
       propertyPath: m_IsActive
       value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: 4005092001460196673, guid: 145bd9f0368b1c8478dabfb38b2b1862, type: 3}
+      propertyPath: m_Color.a
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4005092001460196673, guid: 145bd9f0368b1c8478dabfb38b2b1862, type: 3}
+      propertyPath: m_Color.b
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 4005092001460196673, guid: 145bd9f0368b1c8478dabfb38b2b1862, type: 3}
+      propertyPath: m_Color.g
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 4005092001460196673, guid: 145bd9f0368b1c8478dabfb38b2b1862, type: 3}
+      propertyPath: m_Color.r
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 4120908137628522807, guid: 145bd9f0368b1c8478dabfb38b2b1862, type: 3}
+      propertyPath: bookButton1
+      value: 
+      objectReference: {fileID: 516732488}
+    - target: {fileID: 4120908137628522807, guid: 145bd9f0368b1c8478dabfb38b2b1862, type: 3}
+      propertyPath: bookButton2
+      value: 
+      objectReference: {fileID: 1512373013}
+    - target: {fileID: 4120908137628522807, guid: 145bd9f0368b1c8478dabfb38b2b1862, type: 3}
+      propertyPath: bookButton3
+      value: 
+      objectReference: {fileID: 2065448761}
     - target: {fileID: 4177490976795956531, guid: 145bd9f0368b1c8478dabfb38b2b1862, type: 3}
       propertyPath: m_IsActive
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 4298831157061522684, guid: 145bd9f0368b1c8478dabfb38b2b1862, type: 3}
+      propertyPath: bookButton1
+      value: 
+      objectReference: {fileID: 516732488}
+    - target: {fileID: 4298831157061522684, guid: 145bd9f0368b1c8478dabfb38b2b1862, type: 3}
+      propertyPath: bookButton2
+      value: 
+      objectReference: {fileID: 1512373013}
+    - target: {fileID: 4298831157061522684, guid: 145bd9f0368b1c8478dabfb38b2b1862, type: 3}
+      propertyPath: bookButton3
+      value: 
+      objectReference: {fileID: 2065448761}
     - target: {fileID: 4603291715545451866, guid: 145bd9f0368b1c8478dabfb38b2b1862, type: 3}
       propertyPath: m_RootOrder
       value: 1
@@ -1457,18 +1532,90 @@ PrefabInstance:
       propertyPath: m_enableWordWrapping
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 5545727903204128081, guid: 145bd9f0368b1c8478dabfb38b2b1862, type: 3}
+      propertyPath: bookButton1
+      value: 
+      objectReference: {fileID: 516732488}
+    - target: {fileID: 5545727903204128081, guid: 145bd9f0368b1c8478dabfb38b2b1862, type: 3}
+      propertyPath: bookButton2
+      value: 
+      objectReference: {fileID: 1512373013}
+    - target: {fileID: 5545727903204128081, guid: 145bd9f0368b1c8478dabfb38b2b1862, type: 3}
+      propertyPath: bookButton3
+      value: 
+      objectReference: {fileID: 2065448761}
+    - target: {fileID: 6414706586556013103, guid: 145bd9f0368b1c8478dabfb38b2b1862, type: 3}
+      propertyPath: bookButton1
+      value: 
+      objectReference: {fileID: 516732488}
+    - target: {fileID: 6414706586556013103, guid: 145bd9f0368b1c8478dabfb38b2b1862, type: 3}
+      propertyPath: bookButton2
+      value: 
+      objectReference: {fileID: 1512373013}
+    - target: {fileID: 6414706586556013103, guid: 145bd9f0368b1c8478dabfb38b2b1862, type: 3}
+      propertyPath: bookButton3
+      value: 
+      objectReference: {fileID: 2065448761}
     - target: {fileID: 6455049746378083904, guid: 145bd9f0368b1c8478dabfb38b2b1862, type: 3}
       propertyPath: m_RootOrder
       value: 21
       objectReference: {fileID: 0}
+    - target: {fileID: 6607475171922122110, guid: 145bd9f0368b1c8478dabfb38b2b1862, type: 3}
+      propertyPath: bookButton1
+      value: 
+      objectReference: {fileID: 516732488}
+    - target: {fileID: 6607475171922122110, guid: 145bd9f0368b1c8478dabfb38b2b1862, type: 3}
+      propertyPath: bookButton2
+      value: 
+      objectReference: {fileID: 1512373013}
+    - target: {fileID: 6607475171922122110, guid: 145bd9f0368b1c8478dabfb38b2b1862, type: 3}
+      propertyPath: bookButton3
+      value: 
+      objectReference: {fileID: 2065448761}
     - target: {fileID: 6614514957602676629, guid: 145bd9f0368b1c8478dabfb38b2b1862, type: 3}
       propertyPath: m_RootOrder
       value: 20
       objectReference: {fileID: 0}
+    - target: {fileID: 6654836296587069126, guid: 145bd9f0368b1c8478dabfb38b2b1862, type: 3}
+      propertyPath: bookButton1
+      value: 
+      objectReference: {fileID: 516732488}
+    - target: {fileID: 6654836296587069126, guid: 145bd9f0368b1c8478dabfb38b2b1862, type: 3}
+      propertyPath: bookButton2
+      value: 
+      objectReference: {fileID: 1512373013}
+    - target: {fileID: 6654836296587069126, guid: 145bd9f0368b1c8478dabfb38b2b1862, type: 3}
+      propertyPath: bookButton3
+      value: 
+      objectReference: {fileID: 2065448761}
     - target: {fileID: 7533151193681149007, guid: 145bd9f0368b1c8478dabfb38b2b1862, type: 3}
       propertyPath: m_IsActive
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 7729043327695523170, guid: 145bd9f0368b1c8478dabfb38b2b1862, type: 3}
+      propertyPath: bookButton1
+      value: 
+      objectReference: {fileID: 516732488}
+    - target: {fileID: 7729043327695523170, guid: 145bd9f0368b1c8478dabfb38b2b1862, type: 3}
+      propertyPath: bookButton2
+      value: 
+      objectReference: {fileID: 1512373013}
+    - target: {fileID: 7729043327695523170, guid: 145bd9f0368b1c8478dabfb38b2b1862, type: 3}
+      propertyPath: bookButton3
+      value: 
+      objectReference: {fileID: 2065448761}
+    - target: {fileID: 8318453174544103857, guid: 145bd9f0368b1c8478dabfb38b2b1862, type: 3}
+      propertyPath: bookButton1
+      value: 
+      objectReference: {fileID: 516732488}
+    - target: {fileID: 8318453174544103857, guid: 145bd9f0368b1c8478dabfb38b2b1862, type: 3}
+      propertyPath: bookButton2
+      value: 
+      objectReference: {fileID: 1512373013}
+    - target: {fileID: 8318453174544103857, guid: 145bd9f0368b1c8478dabfb38b2b1862, type: 3}
+      propertyPath: bookButton3
+      value: 
+      objectReference: {fileID: 2065448761}
     - target: {fileID: 9130358367152819862, guid: 145bd9f0368b1c8478dabfb38b2b1862, type: 3}
       propertyPath: m_LocalPosition.x
       value: 32
@@ -1481,6 +1628,17 @@ PrefabInstance:
     - {fileID: 1466611806062372717, guid: 145bd9f0368b1c8478dabfb38b2b1862, type: 3}
     - {fileID: 7661581600481112420, guid: 145bd9f0368b1c8478dabfb38b2b1862, type: 3}
   m_SourcePrefab: {fileID: 100100000, guid: 145bd9f0368b1c8478dabfb38b2b1862, type: 3}
+--- !u!114 &2065448761 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 1568200099517789162, guid: 145bd9f0368b1c8478dabfb38b2b1862, type: 3}
+  m_PrefabInstance: {fileID: 2039709826}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4e29b1a8efbd4b44bb3f3716e73f07ff, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &2144620643 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 3705478220699887285, guid: 378ba82f6f2e21e449dcdba90fc6e8bb, type: 3}

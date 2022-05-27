@@ -2,6 +2,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
 
 public class ShelfTrigger : Trigger
 {
@@ -9,6 +10,7 @@ public class ShelfTrigger : Trigger
     public Sprite[] shelfSprites = new Sprite[9];
     public GameObject[] bookSides = new GameObject[3];
     public GameObject mockBirdBook, mockBirdInside, door;
+    public Button bookButton1, bookButton2, bookButton3;
     // public GameObject shelfZoomed;
     SpriteRenderer spriteRenderer;
     Inventory m_inventory;
@@ -54,6 +56,9 @@ public class ShelfTrigger : Trigger
             bookshelf6.GetComponent<Rigidbody2D>().simulated = true;
             bookshelf6.GetComponent<Rigidbody2D>().velocity = new Vector2(300, 0);
             GameObject.Find("ShelfTrigger (6)").SetActive(false);
+            bookButton1.enabled = false;
+            bookButton2.enabled = false;
+            bookButton3.enabled = false;
             GameObject.Find("HintButton").GetComponent<Hints>().FinishedPuzzle();
         }
     }
