@@ -7,7 +7,7 @@ public class placeStatue : Trigger
     Inventory inventory;
     Hints hints;
     ChangeActiveScene scene;
-    public GameObject sceneStatue;
+    public GameObject sceneStatue, artifactObjs;
     static int statuesPlaced = 0;
 
     void Start()
@@ -27,6 +27,8 @@ public class placeStatue : Trigger
             if (statuesPlaced >= 3) {
                 // win
                 hints.SetPrompt(13);
+                artifactObjs.SetActive(true);
+
             }
         } else { 
             switch (scene.getScene()) {

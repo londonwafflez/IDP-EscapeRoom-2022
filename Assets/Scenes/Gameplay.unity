@@ -141,7 +141,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 6580154389932027099, guid: 0a53050cd4dbf744fa526db28ad976b6, type: 3}
       propertyPath: m_RootOrder
-      value: 4
+      value: 3
       objectReference: {fileID: 0}
     - target: {fileID: 6580154389932027099, guid: 0a53050cd4dbf744fa526db28ad976b6, type: 3}
       propertyPath: m_LocalPosition.x
@@ -192,6 +192,10 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 600666319202514346, guid: 0be16fd0cef87e741b0061b008b24057, type: 3}
+      propertyPath: openDoorTrigger
+      value: 
+      objectReference: {fileID: 307642889}
     - target: {fileID: 600666319202514346, guid: 0be16fd0cef87e741b0061b008b24057, type: 3}
       propertyPath: openDoorBoxCollider
       value: 
@@ -294,7 +298,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 6520643438003402953, guid: 0be16fd0cef87e741b0061b008b24057, type: 3}
       propertyPath: m_IsActive
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 6520643438792537986, guid: 0be16fd0cef87e741b0061b008b24057, type: 3}
       propertyPath: blacklightCircle
@@ -316,6 +320,10 @@ PrefabInstance:
       propertyPath: m_SortingLayerID
       value: -857009855
       objectReference: {fileID: 0}
+    - target: {fileID: 9057389952012466456, guid: 0be16fd0cef87e741b0061b008b24057, type: 3}
+      propertyPath: artifactObjs
+      value: 
+      objectReference: {fileID: 1756410600}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 0be16fd0cef87e741b0061b008b24057, type: 3}
 --- !u!1 &307642880 stripped
@@ -353,6 +361,32 @@ BoxCollider2D:
   m_AutoTiling: 0
   serializedVersion: 2
   m_Size: {x: 14, y: 14}
+  m_EdgeRadius: 0
+--- !u!61 &307642889
+BoxCollider2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 307642881}
+  m_Enabled: 0
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IsTrigger: 1
+  m_UsedByEffector: 0
+  m_UsedByComposite: 0
+  m_Offset: {x: 0, y: 0}
+  m_SpriteTilingProperty:
+    border: {x: 0, y: 0, z: 0, w: 0}
+    pivot: {x: 0.5, y: 0.5}
+    oldSize: {x: 7, y: 7}
+    newSize: {x: 7, y: 7}
+    adaptiveTilingThreshold: 0.5
+    drawMode: 0
+    adaptiveTiling: 0
+  m_AutoTiling: 0
+  serializedVersion: 2
+  m_Size: {x: 20, y: 20}
   m_EdgeRadius: 0
 --- !u!1001 &371933563
 PrefabInstance:
@@ -509,6 +543,7 @@ MonoBehaviour:
   - {fileID: 415017989}
   - {fileID: 1362400156}
   openDoorBoxCollider: {fileID: 0}
+  openDoorTrigger: {fileID: 0}
 --- !u!1 &540256201 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 3705478221724987990, guid: 378ba82f6f2e21e449dcdba90fc6e8bb, type: 3}
@@ -686,11 +721,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 3705478221033069017, guid: 378ba82f6f2e21e449dcdba90fc6e8bb, type: 3}
       propertyPath: m_IsActive
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 3705478221033069030, guid: 378ba82f6f2e21e449dcdba90fc6e8bb, type: 3}
       propertyPath: m_RootOrder
-      value: 5
+      value: 4
       objectReference: {fileID: 0}
     - target: {fileID: 3705478221033069030, guid: 378ba82f6f2e21e449dcdba90fc6e8bb, type: 3}
       propertyPath: m_LocalPosition.x
@@ -888,6 +923,10 @@ PrefabInstance:
       propertyPath: m_RootOrder
       value: 20
       objectReference: {fileID: 0}
+    - target: {fileID: 4981507560375068634, guid: 378ba82f6f2e21e449dcdba90fc6e8bb, type: 3}
+      propertyPath: artifactObjs
+      value: 
+      objectReference: {fileID: 1756410600}
     - target: {fileID: 6511925044087486791, guid: 378ba82f6f2e21e449dcdba90fc6e8bb, type: 3}
       propertyPath: m_SortingOrder
       value: 3
@@ -979,6 +1018,7 @@ MonoBehaviour:
   - {fileID: 0}
   - {fileID: 0}
   openDoorBoxCollider: {fileID: 0}
+  openDoorTrigger: {fileID: 0}
 --- !u!4 &1287380483
 Transform:
   m_ObjectHideFlags: 0
@@ -992,7 +1032,7 @@ Transform:
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 3
+  m_RootOrder: 2
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!82 &1287380484
 AudioSource:
@@ -1273,6 +1313,12 @@ MonoBehaviour:
   - {fileID: 415017989}
   - {fileID: 1362400156}
   openDoorBoxCollider: {fileID: 0}
+  openDoorTrigger: {fileID: 0}
+--- !u!1 &1756410600 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 5676304190462227174, guid: 378ba82f6f2e21e449dcdba90fc6e8bb, type: 3}
+  m_PrefabInstance: {fileID: 888767417}
+  m_PrefabAsset: {fileID: 0}
 --- !u!114 &1858926935 stripped
 MonoBehaviour:
   m_CorrespondingSourceObject: {fileID: 6520643439149490277, guid: 0be16fd0cef87e741b0061b008b24057, type: 3}
@@ -1303,6 +1349,10 @@ PrefabInstance:
       propertyPath: bottomBar
       value: 
       objectReference: {fileID: 1189427901}
+    - target: {fileID: 267226826205016469, guid: 145bd9f0368b1c8478dabfb38b2b1862, type: 3}
+      propertyPath: artifactObjs
+      value: 
+      objectReference: {fileID: 1756410600}
     - target: {fileID: 372443358513971795, guid: 145bd9f0368b1c8478dabfb38b2b1862, type: 3}
       propertyPath: m_Name
       value: Library
@@ -1325,7 +1375,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 2290138935778369616, guid: 145bd9f0368b1c8478dabfb38b2b1862, type: 3}
       propertyPath: m_RootOrder
-      value: 2
+      value: 5
       objectReference: {fileID: 0}
     - target: {fileID: 2290138935778369616, guid: 145bd9f0368b1c8478dabfb38b2b1862, type: 3}
       propertyPath: m_LocalPosition.x
@@ -1393,6 +1443,10 @@ PrefabInstance:
       objectReference: {fileID: 1446381414}
     - target: {fileID: 3942030398296836038, guid: 145bd9f0368b1c8478dabfb38b2b1862, type: 3}
       propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 4603291715545451866, guid: 145bd9f0368b1c8478dabfb38b2b1862, type: 3}
+      propertyPath: m_RootOrder
       value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 4714963557338465097, guid: 145bd9f0368b1c8478dabfb38b2b1862, type: 3}
