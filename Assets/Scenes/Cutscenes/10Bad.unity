@@ -666,7 +666,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   currentScene: {fileID: 11400000, guid: 3fc594b37f7ed8741b8fc3f61808d461, type: 2}
   bottomBar: {fileID: 1580824235}
-  nextScene: 
+  nextScene: HeartRateAfter
   dialogue_canvas: {fileID: 1276876789}
 --- !u!114 &1309531806
 MonoBehaviour:
