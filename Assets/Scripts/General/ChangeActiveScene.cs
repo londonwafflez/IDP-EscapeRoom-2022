@@ -50,7 +50,7 @@ public class ChangeActiveScene : Trigger
 
     public void Win() 
     {
-        if (GameObject.Find("API") != null) GameObject.Find("API").GetComponent<SendToGoogle>().Send();
+        // if (GameObject.Find("API") != null) GameObject.Find("API").GetComponent<SendToGoogle>().Send();
     }
 
 
@@ -74,7 +74,7 @@ public class ChangeActiveScene : Trigger
                 gameObject.transform.localScale = new Vector3(4, 4, 1);
                 // gameObject.transform.localScale.y ;
                 inventory.used("Key1");
-                if (GameObject.Find("API") != null) GameObject.Find("API").GetComponent<SendToGoogle>().Send();
+                // if (GameObject.Find("API") != null) GameObject.Find("API").GetComponent<SendToGoogle>().Send();
                 Library();
             }
             else if (gameObject.GetComponent<SpriteRenderer>().name == "trapdooropen" || roomsGoneTo[1]) 
