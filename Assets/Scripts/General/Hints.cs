@@ -26,8 +26,8 @@ public class Hints : MonoBehaviour
         "Open the book to the first page. Remember the secret code translator from the first room you escaped? That might come in handy to figure out the code for the chest.",
         "Look at the signs above the bookshelves",
         "The doll wants tea. Find the tea set and give it to the doll",
-        "A telephone rings.. The note on the telephone can be used for the computer",
-        "Each security camera footage shows a specific spot in each room. You've collected 3 statues from each room, put them back  into that specific spot"
+        "A telephone rings.. A translator can get you from the sounds to the computer",
+        "Three security cameras and three statues"
     };
     int curPrompt = 0;
     string[] prompts = new string[] {

@@ -16,7 +16,7 @@ public class ChangeActiveScene : Trigger
     static string activeScene = "StorageRoom";
     public GameObject[] ScenePrefabs = new GameObject[3];
     CountdownTimer cdTimer;
-    public BoxCollider2D openDoorBoxCollider;
+    public BoxCollider2D openDoorBoxCollider, openDoorTrigger;
 
     void ChangeScenes(int newScene)
     {
@@ -70,6 +70,7 @@ public class ChangeActiveScene : Trigger
                 m_hints.FinishedPuzzle();
                 gameObject.GetComponent<SpriteRenderer>().sprite = openTrapDoor;
                 openDoorBoxCollider.enabled = true;
+                openDoorTrigger.enabled = true;
                 gameObject.transform.localScale = new Vector3(4, 4, 1);
                 // gameObject.transform.localScale.y ;
                 inventory.used("Key1");

@@ -20,9 +20,9 @@ public class dollTrigger : Trigger
         {
             obj1.SetActive(!isActive); // false to hide, true to show
             isActive1 = !isActive1;
+            GameObject.Find("HintsButton").GetComponent<Hints>().FinishedPuzzle();
         } else
         {
-            
             obj.SetActive(!isActive); // false to hide, true to show
             isActive = !isActive;
         }
