@@ -5,7 +5,7 @@ using UnityEngine.UI;
 
 public class CountdownTimer : MonoBehaviour
 {
-    public float timeValue = 1800;
+    public float timeValue;
     public Text timerText;
     GameController2 dialogueScript;
     int[] puzzleTimes = {0, 0, 0};
@@ -25,6 +25,7 @@ public class CountdownTimer : MonoBehaviour
             else
             {
                 timeValue = 0;
+
             }
             DisplayTime(timeValue);   
         }

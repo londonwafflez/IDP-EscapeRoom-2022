@@ -33,7 +33,7 @@ EditorBuildSettings:
     path: Assets/Scenes/Gameplay.unity
     guid: 709da50f8ab160842a5329514b7ff1d2
   - enabled: 0
-    path: Assets/Scenes/MetacognitveData.unity
+    path: 
     guid: fc1c196c440a53041a3775de666815e6
   - enabled: 1
     path: Assets/Scenes/Questions/HeartRateAfter.unity
@@ -59,6 +59,18 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/Questions/Question5.unity
     guid: 3f41011b611aafe4aae01c9aed75d79c
+  - enabled: 1
+    path: Assets/Scenes/Cutscenes/9ArtifactFoundBad.unity
+    guid: c6f7fcab37fd0d74fa8480f28accc69b
+  - enabled: 1
+    path: Assets/Scenes/Cutscenes/9ArtifactFoundGood.unity
+    guid: 9d56ac7997ae1ec4393b942e32940e22
+  - enabled: 1
+    path: Assets/Scenes/Cutscenes/10Bad.unity
+    guid: 5609bd152a072af4dacdc7ed67513f7a
+  - enabled: 1
+    path: Assets/Scenes/Cutscenes/10Good.unity
+    guid: dc05f47fa62f90d45ab976226737cb2f
   - enabled: 1
     path: Assets/Scenes/GoToMenu.unity
     guid: 790d49821c015c94bb51fa6783d7d2b7

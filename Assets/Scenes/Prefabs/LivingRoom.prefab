@@ -1507,7 +1507,7 @@ GameObject:
   - component: {fileID: 3705478220409670617}
   - component: {fileID: 3705478220409670616}
   - component: {fileID: 3705478220409670619}
-  - component: {fileID: 3705478220409670630}
+  - component: {fileID: 1516798547831013414}
   m_Layer: 0
   m_Name: journal
   m_TagString: Untagged
@@ -1595,8 +1595,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   obj: {fileID: 3705478220133532466}
---- !u!61 &3705478220409670630
-BoxCollider2D:
+--- !u!68 &1516798547831013414
+EdgeCollider2D:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
@@ -1608,19 +1608,20 @@ BoxCollider2D:
   m_IsTrigger: 1
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: 3.5207632, y: -2.1543446}
-  m_SpriteTilingProperty:
-    border: {x: 0, y: 0, z: 0, w: 0}
-    pivot: {x: 0.5, y: 0.5}
-    oldSize: {x: 4.67, y: 7}
-    newSize: {x: 4.67, y: 7}
-    adaptiveTilingThreshold: 0.5
-    drawMode: 0
-    adaptiveTiling: 0
-  m_AutoTiling: 0
-  serializedVersion: 2
-  m_Size: {x: 8.849352, y: 17.8304}
+  m_Offset: {x: 0, y: 0}
   m_EdgeRadius: 0
+  m_Points:
+  - {x: -4.497342, y: 3.1712513}
+  - {x: -3.1501963, y: -3.4596047}
+  - {x: 0.009706676, y: -10.644022}
+  - {x: 7.0662484, y: -7.7344756}
+  - {x: 3.1037483, y: 4.220106}
+  - {x: 1.2334838, y: 5.6928396}
+  - {x: -4.545303, y: 3.3657873}
+  m_AdjacentStartPoint: {x: 0, y: 0}
+  m_AdjacentEndPoint: {x: 0, y: 0}
+  m_UseAdjacentStartPoint: 0
+  m_UseAdjacentEndPoint: 0
 --- !u!1 &3705478220457924583
 GameObject:
   m_ObjectHideFlags: 0
@@ -3120,7 +3121,7 @@ BoxCollider2D:
   m_IsTrigger: 1
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: -3.6975226, y: -13.558809}
+  m_Offset: {x: -5.2230268, y: -13.558809}
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0.5, y: 0.5}
@@ -3131,7 +3132,7 @@ BoxCollider2D:
     adaptiveTiling: 0
   m_AutoTiling: 0
   serializedVersion: 2
-  m_Size: {x: 28.348927, y: 16.193237}
+  m_Size: {x: 25.29792, y: 16.193237}
   m_EdgeRadius: 0
 --- !u!114 &3705478220957138383
 MonoBehaviour:
@@ -5999,6 +6000,7 @@ MonoBehaviour:
   - {fileID: 0}
   - {fileID: 3705478221033069017}
   openDoorBoxCollider: {fileID: 0}
+  openDoorTrigger: {fileID: 0}
 --- !u!1 &6637735306974212169
 GameObject:
   m_ObjectHideFlags: 0

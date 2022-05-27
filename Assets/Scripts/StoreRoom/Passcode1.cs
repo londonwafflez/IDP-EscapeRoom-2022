@@ -17,6 +17,8 @@ public class Passcode1 : MonoBehaviour
     public Text UiText = null;
     public GameObject bbar, dialogueCanvasObj;
     public GameController3 control;
+    public GameObject ghost;
+    public SpriteRenderer ghosts;
 
 
     public void CodeFunction(string Numbers)
@@ -40,6 +42,8 @@ public class Passcode1 : MonoBehaviour
             if (SceneManager.GetActiveScene().name == "Library") GameObject.Find("HintButton").GetComponent<Hints>().SetPrompt(5);
             dialogueCanvasObj.SetActive(true);
             bbar.GetComponent<SpriteRenderer>().enabled = true;
+            ghost.GetComponent<SpriteRenderer>().enabled = true;
+            ghosts.enabled = true;
 
             control.Started();
 
