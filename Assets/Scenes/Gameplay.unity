@@ -302,7 +302,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 6520643438003402953, guid: 0be16fd0cef87e741b0061b008b24057, type: 3}
       propertyPath: m_IsActive
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 6520643438792537986, guid: 0be16fd0cef87e741b0061b008b24057, type: 3}
       propertyPath: blacklightCircle
@@ -1641,7 +1641,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 372443358513971795, guid: 145bd9f0368b1c8478dabfb38b2b1862, type: 3}
       propertyPath: m_IsActive
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 472265456135443280, guid: 145bd9f0368b1c8478dabfb38b2b1862, type: 3}
       propertyPath: bookButton1
@@ -1727,6 +1727,34 @@ PrefabInstance:
       propertyPath: m_SortingOrder
       value: 10
       objectReference: {fileID: 0}
+    - target: {fileID: 2969841412614764991, guid: 145bd9f0368b1c8478dabfb38b2b1862, type: 3}
+      propertyPath: m_Sprite
+      value: 
+      objectReference: {fileID: 21300000, guid: 1f111c36aa1c29a48aab24773acb793a, type: 3}
+    - target: {fileID: 3078583936046378951, guid: 145bd9f0368b1c8478dabfb38b2b1862, type: 3}
+      propertyPath: m_LocalScale.x
+      value: 281.3539
+      objectReference: {fileID: 0}
+    - target: {fileID: 3078583936046378951, guid: 145bd9f0368b1c8478dabfb38b2b1862, type: 3}
+      propertyPath: m_LocalScale.y
+      value: 301.3
+      objectReference: {fileID: 0}
+    - target: {fileID: 3201111824936126439, guid: 145bd9f0368b1c8478dabfb38b2b1862, type: 3}
+      propertyPath: m_LocalScale.x
+      value: 281.3539
+      objectReference: {fileID: 0}
+    - target: {fileID: 3201111824936126439, guid: 145bd9f0368b1c8478dabfb38b2b1862, type: 3}
+      propertyPath: m_LocalScale.y
+      value: 301.3
+      objectReference: {fileID: 0}
+    - target: {fileID: 3201111824936126439, guid: 145bd9f0368b1c8478dabfb38b2b1862, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: -113.6053
+      objectReference: {fileID: 0}
+    - target: {fileID: 3201111824936126439, guid: 145bd9f0368b1c8478dabfb38b2b1862, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: -1.2
+      objectReference: {fileID: 0}
     - target: {fileID: 3591345703599484996, guid: 145bd9f0368b1c8478dabfb38b2b1862, type: 3}
       propertyPath: bbar
       value: 
@@ -1762,7 +1790,7 @@ PrefabInstance:
     - target: {fileID: 3746426442390979322, guid: 145bd9f0368b1c8478dabfb38b2b1862, type: 3}
       propertyPath: m_Sprite
       value: 
-      objectReference: {fileID: 21300000, guid: 95f4cfab6aa6fd141a1352dd72f83162, type: 3}
+      objectReference: {fileID: 21300000, guid: 1f111c36aa1c29a48aab24773acb793a, type: 3}
     - target: {fileID: 3942030398296836038, guid: 145bd9f0368b1c8478dabfb38b2b1862, type: 3}
       propertyPath: m_IsActive
       value: 1
@@ -1867,6 +1895,10 @@ PrefabInstance:
       propertyPath: m_LocalPosition.y
       value: 210
       objectReference: {fileID: 0}
+    - target: {fileID: 5826908712635429356, guid: 145bd9f0368b1c8478dabfb38b2b1862, type: 3}
+      propertyPath: m_Sprite
+      value: 
+      objectReference: {fileID: 21300000, guid: 1f111c36aa1c29a48aab24773acb793a, type: 3}
     - target: {fileID: 6414706586556013103, guid: 145bd9f0368b1c8478dabfb38b2b1862, type: 3}
       propertyPath: bookButton1
       value: 
@@ -1911,6 +1943,14 @@ PrefabInstance:
       propertyPath: bookButton3
       value: 
       objectReference: {fileID: 2065448761}
+    - target: {fileID: 7471712134983856042, guid: 145bd9f0368b1c8478dabfb38b2b1862, type: 3}
+      propertyPath: m_LocalScale.x
+      value: 281.3539
+      objectReference: {fileID: 0}
+    - target: {fileID: 7471712134983856042, guid: 145bd9f0368b1c8478dabfb38b2b1862, type: 3}
+      propertyPath: m_LocalScale.y
+      value: 301.3
+      objectReference: {fileID: 0}
     - target: {fileID: 7533151193681149007, guid: 145bd9f0368b1c8478dabfb38b2b1862, type: 3}
       propertyPath: m_IsActive
       value: 0
