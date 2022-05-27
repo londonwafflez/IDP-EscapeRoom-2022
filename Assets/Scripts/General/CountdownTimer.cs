@@ -8,7 +8,7 @@ public class CountdownTimer : MonoBehaviour
     public float timeValue;
     public Text timerText;
     GameController2 dialogueScript;
-    int[] puzzleTimes = {0, 0, 0};
+    public int[] puzzleTimes = {0, 0, 0};
 
     void Start() {
         dialogueScript = GameObject.Find("DialogueCanvas").GetComponent<GameController2>();
