@@ -252,6 +252,14 @@ PrefabInstance:
       propertyPath: m_LocalScale.y
       value: 8
       objectReference: {fileID: 0}
+    - target: {fileID: 6520643437989056535, guid: 0be16fd0cef87e741b0061b008b24057, type: 3}
+      propertyPath: m_Size.y
+      value: 1.0390103
+      objectReference: {fileID: 0}
+    - target: {fileID: 6520643437989056535, guid: 0be16fd0cef87e741b0061b008b24057, type: 3}
+      propertyPath: m_Offset.y
+      value: -0.14549491
+      objectReference: {fileID: 0}
     - target: {fileID: 6520643438003402952, guid: 0be16fd0cef87e741b0061b008b24057, type: 3}
       propertyPath: m_RootOrder
       value: 3
@@ -302,7 +310,19 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 6520643438003402953, guid: 0be16fd0cef87e741b0061b008b24057, type: 3}
       propertyPath: m_IsActive
-      value: 0
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 6520643438579987401, guid: 0be16fd0cef87e741b0061b008b24057, type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 6520643438669556927, guid: 0be16fd0cef87e741b0061b008b24057, type: 3}
+      propertyPath: m_Size.y
+      value: 0.84895957
+      objectReference: {fileID: 0}
+    - target: {fileID: 6520643438669556927, guid: 0be16fd0cef87e741b0061b008b24057, type: 3}
+      propertyPath: m_Offset.y
+      value: 0.07552023
       objectReference: {fileID: 0}
     - target: {fileID: 6520643438792537986, guid: 0be16fd0cef87e741b0061b008b24057, type: 3}
       propertyPath: blacklightCircle
@@ -399,6 +419,14 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 3612758165549773519, guid: 623f5a8d2746be843bdeccf6b36bde0d, type: 3}
+      propertyPath: m_AnchoredPosition.x
+      value: -5
+      objectReference: {fileID: 0}
+    - target: {fileID: 3612758165549773519, guid: 623f5a8d2746be843bdeccf6b36bde0d, type: 3}
+      propertyPath: m_AnchoredPosition.y
+      value: -0
+      objectReference: {fileID: 0}
     - target: {fileID: 3612758165708380936, guid: 623f5a8d2746be843bdeccf6b36bde0d, type: 3}
       propertyPath: m_Name
       value: UICanvas
@@ -1182,8 +1210,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -407.01, y: -143}
-  m_SizeDelta: {x: 80.0127, y: 27.3498}
+  m_AnchoredPosition: {x: -327, y: -178}
+  m_SizeDelta: {x: 59.6616, y: 13.662}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1455051781
 MonoBehaviour:
@@ -1232,10 +1260,10 @@ MonoBehaviour:
   m_faceColor:
     serializedVersion: 2
     rgba: 4294967295
-  m_fontSize: 15
+  m_fontSize: 21.6
   m_fontSizeBase: 15
   m_fontWeight: 400
-  m_enableAutoSizing: 0
+  m_enableAutoSizing: 1
   m_fontSizeMin: 18
   m_fontSizeMax: 72
   m_fontStyle: 0
@@ -1268,7 +1296,7 @@ MonoBehaviour:
   m_VertexBufferAutoSizeReduction: 0
   m_useMaxVisibleDescender: 1
   m_pageToDisplay: 1
-  m_margin: {x: 0, y: 0, z: 0, w: 0}
+  m_margin: {x: -25.915298, y: -29.607538, z: 0, w: 0}
   m_isUsingLegacyAnimationComponent: 0
   m_isVolumetricText: 0
   m_hasFontAssetChanged: 0
@@ -1641,7 +1669,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 372443358513971795, guid: 145bd9f0368b1c8478dabfb38b2b1862, type: 3}
       propertyPath: m_IsActive
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 472265456135443280, guid: 145bd9f0368b1c8478dabfb38b2b1862, type: 3}
       propertyPath: bookButton1

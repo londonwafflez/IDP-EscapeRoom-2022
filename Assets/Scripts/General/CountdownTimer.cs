@@ -44,7 +44,7 @@ public class CountdownTimer : MonoBehaviour
     }
 
     public void SubtractHintTime() {
-        timeValue -= 30;
+        timeValue -= 180;
     }
 
     public void LogTime(int index) {
