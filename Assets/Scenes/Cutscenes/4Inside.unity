@@ -431,7 +431,6 @@ GameObject:
   - component: {fileID: 458245083}
   - component: {fileID: 458245082}
   - component: {fileID: 458245081}
-  - component: {fileID: 458245080}
   - component: {fileID: 458245079}
   m_Layer: 0
   m_Name: computer
@@ -481,19 +480,6 @@ BoxCollider2D:
   serializedVersion: 2
   m_Size: {x: 38.60777, y: 17.148132}
   m_EdgeRadius: 0
---- !u!114 &458245080
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 458245077}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 88145c2e4d092e842ae7476ab3a8ccfa, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  obj: {fileID: 0}
 --- !u!61 &458245081
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -726,7 +712,6 @@ GameObject:
   m_Component:
   - component: {fileID: 735933336}
   - component: {fileID: 735933339}
-  - component: {fileID: 735933338}
   - component: {fileID: 735933337}
   m_Layer: 0
   m_Name: journal
@@ -776,19 +761,6 @@ BoxCollider2D:
   serializedVersion: 2
   m_Size: {x: 8.849352, y: 17.8304}
   m_EdgeRadius: 0
---- !u!114 &735933338
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 735933335}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 88145c2e4d092e842ae7476ab3a8ccfa, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  obj: {fileID: 0}
 --- !u!212 &735933339
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -1011,7 +983,6 @@ GameObject:
   m_Component:
   - component: {fileID: 1035959770}
   - component: {fileID: 1035959773}
-  - component: {fileID: 1035959772}
   - component: {fileID: 1035959771}
   m_Layer: 0
   m_Name: Telephone
@@ -1061,19 +1032,6 @@ BoxCollider2D:
   serializedVersion: 2
   m_Size: {x: 7.228932, y: 8.596085}
   m_EdgeRadius: 0
---- !u!114 &1035959772
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1035959769}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 88145c2e4d092e842ae7476ab3a8ccfa, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  obj: {fileID: 0}
 --- !u!212 &1035959773
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -1911,7 +1869,6 @@ GameObject:
   m_Component:
   - component: {fileID: 1376742243}
   - component: {fileID: 1376742246}
-  - component: {fileID: 1376742245}
   - component: {fileID: 1376742244}
   m_Layer: 0
   m_Name: doll
@@ -1961,20 +1918,6 @@ BoxCollider2D:
   serializedVersion: 2
   m_Size: {x: 60.045563, y: 64.28047}
   m_EdgeRadius: 0
---- !u!114 &1376742245
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1376742242}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 0f470a38487eeb941990543530513aa0, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  obj: {fileID: 0}
-  obj1: {fileID: 0}
 --- !u!212 &1376742246
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -2157,7 +2100,6 @@ GameObject:
   - component: {fileID: 1633576192}
   - component: {fileID: 1633576195}
   - component: {fileID: 1633576194}
-  - component: {fileID: 1633576193}
   m_Layer: 0
   m_Name: Teacup2
   m_TagString: Untagged
@@ -2180,19 +2122,6 @@ Transform:
   m_Father: {fileID: 761575559}
   m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &1633576193
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1633576191}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 1f79b4efc2b5cc54aa27b3e2c367b071, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  itemIndex: 9
 --- !u!61 &1633576194
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -2570,7 +2499,6 @@ GameObject:
   - component: {fileID: 1870973595}
   - component: {fileID: 1870973594}
   - component: {fileID: 1870973593}
-  - component: {fileID: 1870973592}
   m_Layer: 0
   m_Name: door
   m_TagString: Untagged
@@ -2593,27 +2521,6 @@ Transform:
   m_Father: {fileID: 1167422033}
   m_RootOrder: 8
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &1870973592
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1870973590}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: e4bd334964996ac4199f92eff4ce6ab2, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  obj: {fileID: 0}
-  clockPuzzle: {fileID: 0}
-  openTrapDoor: {fileID: 0}
-  ScenePrefabs:
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  openDoorBoxCollider: {fileID: 0}
-  openDoorTrigger: {fileID: 0}
 --- !u!61 &1870973593
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -2730,9 +2637,7 @@ GameObject:
   - component: {fileID: 1885936767}
   - component: {fileID: 1885936766}
   - component: {fileID: 1885936765}
-  - component: {fileID: 1885936764}
   - component: {fileID: 1885936763}
-  - component: {fileID: 1885936762}
   m_Layer: 0
   m_Name: MainCharacter
   m_TagString: Untagged
@@ -2755,22 +2660,6 @@ Transform:
   m_Father: {fileID: 1167422033}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &1885936762
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1885936760}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 4d570cf4c6a838649a1522ba5f920a50, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  MainCharacter: {fileID: 1885936760}
-  thresh: 200
-  thresh2: 274
-  thresh3: 0
 --- !u!58 &1885936763
 CircleCollider2D:
   m_ObjectHideFlags: 0
@@ -2787,21 +2676,6 @@ CircleCollider2D:
   m_Offset: {x: 0, y: -0.25060403}
   serializedVersion: 2
   m_Radius: 0.12939584
---- !u!114 &1885936764
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1885936760}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: d6a90387deb1c3c489bf07698190de91, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  anim: {fileID: 1885936766}
-  moveSpeed: 200
-  computerCanvas: {fileID: 0}
 --- !u!50 &1885936765
 Rigidbody2D:
   serializedVersion: 4
