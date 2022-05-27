@@ -389,6 +389,7 @@ GameObject:
   - component: {fileID: 1007820350}
   - component: {fileID: 1007820349}
   - component: {fileID: 1007820348}
+  - component: {fileID: 1007820351}
   m_Layer: 0
   m_Name: Main Camera
   m_TagString: MainCamera
@@ -462,6 +463,18 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1007820351
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1007820347}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 6d6674e9cde171a499eff91e7c57de17, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &1117941454
 GameObject:
   m_ObjectHideFlags: 0
@@ -474,6 +487,7 @@ GameObject:
   - component: {fileID: 1117941457}
   - component: {fileID: 1117941456}
   - component: {fileID: 1117941455}
+  - component: {fileID: 1117941459}
   m_Layer: 5
   m_Name: Canvas
   m_TagString: Untagged
@@ -566,6 +580,43 @@ RectTransform:
   m_AnchoredPosition: {x: 0, y: 0}
   m_SizeDelta: {x: 0, y: 0}
   m_Pivot: {x: 0, y: 0}
+--- !u!114 &1117941459
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1117941454}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 1ea3fab24b24ce845b27b163e5c0f1dd, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  username: {fileID: 0}
+  score: {fileID: 0}
+  timeforpuzzle1r1: {fileID: 0}
+  timeforpuzzle2r1: {fileID: 0}
+  timeforpuzzle3r1: {fileID: 0}
+  timeforpuzzle1r2: {fileID: 0}
+  timeforpuzzle2r2: {fileID: 0}
+  timeforpuzzle3r2: {fileID: 0}
+  timeforpuzzle1r3: {fileID: 0}
+  timeforpuzzle2r3: {fileID: 0}
+  timeforpuzzle3r3: {fileID: 0}
+  hintsforpuzzle1: {fileID: 0}
+  hintsforpuzzle2: {fileID: 0}
+  hintsforpuzzle3: {fileID: 0}
+  timeforroom1: {fileID: 0}
+  timeforroom2: {fileID: 0}
+  timeforroom3: {fileID: 0}
+  totalnumberofhints: {fileID: 0}
+  heartratebefore: {fileID: 0}
+  heartrateafter: {fileID: 0}
+  rating: {fileID: 0}
+  difficulty: {fileID: 0}
+  likes: {fileID: 0}
+  dislikes: {fileID: 0}
+  wishtheycoulddo: {fileID: 1741202412}
 --- !u!1 &1170745955
 GameObject:
   m_ObjectHideFlags: 0
@@ -653,6 +704,18 @@ MonoBehaviour:
       - m_Target: {fileID: 590142282}
         m_TargetAssemblyTypeName: Feedback, Assembly-CSharp
         m_MethodName: GoToMenu
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+      - m_Target: {fileID: 1117941459}
+        m_TargetAssemblyTypeName: SendToGoogle, Assembly-CSharp
+        m_MethodName: Send
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -1145,7 +1208,19 @@ MonoBehaviour:
   m_CharacterLimit: 0
   m_OnEndEdit:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 1007820351}
+        m_TargetAssemblyTypeName: SaveDataToVariable, Assembly-CSharp
+        m_MethodName: ReadStringInput7
+        m_Mode: 0
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
   m_OnSubmit:
     m_PersistentCalls:
       m_Calls: []
