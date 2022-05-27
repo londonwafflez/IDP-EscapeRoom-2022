@@ -1,74 +1,75 @@
-// using System.Collections;
-// using System.Collections.Generic;
-// using UnityEngine;
-// using UnityEngine.UI;
+using System.Collections;
+using System.Collections.Generic;
+using UnityEngine;
+using UnityEngine.Networking;
+using UnityEngine.UI;
 
-// public class GoogleForm : MonoBehaviour
-// {
-//    [SerializedField] InputField Username;
-//    [SerializedField] InputField Score;
-//    [SerializedField] InputField TimeForPuzzle1r1;
-//    [SerializedField] InputField TimeForPuzzle2r1;
-//    [SerializedField] InputField TimeForPuzzle3r1;
-//    [SerializedField] InputField TimeForPuzzle1r2;
-//    [SerializedField] InputField TimeForPuzzle2r2;
-//    [SerializedField] InputField TimeForPuzzle3r2;
-//    [SerializedField] InputField TimeForPuzzle1r3;
-//    [SerializedField] InputField TimeForPuzzle2r3;
-//    [SerializedField] InputField TimeForPuzzle3r3;
-//    [SerializedField] InputField HintsForPuzzle1;
-//    [SerializedField] InputField HintsForPuzzle2;
-//    [SerializedField] InputField HintsForPuzzle3;
-//    [SerializedField] InputField TimeForRoom1;
-//    [SerializedField] InputField TimeForRoom2;
-//    [SerializedField] InputField TimeForRoom3;
-//    [SerializedField] InputField TotalNumberOfHints;
-//    [SerializedField] InputField HeartRateBefore;
-//    [SerializedField] InputField HeartRateAfter;
-//    [SerializedField] InputField Rating;
-//    [SerializedField] InputField Difficulty;
-//    [SerializedField] InputField Likes;
-//    [SerializedField] InputField Dislikes;
-//    [SerializedField] InputField WishTheyCouldDo;
+public class GoogleForm : MonoBehaviour
+{
+   [SerializeField] InputField Username;
+   [SerializeField] InputField Score;
+   [SerializeField] InputField TimeForPuzzle1r1;
+   [SerializeField] InputField TimeForPuzzle2r1;
+   [SerializeField] InputField TimeForPuzzle3r1;
+   [SerializeField] InputField TimeForPuzzle1r2;
+   [SerializeField] InputField TimeForPuzzle2r2;
+   [SerializeField] InputField TimeForPuzzle3r2;
+   [SerializeField] InputField TimeForPuzzle1r3;
+   [SerializeField] InputField TimeForPuzzle2r3;
+   [SerializeField] InputField TimeForPuzzle3r3;
+   [SerializeField] InputField HintsForPuzzle1;
+   [SerializeField] InputField HintsForPuzzle2;
+   [SerializeField] InputField HintsForPuzzle3;
+   [SerializeField] InputField TimeForRoom1;
+   [SerializeField] InputField TimeForRoom2;
+   [SerializeField] InputField TimeForRoom3;
+   [SerializeField] InputField TotalNumberOfHints;
+   [SerializeField] InputField HeartRateBefore;
+   [SerializeField] InputField HeartRateAfter;
+   [SerializeField] InputField Rating;
+   [SerializeField] InputField Difficulty;
+   [SerializeField] InputField Likes;
+   [SerializeField] InputField Dislikes;
+   [SerializeField] InputField WishTheyCouldDo;
 
-//     private string URL = "https://docs.google.com/forms/u/0/d/e/1FAIpQLSdvKxbJzSXpFuFo5ogRHYYe5hbzx12OmnLe4MgNNkgi29s78w/formResponse";
+    private string URL = "https://docs.google.com/forms/u/0/d/e/1FAIpQLSdvKxbJzSXpFuFo5ogRHYYe5hbzx12OmnLe4MgNNkgi29s78w/formResponse";
     
-//     public void Send()
-//     {
-//         StartCoroutine(Post(Name, Score, TimeForPuzzle1r1, TimeForPuzzle2r1, TimeForPuzzle3r1, TimeForPuzzle1r2, TimeForPuzzle2r2, TimeForPuzzle3r2, TimeForPuzzle1r3, TimeForPuzzle2r3, TimeForPuzzle3r3, HintsForPuzzle1, HintsForPuzzle2, HintsForPuzzle3, TimeForRoom1, TimeForRoom2, TimeForRoom3, TotalNumberOfHints, HeartRateBefore, HeartRateAfter, Rating, Difficulty, Likes, Dislikes, WishTheyCouldDo));
-//     }
+    public void Send()
+    {
+        StartCoroutine(Post(Username.text, Score.text, TimeForPuzzle1r1.text, TimeForPuzzle2r1.text, TimeForPuzzle3r1.text, TimeForPuzzle1r2.text, TimeForPuzzle2r2.text, TimeForPuzzle3r2.text, TimeForPuzzle1r3.text, TimeForPuzzle2r3.text, TimeForPuzzle3r3.text, HintsForPuzzle1.text, HintsForPuzzle2.text, HintsForPuzzle3.text, TimeForRoom1.text, TimeForRoom2.text, TimeForRoom3.text, TotalNumberOfHints.text, HeartRateBefore.text, HeartRateAfter.text, Rating.text, Difficulty.text, Likes.text, Dislikes.text, WishTheyCouldDo.text));
+    }
 
-//       IEnumerator Post(string name, string score, string timeforpuzzle1r1, string timeforpuzzle2r1, string timeforpuzzle3r1, string timeforpuzzle1r2, string timeforpuzzle2r2, string timeforpuzzle3r2, string timeforpuzzle1r3, string timeforpuzzle2r3, string timeforpuzzle3r3, string hintsforpuzzle1, string hintsforpuzzle2, string hintsforpuzzle3, string timeforroom1, string timeforroom2, string timeforroom3, string totalnumberofhints, string heartratebefore, string heartrateafter, string rating, string difficulty, string likes, string dislikes, string wishtheycoulddo)
-//    {
-//        WWWForm form = new WWWForm();
-//        form.AddField("entry.1288604378", name);
-//        form.AddField("entry.876960760", score);
-//        form.AddField("entry.1605547814", timeforpuzzle1r1);
-//        form.AddField("entry.46043638", timeforpuzzle2r1);
-//        form.AddField("entry.1212807785", timeforpuzzle3r1);
-//        form.AddField("entry.462832709", timeforpuzzle1r2);
-//        form.AddField("entry.1474807138", timeforpuzzle2r2);
-//        form.AddField("entry.1405352907", timeforpuzzle3r2);
-//        form.AddField("entry.1569948200", timeforpuzzle1r3);
-//        form.AddField("entry.454777614", timeforpuzzle2r3);
-//        form.AddField("entry.1078749720", timeforpuzzle3r3);
-//        form.AddField("entry.292689356", hintsforpuzzle1);
-//        form.AddField("entry.504458729", hintsforpuzzle2);
-//        form.AddField("entry.2002984662", hintsforpuzzle3);
-//        form.AddField("entry.1518842093", timeforroom1);
-//        form.AddField("entry.974818698", timeforroom2);
-//        form.AddField("entry.411248928", timeforroom3);
-//        form.AddField("entry.1833221045", totalnumberofhints);
-//        form.AddField("entry.632023255", heartratebefore);
-//        form.AddField("entry.2076689957", heartrateafter);
-//        form.AddField("entry.1522289904", rating);
-//        form.AddField("entry.347837100", difficulty);
-//        form.AddField("entry.1483791588", likes);
-//        form.AddField("entry.1549649089", dislikes);
-//        form.AddField("entry.2021286873", wishtheycoulddo);
+      IEnumerator Post(string s1, string s2, string s3, string s4, string s5, string s6, string s7, string s8, string s9, string s10, string s11, string s12, string s13, string s14, string s15, string s16, string s17, string s18, string s19, string s20, string s21, string s22, string s23, string s24, string s25)
+   {
+       WWWForm form = new WWWForm();
+       form.AddField("entry.1288604378", s1);
+       form.AddField("entry.876960760", s2);
+       form.AddField("entry.1605547814", s3);
+       form.AddField("entry.46043638", s4);
+       form.AddField("entry.1212807785", s5);
+       form.AddField("entry.462832709", s6);
+       form.AddField("entry.1474807138", s7);
+       form.AddField("entry.1405352907", s8);
+       form.AddField("entry.1569948200", s9);
+       form.AddField("entry.454777614", s10);
+       form.AddField("entry.1078749720", s11);
+       form.AddField("entry.292689356", s12);
+       form.AddField("entry.504458729", s13);
+       form.AddField("entry.2002984662", s14);
+       form.AddField("entry.1518842093", s15);
+       form.AddField("entry.974818698", s16);
+       form.AddField("entry.411248928", s17);
+       form.AddField("entry.1833221045", s18);
+       form.AddField("entry.632023255", s19);
+       form.AddField("entry.2076689957", s20);
+       form.AddField("entry.1522289904", s21);
+       form.AddField("entry.347837100", s22);
+       form.AddField("entry.1483791588", s23);
+       form.AddField("entry.1549649089", s24);
+       form.AddField("entry.2021286873", s25);
 
-//        UnityWebRequest www = UnityWebRequest.Post(URL, form);
+       UnityWebRequest www = UnityWebRequest.Post(URL, form);
 
-//        yield return www.SendRequest();
-//    }
-// }
+       yield return www.SendWebRequest();
+   }
+}
