@@ -357,7 +357,8 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: How difficult did you find the puzzles in our game to be?
+  m_text: Out of 5, what would you rate our game.(5 being the highest, 1 being the
+    lowest)
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
   m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
@@ -521,6 +522,18 @@ MonoBehaviour:
       - m_Target: {fileID: 429075519}
         m_TargetAssemblyTypeName: Feedback, Assembly-CSharp
         m_MethodName: Question2
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+      - m_Target: {fileID: 899793352}
+        m_TargetAssemblyTypeName: SendToGoogle, Assembly-CSharp
+        m_MethodName: Send
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -767,6 +780,7 @@ GameObject:
   - component: {fileID: 899793350}
   - component: {fileID: 899793349}
   - component: {fileID: 899793348}
+  - component: {fileID: 899793352}
   m_Layer: 5
   m_Name: Canvas
   m_TagString: Untagged
@@ -859,6 +873,43 @@ RectTransform:
   m_AnchoredPosition: {x: 0, y: 0}
   m_SizeDelta: {x: 0, y: 0}
   m_Pivot: {x: 0, y: 0}
+--- !u!114 &899793352
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 899793347}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 1ea3fab24b24ce845b27b163e5c0f1dd, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  username: {fileID: 0}
+  score: {fileID: 0}
+  timeforpuzzle1r1: {fileID: 0}
+  timeforpuzzle2r1: {fileID: 0}
+  timeforpuzzle3r1: {fileID: 0}
+  timeforpuzzle1r2: {fileID: 0}
+  timeforpuzzle2r2: {fileID: 0}
+  timeforpuzzle3r2: {fileID: 0}
+  timeforpuzzle1r3: {fileID: 0}
+  timeforpuzzle2r3: {fileID: 0}
+  timeforpuzzle3r3: {fileID: 0}
+  hintsforpuzzle1: {fileID: 0}
+  hintsforpuzzle2: {fileID: 0}
+  hintsforpuzzle3: {fileID: 0}
+  timeforroom1: {fileID: 0}
+  timeforroom2: {fileID: 0}
+  timeforroom3: {fileID: 0}
+  totalnumberofhints: {fileID: 0}
+  heartratebefore: {fileID: 0}
+  heartrateafter: {fileID: 0}
+  rating: {fileID: 4190038}
+  difficulty: {fileID: 0}
+  likes: {fileID: 0}
+  dislikes: {fileID: 0}
+  wishtheycoulddo: {fileID: 0}
 --- !u!1 &970687650
 GameObject:
   m_ObjectHideFlags: 0
