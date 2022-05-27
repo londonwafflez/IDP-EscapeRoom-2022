@@ -49,5 +49,6 @@ public class CountdownTimer : MonoBehaviour
 
     public void LogTime(int index) {
         puzzleTimes[index] = (int)timeValue;
+        Debug.Log(puzzleTimes[index]);
     }
 }
