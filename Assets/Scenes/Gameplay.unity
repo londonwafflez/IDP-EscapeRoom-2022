@@ -298,7 +298,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 6520643438003402953, guid: 0be16fd0cef87e741b0061b008b24057, type: 3}
       propertyPath: m_IsActive
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 6520643438792537986, guid: 0be16fd0cef87e741b0061b008b24057, type: 3}
       propertyPath: blacklightCircle
@@ -495,6 +495,14 @@ PrefabInstance:
       propertyPath: items.Array.data[10]
       value: 
       objectReference: {fileID: 21300000, guid: adff9c6c0e5639c48ae743ff3e9fa995, type: 3}
+    - target: {fileID: 3612758167105934352, guid: 623f5a8d2746be843bdeccf6b36bde0d, type: 3}
+      propertyPath: m_Type
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3612758167105934352, guid: 623f5a8d2746be843bdeccf6b36bde0d, type: 3}
+      propertyPath: m_Sprite
+      value: 
+      objectReference: {fileID: 21300000, guid: 1315937200bf01045b6d0bd9b9719ea5, type: 3}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 623f5a8d2746be843bdeccf6b36bde0d, type: 3}
 --- !u!1 &415017989 stripped
@@ -729,7 +737,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 3705478221033069017, guid: 378ba82f6f2e21e449dcdba90fc6e8bb, type: 3}
       propertyPath: m_IsActive
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 3705478221033069030, guid: 378ba82f6f2e21e449dcdba90fc6e8bb, type: 3}
       propertyPath: m_RootOrder
