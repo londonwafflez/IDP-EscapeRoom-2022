@@ -50,7 +50,7 @@ public class Hints : MonoBehaviour
     CountdownTimer m_cdTimer;
 
     void Start()
-    {
+    { 
        m_cdTimer = GameObject.Find("TimerText").GetComponent<CountdownTimer>();
        if (GameObject.Find("DialogueCanvas") != null) dialogueScript = GameObject.Find("DialogueCanvas").GetComponent<GameController2>();
     }
