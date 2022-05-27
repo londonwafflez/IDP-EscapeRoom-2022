@@ -62,16 +62,12 @@ public class Player : MonoBehaviour
 
     private void Update() {
         if (dialogueScript != null) {
-            if (dialogueScript.isDialogueDone())
+            if (dialogueScript.isDialogueDone() && !isTyping)
             {
                 GetInput();
                 Animate();
             } 
-        } else if (!isTyping) {
-            GetInput();
-            Animate();
-        }
-        if (isTyping) {
+        } else {
             if (!computerCanvas.activeSelf) 
                 typing(false);
         }

@@ -13,7 +13,7 @@ MonoBehaviour:
   m_Name: 13Good2
   m_EditorClassIdentifier: 
   sentences:
-  - text: Its a good thing I got home on time. Anyways.
+  - text: Its a good thing I got home on time. Anyways...
     speaker: {fileID: 11400000, guid: c91b125d574570e42b6955cd1c87cccf, type: 2}
   - text: Goodnight mom!
     speaker: {fileID: 11400000, guid: c91b125d574570e42b6955cd1c87cccf, type: 2}
