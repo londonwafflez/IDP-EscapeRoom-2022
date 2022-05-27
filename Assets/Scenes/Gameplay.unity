@@ -123,6 +123,37 @@ NavMeshSettings:
     debug:
       m_Flags: 0
   m_NavMeshData: {fileID: 0}
+--- !u!1 &24144185 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 3660252063078550457, guid: 145bd9f0368b1c8478dabfb38b2b1862, type: 3}
+  m_PrefabInstance: {fileID: 2039709826}
+  m_PrefabAsset: {fileID: 0}
+--- !u!61 &24144189
+BoxCollider2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 24144185}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_UsedByEffector: 0
+  m_UsedByComposite: 0
+  m_Offset: {x: 0, y: -0.20677397}
+  m_SpriteTilingProperty:
+    border: {x: 0, y: 0, z: 0, w: 0}
+    pivot: {x: 0.5, y: 0.5}
+    oldSize: {x: 0.2, y: 0.5}
+    newSize: {x: 15, y: 37.50916}
+    adaptiveTilingThreshold: 0.5
+    drawMode: 0
+    adaptiveTiling: 0
+  m_AutoTiling: 0
+  serializedVersion: 2
+  m_Size: {x: 0.2, y: 0.08645205}
+  m_EdgeRadius: 0
 --- !u!1 &137791524 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 6520643438003402953, guid: 0be16fd0cef87e741b0061b008b24057, type: 3}
@@ -310,7 +341,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 6520643438003402953, guid: 0be16fd0cef87e741b0061b008b24057, type: 3}
       propertyPath: m_IsActive
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 6520643438579987401, guid: 0be16fd0cef87e741b0061b008b24057, type: 3}
       propertyPath: m_IsActive
@@ -411,6 +442,37 @@ BoxCollider2D:
   m_AutoTiling: 0
   serializedVersion: 2
   m_Size: {x: 20, y: 20}
+  m_EdgeRadius: 0
+--- !u!1 &352752491 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 799144441656301377, guid: 145bd9f0368b1c8478dabfb38b2b1862, type: 3}
+  m_PrefabInstance: {fileID: 2039709826}
+  m_PrefabAsset: {fileID: 0}
+--- !u!61 &352752495
+BoxCollider2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 352752491}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_UsedByEffector: 0
+  m_UsedByComposite: 0
+  m_Offset: {x: 0, y: 0}
+  m_SpriteTilingProperty:
+    border: {x: 0, y: 0, z: 0, w: 0}
+    pivot: {x: 0.5, y: 0.5}
+    oldSize: {x: 0.2, y: 0.5}
+    newSize: {x: 15, y: 37.50916}
+    adaptiveTilingThreshold: 0.5
+    drawMode: 0
+    adaptiveTiling: 0
+  m_AutoTiling: 0
+  serializedVersion: 2
+  m_Size: {x: 0.2, y: 0.5}
   m_EdgeRadius: 0
 --- !u!1001 &371933563
 PrefabInstance:
@@ -1619,6 +1681,37 @@ MonoBehaviour:
   obj: {fileID: 1372517312}
   BadEnd: 9ArtifactFoundBad
   GoodEnd: 9ArtifactFoundGood
+--- !u!1 &1773061970 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 8536128638303406093, guid: 145bd9f0368b1c8478dabfb38b2b1862, type: 3}
+  m_PrefabInstance: {fileID: 2039709826}
+  m_PrefabAsset: {fileID: 0}
+--- !u!61 &1773061974
+BoxCollider2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1773061970}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_UsedByEffector: 0
+  m_UsedByComposite: 0
+  m_Offset: {x: 0, y: 0}
+  m_SpriteTilingProperty:
+    border: {x: 0, y: 0, z: 0, w: 0}
+    pivot: {x: 0.5, y: 0.5}
+    oldSize: {x: 0.2, y: 0.5}
+    newSize: {x: 15, y: 37.50916}
+    adaptiveTilingThreshold: 0.5
+    drawMode: 0
+    adaptiveTiling: 0
+  m_AutoTiling: 0
+  serializedVersion: 2
+  m_Size: {x: 0.2, y: 0.5}
+  m_EdgeRadius: 0
 --- !u!1 &1774350767 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 4177490976795956531, guid: 145bd9f0368b1c8478dabfb38b2b1862, type: 3}
@@ -1669,7 +1762,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 372443358513971795, guid: 145bd9f0368b1c8478dabfb38b2b1862, type: 3}
       propertyPath: m_IsActive
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 472265456135443280, guid: 145bd9f0368b1c8478dabfb38b2b1862, type: 3}
       propertyPath: bookButton1
@@ -1737,6 +1830,10 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 2290138935778369616, guid: 145bd9f0368b1c8478dabfb38b2b1862, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2305662120208173942, guid: 145bd9f0368b1c8478dabfb38b2b1862, type: 3}
+      propertyPath: m_IsActive
       value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 2523851598001000238, guid: 145bd9f0368b1c8478dabfb38b2b1862, type: 3}
@@ -2007,6 +2104,30 @@ PrefabInstance:
       propertyPath: bookButton3
       value: 
       objectReference: {fileID: 2065448761}
+    - target: {fileID: 8234274532397922706, guid: 145bd9f0368b1c8478dabfb38b2b1862, type: 3}
+      propertyPath: m_Size.x
+      value: 0.7320536
+      objectReference: {fileID: 0}
+    - target: {fileID: 8234274532397922706, guid: 145bd9f0368b1c8478dabfb38b2b1862, type: 3}
+      propertyPath: m_Size.y
+      value: 0.92122114
+      objectReference: {fileID: 0}
+    - target: {fileID: 8234274532397922706, guid: 145bd9f0368b1c8478dabfb38b2b1862, type: 3}
+      propertyPath: m_Offset.x
+      value: -0.47118923
+      objectReference: {fileID: 0}
+    - target: {fileID: 8234274532397922706, guid: 145bd9f0368b1c8478dabfb38b2b1862, type: 3}
+      propertyPath: m_Offset.y
+      value: -0.23350073
+      objectReference: {fileID: 0}
+    - target: {fileID: 8234274532397922706, guid: 145bd9f0368b1c8478dabfb38b2b1862, type: 3}
+      propertyPath: m_SpriteTilingProperty.oldSize.x
+      value: 0.2
+      objectReference: {fileID: 0}
+    - target: {fileID: 8234274532397922706, guid: 145bd9f0368b1c8478dabfb38b2b1862, type: 3}
+      propertyPath: m_SpriteTilingProperty.oldSize.y
+      value: 0.5
+      objectReference: {fileID: 0}
     - target: {fileID: 8318453174544103857, guid: 145bd9f0368b1c8478dabfb38b2b1862, type: 3}
       propertyPath: bookButton1
       value: 
@@ -2021,15 +2142,18 @@ PrefabInstance:
       objectReference: {fileID: 2065448761}
     - target: {fileID: 9130358367152819862, guid: 145bd9f0368b1c8478dabfb38b2b1862, type: 3}
       propertyPath: m_LocalPosition.x
-      value: 19
+      value: 31
       objectReference: {fileID: 0}
     - target: {fileID: 9130358367152819862, guid: 145bd9f0368b1c8478dabfb38b2b1862, type: 3}
       propertyPath: m_LocalPosition.y
-      value: -195
+      value: -203
       objectReference: {fileID: 0}
     m_RemovedComponents:
     - {fileID: 1466611806062372717, guid: 145bd9f0368b1c8478dabfb38b2b1862, type: 3}
     - {fileID: 7661581600481112420, guid: 145bd9f0368b1c8478dabfb38b2b1862, type: 3}
+    - {fileID: 8234274532397922706, guid: 145bd9f0368b1c8478dabfb38b2b1862, type: 3}
+    - {fileID: 8003321050305511917, guid: 145bd9f0368b1c8478dabfb38b2b1862, type: 3}
+    - {fileID: 1954299649906949918, guid: 145bd9f0368b1c8478dabfb38b2b1862, type: 3}
   m_SourcePrefab: {fileID: 100100000, guid: 145bd9f0368b1c8478dabfb38b2b1862, type: 3}
 --- !u!114 &2065448761 stripped
 MonoBehaviour:

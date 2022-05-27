@@ -18,6 +18,7 @@ public class Hints : MonoBehaviour
     bool firstHasRun = false;
     string activeSentence;
     Coroutine lastRoutine;
+    
     string[] hintsText = new string[9]
     {
         "The clock needs to be fixed, so move it to the correct time and it will open",
