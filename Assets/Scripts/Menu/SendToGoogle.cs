@@ -8,15 +8,6 @@
 // {
 //     public GameObject username;
 //     public GameObject score;
-//     public GameObject timeforpuzzle1r1;
-//     public GameObject timeforpuzzle2r1;
-//     public GameObject timeforpuzzle3r1;
-//     public GameObject timeforpuzzle1r2;
-//     public GameObject timeforpuzzle2r2;
-//     public GameObject timeforpuzzle3r2;
-//     public GameObject timeforpuzzle1r3;
-//     public GameObject timeforpuzzle2r3;
-//     public GameObject timeforpuzzle3r3;
 //     public GameObject hintsforpuzzle1;
 //     public GameObject hintsforpuzzle2;
 //     public GameObject hintsforpuzzle3;
@@ -34,15 +25,7 @@
 
 //     private string Name;
 //     private string Score;
-//     private string TimeForPuzzle1r1;
-//     private string TimeForPuzzle2r1;
-//     private string TimeForPuzzle3r1;
-//     private string TimeForPuzzle1r2;
-//     private string TimeForPuzzle2r2;
-//     private string TimeForPuzzle3r2;
-//     private string TimeForPuzzle1r3;
-//     private string TimeForPuzzle2r3;
-//     private string TimeForPuzzle3r3;
+
 //     private string HintsForPuzzle1;
 //     private string HintsForPuzzle2;
 //     private string HintsForPuzzle3;
@@ -65,15 +48,6 @@
 //         WWWForm form = new WWWForm();
 //         form.AddField("entry.1288604378", name);
 //         form.AddField("entry.876960760", score);
-//         form.AddField("entry.1605547814", timeforpuzzle1r1);
-//         form.AddField("entry.46043638", timeforpuzzle2r1);
-//         form.AddField("entry.1212807785", timeforpuzzle3r1);
-//         form.AddField("entry.462832709", timeforpuzzle1r2);
-//         form.AddField("entry.1474807138", timeforpuzzle2r2);
-//         form.AddField("entry.1405352907", timeforpuzzle3r2);
-//         form.AddField("entry.1569948200", timeforpuzzle1r3);
-//         form.AddField("entry.454777614", timeforpuzzle2r3);
-//         form.AddField("entry.1078749720", timeforpuzzle3r3);
 //         form.AddField("entry.292689356", hintsforpuzzle1);
 //         form.AddField("entry.504458729", hintsforpuzzle2);
 //         form.AddField("entry.2002984662", hintsforpuzzle3);
@@ -125,7 +99,7 @@
 //         Dislikes = dislikes.GetComponent<TMP_InputField>().text;
 //         WishTheyCouldDo = wishtheycoulddo.GetComponent<TMP_InputField>().text;
 
-//         StartCoroutine(Post(Name, Score, TimeForPuzzle1r1, TimeForPuzzle2r1, TimeForPuzzle3r1, TimeForPuzzle1r2, TimeForPuzzle2r2, TimeForPuzzle3r2, TimeForPuzzle1r3, TimeForPuzzle2r3, TimeForPuzzle3r3, HintsForPuzzle1, HintsForPuzzle2, HintsForPuzzle3, TimeForRoom1, TimeForRoom2, TimeForRoom3, TotalNumberOfHints, HeartRateBefore, HeartRateAfter, Rating, Difficulty, Likes, Dislikes, WishTheyCouldDo));
+//         StartCoroutine(Post(Name, Score, HintsForPuzzle1, HintsForPuzzle2, HintsForPuzzle3, TimeForRoom1, TimeForRoom2, TimeForRoom3, TotalNumberOfHints, HeartRateBefore, HeartRateAfter, Rating, Difficulty, Likes, Dislikes, WishTheyCouldDo));
 //     }
 
 //     public void getName()

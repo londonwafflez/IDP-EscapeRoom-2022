@@ -26,49 +26,49 @@ public class SaveDataToVariable : MonoBehaviour
         
     }
 
-    public void ReadStringInput(string s)
+    public void ReadStringInput(string a)
     {
-        input = s;
+        input = a;
         Debug.Log(input);
     }
-    public void ReadStringInput1(string s)
+    public void ReadStringInput1(string b)
     {
-        input = s;
+        input1 = b;
         Debug.Log(input1);
     }
-    public void ReadStringInput2(string s)
+    public void ReadStringInput2(string c)
     {
-        input = s;
+        input2 = c;
         Debug.Log(input2);
     }
-    public void ReadStringInput3(string s)
+    public void ReadStringInput3(string d)
     {
-        input = s;
+        input3 = d;
         Debug.Log(input3);
     }
-    public void ReadStringInput4(string s)
+    public void ReadStringInput4(string e)
     {
-        input = s;
+        input4 = e;
         Debug.Log(input4);
     }
-    public void ReadStringInput5(string s)
+    public void ReadStringInput5(string f)
     {
-        input = s;
+        input5 = f;
         Debug.Log(input5);
     }
-    public void ReadStringInput6(string s)
+    public void ReadStringInput6(string g)
     {
-        input = s;
+        input6 = g;
         Debug.Log(input6);
     }
-    public void ReadStringInput7(string s)
+    public void ReadStringInput7(string h)
     {
-        input = s;
+        input7 = h;
         Debug.Log(input7);
     }
-    public void ReadStringInput8(string s)
+    public void ReadStringInput8(string i)
     {
-        input = s;
+        input8 = i;
         Debug.Log(input8);
     }
    
