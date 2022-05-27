@@ -43,6 +43,7 @@ public class Player : MonoBehaviour
                 dialogueScript = GameObject.Find("DialogueCanvas").GetComponent<GameController2>();
             } else {
                 computerTrigger = GameObject.Find("computer").GetComponent<Trigger>();
+                dialogueScript = GameObject.Find("DialogueCanvas").GetComponent<GameController2>();
             }
         } 
         else {

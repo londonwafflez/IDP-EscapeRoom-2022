@@ -11,11 +11,12 @@ public class Trigger2 : MonoBehaviour
     public string BadEnd;
     public string GoodEnd;
 
+    CountdownTimer m_cdTimer;
 
     void Start()
     {
 
-        CountdownTimer m_cdTimer = GameObject.Find("TimerText").GetComponent<CountdownTimer>();
+        m_cdTimer = GameObject.Find("TimerText").GetComponent<CountdownTimer>();
 
 
 
@@ -24,7 +25,7 @@ public class Trigger2 : MonoBehaviour
   
     protected void Update()
     {
-        CountdownTimer m_cdTimer = GameObject.Find("TimerText").GetComponent<CountdownTimer>();
+        m_cdTimer = GameObject.Find("TimerText").GetComponent<CountdownTimer>();
 
         if (runTrigger)
         {
@@ -38,8 +39,6 @@ public class Trigger2 : MonoBehaviour
                 if (m_cdTimer.timeValue > 0)
                 {
                     SceneManager.LoadScene(GoodEnd);
-
-
                 }
 
 
