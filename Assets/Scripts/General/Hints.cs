@@ -7,7 +7,8 @@ using TMPro;
 public class Hints : MonoBehaviour
 {
     public Text hintTextBoxText;
-    int puzzleNum, hintsGiven;
+    public int hintsGiven;
+    int puzzleNum;
     public GameObject hintTextBox, originalOldHintButton, oldHintButtons, warning;
     TextMeshPro TMP;
     GameController2 dialogueScript;

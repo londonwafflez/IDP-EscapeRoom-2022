@@ -23,6 +23,8 @@ public class SendToGoogle : MonoBehaviour
     // public GameObject dislikes;
     // public GameObject wishtheycoulddo;
 
+    public TextMeshPro scoretextbox;
+
     private static string Name = "";
     private static string Score = "";
     private static string HintsForPuzzle1 = "";
@@ -41,6 +43,14 @@ public class SendToGoogle : MonoBehaviour
     private static string WishTheyCouldDo = "";
 
     private string BASE_URL = "https://docs.google.com/forms/u/0/d/e/1FAIpQLSdvKxbJzSXpFuFo5ogRHYYe5hbzx12OmnLe4MgNNkgi29s78w/formResponse";
+
+    void Start()
+    {
+        if(scoretextbox != null)
+        {
+            scoretextbox.text = Score;
+        }
+    }
 
     IEnumerator Post(string name, string score, string hintsforpuzzle1, string hintsforpuzzle2, string hintsforpuzzle3, string timeforroom1, string timeforroom2, string timeforroom3, string totalnumberofhints, string heartratebefore, string heartrateafter, string rating, string difficulty, string likes, string dislikes, string wishtheycoulddo)
     {
@@ -83,6 +93,13 @@ public class SendToGoogle : MonoBehaviour
             TimeForRoom2 = m_cdTimer.puzzleTimes[1].ToString();
             TimeForRoom3 = m_cdTimer.puzzleTimes[2].ToString();
         }
+
+        if(GameObject.Find("HintsButton") != null)
+        {
+            TotalNumberOfHints = GameObject.Find("HintsButton").GetComponent<Hints>().hintsGiven.ToString();
+        }
+
+        
 
     }
 
