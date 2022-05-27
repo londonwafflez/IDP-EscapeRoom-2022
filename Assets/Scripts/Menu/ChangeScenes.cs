@@ -95,7 +95,7 @@ public class ChangeScenes : Trigger
     public void checkUserGoCutScene() {
         if (!Regex.IsMatch(usernameInput.GetComponent<TMP_InputField>().text, @"^[A-Za-z\s]*$")  && usernameInput.GetComponent<TMP_InputField>().text.Length < 4) {
             Username();
-        }
+        } else
         feedback.SetActive(true);
     }
 

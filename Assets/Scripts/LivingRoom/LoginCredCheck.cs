@@ -35,7 +35,7 @@ public class LoginCredCheck : MonoBehaviour
         if ("teapot123" == userText.text && "8664" == passText.text)
         {
             SecurityCams.SetActive(true);
-            GameObject.Find("HintsButton").GetComponent<Hints>().FinishedPuzzle();
+            GameObject.Find("HintButton").GetComponent<Hints>().FinishedPuzzle();
             LoginCanvas.SetActive(false);
             feedback.SetActive(false);
         } else
