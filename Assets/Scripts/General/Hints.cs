@@ -30,9 +30,9 @@ public class Hints : MonoBehaviour
     
     string[] hintsText = new string[9]
     {
-        "The clock needs to be fixed, so move it to the correct time and it will open",
-        "Try looking around the room for hidden objects",
-        "Look at the trapdoor and see what it needs. The clock in the room might help you.",
+        "The clock needs to be fixed, so move it to your local time and it will open",
+        "Use a flashlight to light up your way",
+        "Look at the trapdoor and note to see what it needs. The clock in the room might help you.",
         "Sometimes, it's okay to snoop around. Why don't you read a page from the ghost's diary? There may be a book title that you have to find.",
         "Open the book to the first page. Remember the secret code translator from the first room you escaped? That might come in handy to figure out the code for the chest.",
         "Look at the signs above the bookshelves",
