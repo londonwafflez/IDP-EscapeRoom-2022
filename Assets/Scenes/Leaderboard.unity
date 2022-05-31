@@ -417,7 +417,7 @@ MonoBehaviour:
   m_GameObject: {fileID: 341515506}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 618a4525848bfd04194357e1cdf6181e, type: 3}
+  m_Script: {fileID: 11500000, guid: 59c7d3ffbe314724195a134ae1f92d69, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
 --- !u!114 &341515509
@@ -429,11 +429,11 @@ MonoBehaviour:
   m_GameObject: {fileID: 341515506}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 24fa45dc6da85d04e9d3f7994c21a41a, type: 3}
+  m_Script: {fileID: 11500000, guid: 8615fdc42d7fd36418e6fefc45e49186, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  leaderboardUser: {fileID: 954541823}
-  leaderboardScore: {fileID: 376229636}
+  userText: {fileID: 954541823}
+  scoreText: {fileID: 376229636}
 --- !u!1 &376229635
 GameObject:
   m_ObjectHideFlags: 0
