@@ -17,10 +17,6 @@ public class Trigger2 : MonoBehaviour
     {
 
         m_cdTimer = GameObject.Find("TimerText").GetComponent<CountdownTimer>();
-
-
-
-
     }
   
     protected void Update()
@@ -40,9 +36,9 @@ public class Trigger2 : MonoBehaviour
                 {
                     SceneManager.LoadScene(GoodEnd);
                 }
-
-
-                
+                if (GameObject.Find("TimerText")) GameObject.Find("TimerText").GetComponent<CountdownTimer>().LogTime(2);
+                SendToGoogle m_api = GameObject.Find("API").GetComponent<SendToGoogle>();
+                if (m_api != null) m_api.GetTime();
             }
         }
     }

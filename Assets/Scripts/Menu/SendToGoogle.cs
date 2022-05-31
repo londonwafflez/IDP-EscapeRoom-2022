@@ -80,6 +80,7 @@ public class SendToGoogle : MonoBehaviour
     public void Send()
     {
         StartCoroutine(Post(Name, Score, HintsForPuzzle1, HintsForPuzzle2, HintsForPuzzle3, TimeForRoom1, TimeForRoom2, TimeForRoom3, TotalNumberOfHints, HeartRateBefore, HeartRateAfter, Rating, Difficulty, Likes, Dislikes, WishTheyCouldDo));
+
     }
 
     public void GetTime()
@@ -94,13 +95,14 @@ public class SendToGoogle : MonoBehaviour
             TimeForRoom3 = m_cdTimer.puzzleTimes[2].ToString();
         }
 
-        if(GameObject.Find("HintsButton") != null)
+        if(GameObject.Find("HintButton") != null)
         {
-            TotalNumberOfHints = GameObject.Find("HintsButton").GetComponent<Hints>().hintsGiven.ToString();
+            Hints m_hints = GameObject.Find("HintButton").GetComponent<Hints>();
+            TotalNumberOfHints = m_hints.hintsGiven.ToString();
+            HintsForPuzzle1 = m_hints.hintsPerRoom[0].ToString();
+            HintsForPuzzle2 = m_hints.hintsPerRoom[1].ToString();
+            HintsForPuzzle3 = m_hints.hintsPerRoom[2].ToString();
         }
-
-        
-
     }
 
     public void ReadStringInput(string a)

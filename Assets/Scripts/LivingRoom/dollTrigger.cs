@@ -7,6 +7,7 @@ public class dollTrigger : Trigger
     Inventory m_inventory;
     public GameObject obj1;
     bool isActive1;
+    bool firstTime = true;
 
     // Start is called before the first frame update
     void Start()
@@ -20,7 +21,11 @@ public class dollTrigger : Trigger
         {
             obj1.SetActive(!isActive); // false to hide, true to show
             isActive1 = !isActive1;
-            GameObject.Find("HintButton").GetComponent<Hints>().FinishedPuzzle();
+            if (firstTime)
+            {
+                GameObject.Find("HintButton").GetComponent<Hints>().FinishedPuzzle();
+                firstTime = false;
+            }
         } else
         {
             obj.SetActive(!isActive); // false to hide, true to show

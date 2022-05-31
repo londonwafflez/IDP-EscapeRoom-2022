@@ -18,7 +18,7 @@ public class Hints : MonoBehaviour
     bool firstHasRun = false;
     string activeSentence;
     Coroutine lastRoutine;
-    int[] hintsPerRoom = {0, 0, 0};
+    public int[] hintsPerRoom = {0, 0, 0};
     string[] hintsText = new string[9]
     {
         "The clock needs to be fixed, so move it to the correct time and it will open",
