@@ -1071,7 +1071,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 1
     m_LineSpacing: 1
-  m_Text: Use F or Spacebar to go to continue the story
+  m_Text: Use F or Spacebar to continue the story
 --- !u!222 &1872925399
 CanvasRenderer:
   m_ObjectHideFlags: 0

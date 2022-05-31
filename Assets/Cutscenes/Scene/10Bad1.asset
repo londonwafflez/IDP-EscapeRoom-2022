@@ -15,7 +15,7 @@ MonoBehaviour:
   sentences:
   - text: You found the artifact! Thank you, now my soul can be free.
     speaker: {fileID: 11400000, guid: 9513e85715b355d4796c400a900cba4f, type: 2}
-  - text: You are welcome. Hopefully i can make it home on time before my mom gets
+  - text: You are welcome. Hopefully I can make it home on time before my mom gets
       mad.
     speaker: {fileID: 11400000, guid: c91b125d574570e42b6955cd1c87cccf, type: 2}
   background: {fileID: 0}
