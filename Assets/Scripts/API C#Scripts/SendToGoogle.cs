@@ -31,8 +31,17 @@ public class SendToGoogle : MonoBehaviour
     private static string HintsForPuzzle2 = "";
     private static string HintsForPuzzle3 = "";
     private static string TimeForRoom1 = "";
+    private static string TimeForPuzzle1Room1 = "";
+    private static string TimeForPuzzle2Room1 = "";
+    private static string TimeForPuzzle3Room1 = "";
     private static string TimeForRoom2 = "";
+    private static string TimeForPuzzle1Room2 = "";
+    private static string TimeForPuzzle2Room2 = "";
+    private static string TimeForPuzzle3Room2 = "";
     private static string TimeForRoom3 = "";
+    private static string TimeForPuzzle1Room3 = "";
+    private static string TimeForPuzzle2Room3 = "";
+    private static string TimeForPuzzle3Room3 = "";
     private static string TotalNumberOfHints = "";
     private static string HeartRateBefore = "";
     private static string HeartRateAfter = "";
@@ -52,7 +61,7 @@ public class SendToGoogle : MonoBehaviour
         }
     }
 
-    IEnumerator Post(string name, string score, string hintsforpuzzle1, string hintsforpuzzle2, string hintsforpuzzle3, string timeforroom1, string timeforroom2, string timeforroom3, string totalnumberofhints, string heartratebefore, string heartrateafter, string rating, string difficulty, string likes, string dislikes, string wishtheycoulddo)
+    IEnumerator Post(string name, string score, string hintsforpuzzle1, string hintsforpuzzle2, string hintsforpuzzle3, string timeforroom1, string timeforroom2, string timeforroom3, string totalnumberofhints, string heartratebefore, string heartrateafter, string rating, string difficulty, string likes, string dislikes, string wishtheycoulddo, string timeforpuzzle1room1, string timeforpuzzle1room2, string timeforpuzzle1room3, string timeforpuzzle2room1, string timeforpuzzle2room2, string timeforpuzzle2room3, string timeforpuzzle3room1, string timeforpuzzle3room2, string timeforpuzzle3room3)
     {
         WWWForm form = new WWWForm();
         form.AddField("entry.1288604378", name);
@@ -71,6 +80,15 @@ public class SendToGoogle : MonoBehaviour
         form.AddField("entry.1483791588", likes);
         form.AddField("entry.1549649089", dislikes);
         form.AddField("entry.2021286873", wishtheycoulddo);
+        form.AddField("entry.908791967", timeforpuzzle1room1);
+        form.AddField("entry.391939050", timeforpuzzle2room1);
+        form.AddField("entry.492667528", timeforpuzzle3room1);
+        form.AddField("entry.1557273089", timeforpuzzle1room2);
+        form.AddField("entry.1655024605", timeforpuzzle2room2);
+        form.AddField("entry.353484927", timeforpuzzle3room2);
+        form.AddField("entry.765432788", timeforpuzzle1room3);
+        form.AddField("entry.290244229", timeforpuzzle2room3);
+        form.AddField("entry.1678059324", timeforpuzzle3room3);
         byte[] rawData = form.data;
         WWW www = new WWW(BASE_URL, rawData);
         Debug.Log("Data user: " + name + " and score: " + score + " sent");
@@ -79,7 +97,7 @@ public class SendToGoogle : MonoBehaviour
 
     public void Send()
     {
-        StartCoroutine(Post(Name, Score, HintsForPuzzle1, HintsForPuzzle2, HintsForPuzzle3, TimeForRoom1, TimeForRoom2, TimeForRoom3, TotalNumberOfHints, HeartRateBefore, HeartRateAfter, Rating, Difficulty, Likes, Dislikes, WishTheyCouldDo));
+        StartCoroutine(Post(Name, Score, HintsForPuzzle1, HintsForPuzzle2, HintsForPuzzle3, TimeForRoom1, TimeForRoom2, TimeForRoom3, TotalNumberOfHints, HeartRateBefore, HeartRateAfter, Rating, Difficulty, Likes, Dislikes, WishTheyCouldDo, TimeForPuzzle1Room1, TimeForPuzzle1Room2, TimeForPuzzle1Room3, TimeForPuzzle2Room1, TimeForPuzzle2Room2, TimeForPuzzle2Room3, TimeForPuzzle3Room1, TimeForPuzzle3Room2, TimeForPuzzle3Room3));
 
     }
 
