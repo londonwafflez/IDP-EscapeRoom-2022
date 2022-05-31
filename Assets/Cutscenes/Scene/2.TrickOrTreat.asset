@@ -13,7 +13,7 @@ MonoBehaviour:
   m_Name: 2.TrickOrTreat
   m_EditorClassIdentifier: 
   sentences:
-  - text: "We\u2019ve been trick or treating for a while.. Look how much candy we
+  - text: "We\u2019ve been trick or treating for a while. Look how much candy we
       have!"
     speaker: {fileID: 11400000, guid: c91b125d574570e42b6955cd1c87cccf, type: 2}
   - text: "There\u2019s a lot of candy in our bags. Do we still want to trick or

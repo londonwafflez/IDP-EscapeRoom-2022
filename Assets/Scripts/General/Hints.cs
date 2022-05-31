@@ -100,9 +100,9 @@ public class Hints : MonoBehaviour
             oldHintButton = Instantiate(originalOldHintButton, new Vector3(-337 + 578, -120 + hintsGiven * 60 + 252, 0), new Quaternion(0, 0, 0, 1), oldHintButtons.transform);
             oldHintButton.SetActive(true);
             hintTextBox.SetActive(true);
-            if (puzzleNum < 3) hintsPerRoom[0] ++;
-            else if (puzzleNum < 6) hintsPerRoom[1] ++;
-            else if (puzzleNum < 9) hintsPerRoom[2] ++;
+            if (puzzleNum < 3) {hintsPerRoom[0] ++;}
+            else if (puzzleNum < 6) {hintsPerRoom[1] ++;}
+            else if (puzzleNum < 9) {hintsPerRoom[2] ++;}
             hintsGiven ++;
             lastHintGiven = puzzleNum;
             Debug.Log("Hint " + puzzleNum + " given");

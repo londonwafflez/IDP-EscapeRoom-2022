@@ -341,7 +341,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 6520643438003402953, guid: 0be16fd0cef87e741b0061b008b24057, type: 3}
       propertyPath: m_IsActive
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 6520643438579987401, guid: 0be16fd0cef87e741b0061b008b24057, type: 3}
       propertyPath: m_IsActive
@@ -2075,7 +2075,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 372443358513971795, guid: 145bd9f0368b1c8478dabfb38b2b1862, type: 3}
       propertyPath: m_IsActive
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 472265456135443280, guid: 145bd9f0368b1c8478dabfb38b2b1862, type: 3}
       propertyPath: bookButton1
@@ -2205,6 +2205,14 @@ PrefabInstance:
       propertyPath: m_LocalPosition.y
       value: -1.2
       objectReference: {fileID: 0}
+    - target: {fileID: 3384376610998443690, guid: 145bd9f0368b1c8478dabfb38b2b1862, type: 3}
+      propertyPath: m_LocalScale.x
+      value: 27.701414
+      objectReference: {fileID: 0}
+    - target: {fileID: 3384376610998443690, guid: 145bd9f0368b1c8478dabfb38b2b1862, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: -56.1535
+      objectReference: {fileID: 0}
     - target: {fileID: 3591345703599484996, guid: 145bd9f0368b1c8478dabfb38b2b1862, type: 3}
       propertyPath: bbar
       value: 
@@ -2277,6 +2285,22 @@ PrefabInstance:
       propertyPath: m_IsActive
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 4234531907646027042, guid: 145bd9f0368b1c8478dabfb38b2b1862, type: 3}
+      propertyPath: m_Size.x
+      value: 28.000002
+      objectReference: {fileID: 0}
+    - target: {fileID: 4234531907646027042, guid: 145bd9f0368b1c8478dabfb38b2b1862, type: 3}
+      propertyPath: m_Size.y
+      value: 28.000002
+      objectReference: {fileID: 0}
+    - target: {fileID: 4234531907646027042, guid: 145bd9f0368b1c8478dabfb38b2b1862, type: 3}
+      propertyPath: m_Sprite
+      value: 
+      objectReference: {fileID: 21300000, guid: ab4aeb2333aa3ae4fac78d4611f39929, type: 3}
+    - target: {fileID: 4234531907646027042, guid: 145bd9f0368b1c8478dabfb38b2b1862, type: 3}
+      propertyPath: m_WasSpriteAssigned
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 4298831157061522684, guid: 145bd9f0368b1c8478dabfb38b2b1862, type: 3}
       propertyPath: bookButton1
       value: 
@@ -2309,6 +2333,14 @@ PrefabInstance:
       propertyPath: m_RootOrder
       value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: 4644327441643600958, guid: 145bd9f0368b1c8478dabfb38b2b1862, type: 3}
+      propertyPath: m_LocalScale.x
+      value: 12
+      objectReference: {fileID: 0}
+    - target: {fileID: 4644327441643600958, guid: 145bd9f0368b1c8478dabfb38b2b1862, type: 3}
+      propertyPath: m_LocalScale.y
+      value: 12
+      objectReference: {fileID: 0}
     - target: {fileID: 4714963557338465097, guid: 145bd9f0368b1c8478dabfb38b2b1862, type: 3}
       propertyPath: m_IsActive
       value: 0
@@ -2333,6 +2365,10 @@ PrefabInstance:
       propertyPath: bookButton3
       value: 
       objectReference: {fileID: 2065448761}
+    - target: {fileID: 5716779221930322313, guid: 145bd9f0368b1c8478dabfb38b2b1862, type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 5717885853733891344, guid: 145bd9f0368b1c8478dabfb38b2b1862, type: 3}
       propertyPath: m_Navigation.m_Mode
       value: 0
@@ -2400,6 +2436,14 @@ PrefabInstance:
     - target: {fileID: 6699479013311674467, guid: 145bd9f0368b1c8478dabfb38b2b1862, type: 3}
       propertyPath: m_Navigation.m_Mode
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6906398997940030074, guid: 145bd9f0368b1c8478dabfb38b2b1862, type: 3}
+      propertyPath: m_LocalScale.x
+      value: 42.207058
+      objectReference: {fileID: 0}
+    - target: {fileID: 6906398997940030074, guid: 145bd9f0368b1c8478dabfb38b2b1862, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 11.6829
       objectReference: {fileID: 0}
     - target: {fileID: 7471712134983856042, guid: 145bd9f0368b1c8478dabfb38b2b1862, type: 3}
       propertyPath: m_LocalScale.x

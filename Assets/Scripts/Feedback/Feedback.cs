@@ -2,9 +2,13 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.SceneManagement;
+using System.Text.RegularExpressions;
+using TMPro;
 
 public class Feedback : MonoBehaviour
 {
+    public GameObject feedback, usernameInput;
+
     public void HeartRateBefore()
     {
         SceneManager.LoadScene("HeartRateBefore");
@@ -43,6 +47,9 @@ public class Feedback : MonoBehaviour
     }
      public void StartQuestions()
     {
-        SceneManager.LoadScene("StartQuestions");
+        if (!Regex.IsMatch(usernameInput.GetComponent<TMP_InputField>().text, @"^[A-Za-z\s]*$")  && usernameInput.GetComponent<TMP_InputField>().text.Length < 4) {
+            SceneManager.LoadScene("StartQuestions");
+        } else
+        feedback.SetActive(true);
     }
 }
