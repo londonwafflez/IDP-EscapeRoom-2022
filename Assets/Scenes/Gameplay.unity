@@ -481,6 +481,10 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 3612758165549773518, guid: 623f5a8d2746be843bdeccf6b36bde0d, type: 3}
+      propertyPath: m_Navigation.m_Mode
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 3612758165549773519, guid: 623f5a8d2746be843bdeccf6b36bde0d, type: 3}
       propertyPath: m_AnchoredPosition.x
       value: -5
@@ -585,6 +589,10 @@ PrefabInstance:
       propertyPath: m_LocalPosition.y
       value: -70
       objectReference: {fileID: 0}
+    - target: {fileID: 3612758166590842977, guid: 623f5a8d2746be843bdeccf6b36bde0d, type: 3}
+      propertyPath: m_Navigation.m_Mode
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 3612758166896915196, guid: 623f5a8d2746be843bdeccf6b36bde0d, type: 3}
       propertyPath: m_LocalScale.x
       value: 100
@@ -625,6 +633,10 @@ PrefabInstance:
       propertyPath: m_Sprite
       value: 
       objectReference: {fileID: 21300000, guid: 1315937200bf01045b6d0bd9b9719ea5, type: 3}
+    - target: {fileID: 3612758167105934353, guid: 623f5a8d2746be843bdeccf6b36bde0d, type: 3}
+      propertyPath: m_Navigation.m_Mode
+      value: 0
+      objectReference: {fileID: 0}
     m_RemovedComponents:
     - {fileID: 3612758165708380929, guid: 623f5a8d2746be843bdeccf6b36bde0d, type: 3}
   m_SourcePrefab: {fileID: 100100000, guid: 623f5a8d2746be843bdeccf6b36bde0d, type: 3}
@@ -2077,6 +2089,10 @@ PrefabInstance:
       propertyPath: bookButton3
       value: 
       objectReference: {fileID: 2065448761}
+    - target: {fileID: 1014257735268176473, guid: 145bd9f0368b1c8478dabfb38b2b1862, type: 3}
+      propertyPath: m_Navigation.m_Mode
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 1248914174397231295, guid: 145bd9f0368b1c8478dabfb38b2b1862, type: 3}
       propertyPath: m_Name
       value: DialogueCanvas
@@ -2084,6 +2100,10 @@ PrefabInstance:
     - target: {fileID: 1248914174397231295, guid: 145bd9f0368b1c8478dabfb38b2b1862, type: 3}
       propertyPath: m_IsActive
       value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 1568200099517789162, guid: 145bd9f0368b1c8478dabfb38b2b1862, type: 3}
+      propertyPath: m_Navigation.m_Mode
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 1820016094779803675, guid: 145bd9f0368b1c8478dabfb38b2b1862, type: 3}
       propertyPath: m_Sprite
@@ -2313,6 +2333,10 @@ PrefabInstance:
       propertyPath: bookButton3
       value: 
       objectReference: {fileID: 2065448761}
+    - target: {fileID: 5717885853733891344, guid: 145bd9f0368b1c8478dabfb38b2b1862, type: 3}
+      propertyPath: m_Navigation.m_Mode
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 5794948472471745006, guid: 145bd9f0368b1c8478dabfb38b2b1862, type: 3}
       propertyPath: m_LocalScale.x
       value: 0.83426654
@@ -2373,6 +2397,10 @@ PrefabInstance:
       propertyPath: bookButton3
       value: 
       objectReference: {fileID: 2065448761}
+    - target: {fileID: 6699479013311674467, guid: 145bd9f0368b1c8478dabfb38b2b1862, type: 3}
+      propertyPath: m_Navigation.m_Mode
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 7471712134983856042, guid: 145bd9f0368b1c8478dabfb38b2b1862, type: 3}
       propertyPath: m_LocalScale.x
       value: 281.3539

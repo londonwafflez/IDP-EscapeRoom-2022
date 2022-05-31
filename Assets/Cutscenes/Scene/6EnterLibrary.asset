@@ -18,9 +18,8 @@ MonoBehaviour:
     speaker: {fileID: 11400000, guid: 9513e85715b355d4796c400a900cba4f, type: 2}
   - text: "I don\u2019t know where to start\u2026"
     speaker: {fileID: 11400000, guid: c91b125d574570e42b6955cd1c87cccf, type: 2}
-  - text: "Look over there at the table. It\u2019s my dad\u2019s diary from when
-      he was a ghost. You\u2019ll see how lonely his life was as a ghost. I\u2019ve
-      read it multiple times. "
+  - text: "Look over there at the table. It\u2019s my dad\u2019s diary. You\u2019ll
+      see how lonely his life was. I\u2019ve read it multiple times. "
     speaker: {fileID: 11400000, guid: 9513e85715b355d4796c400a900cba4f, type: 2}
   - text: "I think he left a clue in a diary entry. I just haven\u2019t been able
       to figure it out. Maybe you\u2019ll be able to."
