@@ -55,11 +55,11 @@ public class ShelfTrigger : Trigger
             door.SetActive(true);
             bookshelf6.GetComponent<Rigidbody2D>().simulated = true;
             bookshelf6.GetComponent<Rigidbody2D>().velocity = new Vector2(300, 0);
+            GameObject.Find("HintButton").GetComponent<Hints>().FinishedPuzzle(6);
             GameObject.Find("ShelfTrigger (6)").SetActive(false);
             bookButton1.enabled = false;
             bookButton2.enabled = false;
             bookButton3.enabled = false;
-            GameObject.Find("HintButton").GetComponent<Hints>().FinishedPuzzle(6);
         }
     }
 

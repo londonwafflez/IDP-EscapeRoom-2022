@@ -28,7 +28,6 @@ public class placeStatue : Trigger
                 // win
                 hints.SetPrompt(13);
                 artifactObjs.SetActive(true);
-
             }
         } else { 
             switch (scene.getScene()) {
