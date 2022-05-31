@@ -22,6 +22,7 @@ public class Inventory : MonoBehaviour
     int lastBoxIdentity;
     int nextBox = -1;
     int popOutItem;
+    int popOutItem2;
     blacklight m_blacklight;
     // bool isZoomed = false;
 
@@ -57,10 +58,11 @@ public class Inventory : MonoBehaviour
                         m_blacklight.holdingBlacklight(false);
             } catch { }
 
-            if (activeInvBox == popOutItem && popOut != null)
+            if ((activeInvBox == popOutItem || activeInvBox == popOutItem2) && popOut != null)
             {
                 popOut.GetComponent<SpriteRenderer>().sprite = itemBoxes[activeInvBox].GetComponent<SpriteRenderer>().sprite;
                 popOut.SetActive(true);
+                Debug.Log("popoutitem active");
             }
             break;
         } while (false);
@@ -115,7 +117,16 @@ public class Inventory : MonoBehaviour
         itemBoxes[nextBox].SetActive(true);
         if (itemIndex == 4 || itemIndex == 8)
         {
-            popOutItem = nextBox;
+            if (popOutItem == null || popOutItem == 0) 
+            {
+                popOutItem = nextBox;
+                Debug.Log("Popoutitem" + popOutItem);
+            }
+            else 
+            {
+                popOutItem2 = nextBox;
+                Debug.Log("Popoutitem2" + popOutItem2);
+            }
         }
         nextBox = -1;
     }
