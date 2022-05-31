@@ -6,19 +6,28 @@ using TMPro;
 
 public class Hints : MonoBehaviour
 {
-    public Text hintTextBoxText;
-    public int hintsGiven;
-    int puzzleNum;
     public GameObject hintTextBox, originalOldHintButton, oldHintButtons, warning;
-    TextMeshPro TMP;
-    GameController2 dialogueScript;
+    public Text hintTextBoxText;
+    public int[] hintsPerRoom = {0, 0, 0};
+    public int hintsGiven;
+    
     GameObject oldHintButton;
+    TextMeshPro TMP;
+    
+    GameController2 dialogueScript;
+    CountdownTimer m_cdTimer;
+    Coroutine lastRoutine;
+    
+
     int lastHintGiven = -1;
+    int curPrompt = 0;
+    int puzzleNum;
+    
     static bool doneTyping = true;
     bool firstHasRun = false;
+    
     string activeSentence;
-    Coroutine lastRoutine;
-    public int[] hintsPerRoom = {0, 0, 0};
+    
     string[] hintsText = new string[9]
     {
         "The clock needs to be fixed, so move it to the correct time and it will open",
@@ -31,7 +40,7 @@ public class Hints : MonoBehaviour
         "A telephone rings.. A translator can get you from the sounds to the computer",
         "Three security cameras and three statues"
     };
-    int curPrompt = 0;
+    
     string[] prompts = new string[] {
 /*0*/       "Use W, A, S, and D or arrow keys to move up, left, down, and right",
             "Use F or Spacebar to interact with objects",
@@ -48,8 +57,6 @@ public class Hints : MonoBehaviour
             "A comfortable looking couch",
             "Something happened..."
     };
-
-    CountdownTimer m_cdTimer;
 
     void Start()
     { 
@@ -114,17 +121,23 @@ public class Hints : MonoBehaviour
         }
     }
 
-    public void FinishedPuzzle() {
-        if (puzzleNum < hintsText.Length)
-        {
-            puzzleNum++;
-            foreach (Transform child in oldHintButtons.transform)
+    public void FinishedPuzzle(int currPuzzle) {
+        if (currPuzzle == null) {
+            if (puzzleNum < hintsText.Length)
             {
-                GameObject.Destroy(child.gameObject);
+                puzzleNum++;
+                Debug.LogError("No int given as a parameter for FinishedPuzzle(int currPuzzle). Defaulting to add one");
             }
-            hintsGiven = 0;
-            hintTextBox.SetActive(false);
+        } else {
+            puzzleNum = currPuzzle;
         }
+        foreach (Transform child in oldHintButtons.transform)
+        {
+            GameObject.Destroy(child.gameObject);
+        }
+        hintsGiven = 0;
+        hintTextBox.SetActive(false);
+        m_cdTimer.LogSubPuzzleTime(puzzleNum);
     }
 
     public void NextPrompt() {

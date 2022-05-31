@@ -23,7 +23,7 @@ public class dollTrigger : Trigger
             isActive1 = !isActive1;
             if (firstTime)
             {
-                GameObject.Find("HintButton").GetComponent<Hints>().FinishedPuzzle();
+                GameObject.Find("HintButton").GetComponent<Hints>().FinishedPuzzle(7);
                 firstTime = false;
             }
         } else

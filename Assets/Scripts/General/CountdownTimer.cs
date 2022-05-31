@@ -9,6 +9,7 @@ public class CountdownTimer : MonoBehaviour
     public Text timerText;
     GameController2 dialogueScript;
     public int[] puzzleTimes = {0, 0, 0};
+    public int[] subPuzzleTimes = {0, 0, 0, 0, 0, 0, 0, 0, 0};
 
     void Start() {
         dialogueScript = GameObject.Find("DialogueCanvas").GetComponent<GameController2>();
@@ -50,5 +51,10 @@ public class CountdownTimer : MonoBehaviour
     public void LogTime(int index) {
         puzzleTimes[index] = (int)timeValue;
         Debug.Log(puzzleTimes[index]);
+    }
+
+    public void LogSubPuzzleTime(int index) {
+        subPuzzleTimes[index] = (int)timeValue;
+        Debug.Log(subPuzzleTimes[index]);
     }
 }

@@ -38,7 +38,7 @@ public class Passcode1 : MonoBehaviour
             spriteRenderer = chest.GetComponent<SpriteRenderer>();
             spriteRenderer.sprite = openChest;
             key1.SetActive(true);
-            GameObject.Find("HintButton").GetComponent<Hints>().FinishedPuzzle();
+            GameObject.Find("HintButton").GetComponent<Hints>().FinishedPuzzle(5);
             if (SceneManager.GetActiveScene().name == "Library") GameObject.Find("HintButton").GetComponent<Hints>().SetPrompt(5);
             dialogueCanvasObj.SetActive(true);
             bbar.GetComponent<SpriteRenderer>().enabled = true;
