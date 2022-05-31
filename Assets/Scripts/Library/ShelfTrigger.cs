@@ -59,7 +59,7 @@ public class ShelfTrigger : Trigger
             bookButton1.enabled = false;
             bookButton2.enabled = false;
             bookButton3.enabled = false;
-            GameObject.Find("HintButton").GetComponent<Hints>().FinishedPuzzle();
+            GameObject.Find("HintButton").GetComponent<Hints>().FinishedPuzzle(6);
         }
     }
 

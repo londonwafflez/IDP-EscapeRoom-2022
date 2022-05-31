@@ -14,7 +14,7 @@ public class MockBirdButton : MonoBehaviour
             MockBirdInside.SetActive(true);
         }
         if (!opennedBefore) {
-            GameObject.Find("HintButton").GetComponent<Hints>().FinishedPuzzle();
+            GameObject.Find("HintButton").GetComponent<Hints>().FinishedPuzzle(4);
             opennedBefore = true;
         }
     }

@@ -43,7 +43,7 @@ public class ClockPuzzle : MonoBehaviour
                 clockDoor.SetActive(false);
                 // trigger.SetActive(false);
                 insideClock.SetActive(true);
-                GameObject.Find("HintButton").GetComponent<Hints>().FinishedPuzzle();
+                GameObject.Find("HintButton").GetComponent<Hints>().FinishedPuzzle(1);
                 GameObject.Find("HintButton").GetComponent<Hints>().SetPrompt(3);
                 wait = false;
             }

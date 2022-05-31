@@ -67,7 +67,7 @@ public class ChangeActiveScene : Trigger
 
             if (inventory.getActiveItem() == "Key1" && clockPuzzle.appliedRotation - 90 == correctPos)
             {
-                m_hints.FinishedPuzzle();
+                m_hints.FinishedPuzzle(3);
                 gameObject.GetComponent<SpriteRenderer>().sprite = openTrapDoor;
                 openDoorBoxCollider.enabled = true;
                 openDoorTrigger.enabled = true;
