@@ -111,6 +111,16 @@ public class SendToGoogle : MonoBehaviour
             TimeForRoom1 = m_cdTimer.puzzleTimes[0].ToString();
             TimeForRoom2 = m_cdTimer.puzzleTimes[1].ToString();
             TimeForRoom3 = m_cdTimer.puzzleTimes[2].ToString();
+
+            TimeForPuzzle1Room1 = m_cdTimer.subPuzzleTimes[0].ToString();
+            TimeForPuzzle2Room1 = m_cdTimer.subPuzzleTimes[1].ToString();
+            TimeForPuzzle3Room1 = m_cdTimer.subPuzzleTimes[2].ToString();
+            TimeForPuzzle1Room2 = m_cdTimer.subPuzzleTimes[3].ToString();
+            TimeForPuzzle2Room2 = m_cdTimer.subPuzzleTimes[4].ToString();
+            TimeForPuzzle3Room2 = m_cdTimer.subPuzzleTimes[5].ToString();
+            TimeForPuzzle1Room3 = m_cdTimer.subPuzzleTimes[6].ToString();
+            TimeForPuzzle2Room3 = m_cdTimer.subPuzzleTimes[7].ToString();
+            TimeForPuzzle3Room3 = m_cdTimer.subPuzzleTimes[8].ToString();
         }
 
         if(GameObject.Find("HintButton") != null)
