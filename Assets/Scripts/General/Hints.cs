@@ -137,7 +137,7 @@ public class Hints : MonoBehaviour
         }
         hintsGiven = 0;
         hintTextBox.SetActive(false);
-        m_cdTimer.LogSubPuzzleTime(puzzleNum);
+        m_cdTimer.LogSubPuzzleTime(puzzleNum - 1);
     }
 
     public void NextPrompt() {

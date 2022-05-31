@@ -20,7 +20,7 @@ public class Player : MonoBehaviour
     static bool allKeyClicked, wClicked, aClicked, sClicked, dClicked;
 
     GameController2 dialogueScript;
-    Trigger computerTrigger;
+    public Trigger computerTrigger;
     public GameObject computerCanvas;
 
     bool isTyping;

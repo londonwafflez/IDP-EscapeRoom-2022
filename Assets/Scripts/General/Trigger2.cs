@@ -36,7 +36,11 @@ public class Trigger2 : MonoBehaviour
                 {
                     SceneManager.LoadScene(GoodEnd);
                 }
-                if (GameObject.Find("TimerText")) GameObject.Find("TimerText").GetComponent<CountdownTimer>().LogTime(2);
+                if (GameObject.Find("TimerText")) 
+                {
+                    GameObject.Find("TimerText").GetComponent<CountdownTimer>().LogTime(2);
+                    GameObject.Find("TimerText").GetComponent<CountdownTimer>().LogSubPuzzleTime(8);
+                }
                 SendToGoogle m_api = GameObject.Find("API").GetComponent<SendToGoogle>();
                 if (m_api != null) m_api.GetTime();
             }
